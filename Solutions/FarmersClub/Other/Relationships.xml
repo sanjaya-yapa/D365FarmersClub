@@ -33,6 +33,7 @@
   <EntityRelationship Name="sw365_Incident_Task" />
   <EntityRelationship Name="sw365_membership_contact" />
   <EntityRelationship Name="sw365_membership_Incident" />
+  <EntityRelationship Name="sw365_subscription_membership" />
   <EntityRelationship Name="sw365_sw365_casetype_incident" />
   <EntityRelationship Name="team_sw365_attendees" />
   <EntityRelationship Name="team_sw365_casetype" />
@@ -41,6 +42,7 @@
   <EntityRelationship Name="team_sw365_payment" />
   <EntityRelationship Name="team_sw365_subscription" />
   <EntityRelationship Name="team_sw365_subscriptiontype" />
+  <EntityRelationship Name="TransactionCurrency_sw365_subscriptiontype" />
   <EntityRelationship Name="user_sw365_attendees" />
   <EntityRelationship Name="user_sw365_casetype" />
   <EntityRelationship Name="user_sw365_communityevent" />

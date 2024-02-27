@@ -29,7 +29,7 @@
                         <labels>
                           <label description="Membership Number" languagecode="1033" />
                         </labels>
-                        <control id="sw365_membershipnumber" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_membershipnumber" disabled="false" />
+                        <control id="sw365_membershipnumber" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_membershipnumber" disabled="true" />
                       </cell>
                     </row>
                     <row>
@@ -38,14 +38,6 @@
                           <label description="Account Name" languagecode="1033" />
                         </labels>
                         <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{287a2e82-e71b-4274-817d-252bbe0e9cb6}" locklevel="0" colspan="1" rowspan="1" labelid="{5170d0d5-cbbd-4c3c-bb77-80e3ff458e3c}">
-                        <labels>
-                          <label description="Membership Start Date" languagecode="1033" />
-                        </labels>
-                        <control id="sw365_membershipstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_membershipstartdate" disabled="false" />
                       </cell>
                     </row>
                     <row>
@@ -62,6 +54,14 @@
                           <label description="Approved Date" languagecode="1033" />
                         </labels>
                         <control id="sw365_approveddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_approveddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{287a2e82-e71b-4274-817d-252bbe0e9cb6}" locklevel="0" colspan="1" rowspan="1" labelid="{5170d0d5-cbbd-4c3c-bb77-80e3ff458e3c}">
+                        <labels>
+                          <label description="Membership Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_membershipstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_membershipstartdate" disabled="false" />
                       </cell>
                     </row>
                     <row>
