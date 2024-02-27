@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SW365.OSIRIS.Plugins", "SW365.OSIRIS.Plugins\SW365.OSIRIS.Plugins.csproj", "{51A065A0-2255-481C-9798-6DF6B0AE268A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SW365.OSIRIS.Webresources", "SW365.OSIRIS.Webresources\SW365.OSIRIS.Webresources.csproj", "{886B2B32-88C2-4E62-BA62-2BE675057076}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51A065A0-2255-481C-9798-6DF6B0AE268A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A065A0-2255-481C-9798-6DF6B0AE268A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A065A0-2255-481C-9798-6DF6B0AE268A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A065A0-2255-481C-9798-6DF6B0AE268A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{886B2B32-88C2-4E62-BA62-2BE675057076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{886B2B32-88C2-4E62-BA62-2BE675057076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{886B2B32-88C2-4E62-BA62-2BE675057076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{886B2B32-88C2-4E62-BA62-2BE675057076}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8BDDCA6C-FF0E-443D-AC20-B92ABBE5FD94}
+	EndGlobalSection
+EndGlobal
