@@ -1,0 +1,114 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_approvals": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "sw365_sharedapprovals_84f01"
+        },
+        "api": {
+          "name": "shared_approvals"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "sw365_sharedcommondataserviceforapps_e08cf"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_membership_record_is_created": {
+          "metadata": {
+            "operationMetadataId": "7e60313d-b343-4cfd-8332-862910151d24"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "account",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Start_and_wait_for_an_approval": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "25dcfa59-09f7-430a-8f27-b9bae1e4b9d8"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_approvals",
+              "operationId": "StartAndWaitForAnApproval",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_approvals"
+            },
+            "parameters": {
+              "approvalType": "Basic",
+              "WebhookApprovalCreationInput/title": "New membership ",
+              "WebhookApprovalCreationInput/assignedTo": "sanjaya@subwind365.com;",
+              "WebhookApprovalCreationInput/enableNotifications": true,
+              "WebhookApprovalCreationInput/enableReassignment": true
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@outputs('Start_and_wait_for_an_approval')?['body/responses']",
+          "actions": {
+            "Condition": {
+              "actions": {},
+              "runAfter": {},
+              "expression": {
+                "equals": [
+                  "@items('Apply_to_each')",
+                  ""
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "6bcb7f68-152d-4c19-8ca2-3cf5c4f264dc"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {
+            "Start_and_wait_for_an_approval": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "31e23179-455b-44a0-a24e-a8202c6e568e"
+          },
+          "type": "Foreach"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
