@@ -1,0 +1,15 @@
+{
+  "name": "sw365.osiris.webresources",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sanjaya Yapa",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/xrm": "^9.0.78",
+    "typescript": "^5.3.3"
+  }
+}
