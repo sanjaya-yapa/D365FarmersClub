@@ -26,6 +26,14 @@
                   </labels>
                   <rows>
                     <row>
+                      <cell id="{011965af-4383-4c82-9ead-53c46f28c7e3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contact Type" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_contacttype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sw365_contacttype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{542e581d-cca1-5e40-e6d9-d67a9d1468b4}" showlabel="true" locklevel="0" labelid="{9519242d-6abd-4dee-9698-21dc6cfa3706}">
                         <labels>
                           <label description="Full Name" languagecode="1033" />

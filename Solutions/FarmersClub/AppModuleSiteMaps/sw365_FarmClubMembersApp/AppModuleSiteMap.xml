@@ -45,6 +45,12 @@
           </Titles>
         </SubArea>
       </Group>
+      <Group Id="group_d632b64e" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Settings" />
+        </Titles>
+        <SubArea Id="subarea_3d72b8e2" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="sw365_subscriptiontype" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+      </Group>
     </Area>
     <Area Id="NewArea_d07c6b29" ResourceId="SitemapDesigner.NewArea" ShowGroups="false">
       <Titles>

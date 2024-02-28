@@ -5,7 +5,7 @@
     <IntroducedVersion>1.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form>
+    <form headerdensity="HighWithControls">
       <tabs>
         <tab verticallayout="true" id="{35ea6842-efb9-432e-b654-303b8c5c357d}" IsUserDefined="1">
           <labels>
@@ -14,7 +14,7 @@
           <columns>
             <column width="100%">
               <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{68b62a40-c975-4f4e-8d64-34ccd07329cb}">
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{68b62a40-c975-4f4e-8d64-34ccd07329cb}" columns="11">
                   <labels>
                     <label description="General" languagecode="1033" />
                   </labels>
@@ -26,9 +26,35 @@
                         </labels>
                         <control id="sw365_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sw365_name" />
                       </cell>
+                      <cell id="{bf48cacf-8a78-45f0-b490-5f247dc6e5c7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Membership" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_membership" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_membership" disabled="false" />
+                      </cell>
                     </row>
                     <row>
-                      <cell id="{0b2306e2-35bb-4837-9fd2-19fbc0840739}">
+                      <cell id="{b2ca880f-cfbb-49bd-9339-e7ea513fb5fa}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Subscription Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_subscriptionstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_subscriptionstartdate" disabled="false" />
+                      </cell>
+                      <cell id="{993d026e-b86b-4f34-b03a-e4894c337322}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Subscription End Date" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_dubscriptionenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_dubscriptionenddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9f30b1be-d9d8-4fec-bced-cb4fc6379dcf}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status Reason" languagecode="1033" />
+                        </labels>
+                        <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                      </cell>
+                      <cell id="{0b2306e2-35bb-4837-9fd2-19fbc0840739}" colspan="1" rowspan="1">
                         <labels>
                           <label description="Owner" languagecode="1033" />
                         </labels>
@@ -42,6 +68,51 @@
           </columns>
         </tab>
       </tabs>
+      <header id="{90f8eccd-ca15-48ae-901a-dc0fee09a8f1}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{80267848-99da-4594-8509-2154dacb6bf1}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4a2a60ee-7346-47ca-96b7-11ea0ebc060b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{986916f6-0814-4b3d-b074-46bea18a727d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{586709df-2c7a-46e6-8488-728f6a6eafca}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{35ff5cf1-7b96-45a5-8394-f1b8468e21df}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{aed118f7-a906-4719-bd26-3289fcc7aba2}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{5f9b2564-99a5-4660-85dd-41075a17209c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
