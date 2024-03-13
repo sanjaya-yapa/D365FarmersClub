@@ -510,6 +510,38 @@
                     <row />
                   </rows>
                 </section>
+                <section name="tab_subscriptionpayments" id="fe93f689-925f-49d7-b07e-26845da0fcc0" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Subscription Payments" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{06da0793-f4c0-45a3-b92d-4cf3efd205d5}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1710329581396" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_2" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sw365_payment</TargetEntityType>
+                            <ViewId>{5AA2E8A1-9C06-4EAA-8074-91E45A028CCF}</ViewId>
+                            <ViewIds>{5AA2E8A1-9C06-4EAA-8074-91E45A028CCF}</ViewIds>
+                            <RelationshipName>sw365_payment_membership</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
               </sections>
             </column>
           </columns>
