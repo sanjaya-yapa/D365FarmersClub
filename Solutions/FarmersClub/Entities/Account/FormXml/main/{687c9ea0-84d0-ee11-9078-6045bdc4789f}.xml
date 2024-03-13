@@ -471,6 +471,49 @@
             </column>
           </columns>
         </tab>
+        <tab name="tab_subscriptiondetails" id="ecdcd697-bef5-466e-98d3-02873eab5ad2" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Subscription Details" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_6_section_1" id="657d3eb1-5191-47ef-b02b-1034ad1d2e93" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Subscriptions" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{871a928e-cc46-4ecf-804f-b13b6e4c9491}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1710325578757" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sw365_subscription</TargetEntityType>
+                            <ViewId>{C22EE5CB-166D-4EA1-83E1-9A9873DD749B}</ViewId>
+                            <ViewIds>{C22EE5CB-166D-4EA1-83E1-9A9873DD749B}</ViewIds>
+                            <RelationshipName>sw365_subscription_membership</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
         <tab name="urstab" id="{c89e4b42-29b5-63b1-4666-65574779eddd}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="false" labelid="{fa288a34-1b80-4bf0-95d5-f3f9a8bd4441}" visible="false">
           <labels>
             <label description="Scheduling" languagecode="1033" />
