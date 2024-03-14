@@ -41,6 +41,14 @@
                       </cell>
                     </row>
                     <row>
+                      <cell id="{a44d3435-2477-486c-b7f9-8f1631286e7d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Subscription Type" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_subscriptiontype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_subscriptiontype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{c98f671f-59c1-467d-ab6f-f6f8eb4940ac}" locklevel="0" colspan="1" rowspan="1" labelid="{9c01dd74-475c-4d47-9472-2b5ad4e67723}">
                         <labels>
                           <label description="Applied Date" languagecode="1033" />
@@ -1667,7 +1675,7 @@
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
     <LocalizedNames>
-      <LocalizedName description="Membership main form" languagecode="1033" />
+      <LocalizedName description="CFM - Membership main form" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
       <Description description="Updated default Account form." languagecode="1033" />

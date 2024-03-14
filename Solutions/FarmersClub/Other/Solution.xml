@@ -211,13 +211,13 @@
         <Required type="60" displayName="account contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
           <package>msdynce_AppCommonAnchor (9.0.24023.10001)</package>
         </Required>
-        <Dependent type="60" displayName="Membership main form" parentDisplayName="Account" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
+        <Dependent type="60" displayName="CFM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="msdyn_/Account/AssetCommon.Account.Library.js" displayName="msdyn_/Account/AssetCommon.Account.Library.js" solution="msdyn_AssetCommon (1.0.26.9)">
           <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
         </Required>
-        <Dependent type="60" displayName="Membership main form" parentDisplayName="Account" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
+        <Dependent type="60" displayName="CFM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
@@ -239,7 +239,7 @@
         <Required type="61" schemaName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" displayName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" solution="msdyn_SalesOmniChannel (9.1.24023.10013)">
           <package>msdyn_AcceleratedSalesAnchor (9.1.24023.10013)</package>
         </Required>
-        <Dependent type="60" displayName="Membership main form" parentDisplayName="Account" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
+        <Dependent type="60" displayName="CFM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="msdyn_talkingpointsloader.js" displayName="msdyn_talkingpointsloader.js" solution="msdynce_Talkingpoints (9.1.0.59)">
@@ -263,7 +263,7 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2402.3020)" />
-        <Dependent type="60" displayName="Membership main form" parentDisplayName="Account" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
+        <Dependent type="60" displayName="CFM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2402.3020)" />
@@ -271,7 +271,7 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2402.3020)" />
-        <Dependent type="60" displayName="Membership main form" parentDisplayName="Account" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
+        <Dependent type="60" displayName="CFM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="MscrmControls.LeadHygiene.ValidatedFieldControl" displayName="MscrmControls.LeadHygiene.ValidatedFieldControl" solution="msdyn_leadhygiene (9.1.2402.3001)">
@@ -289,7 +289,7 @@
         <Required type="66" schemaName="msdyn_MscrmControls.TreeView.TreeViewControl" displayName="msdyn_MscrmControls.TreeView.TreeViewControl" solution="msdyn_AssetCommon (1.0.26.9)">
           <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
         </Required>
-        <Dependent type="60" displayName="Membership main form" parentDisplayName="Account" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
+        <Dependent type="60" displayName="CFM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" displayName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" solution="msdyn_SalesOmniChannel (9.1.24023.10013)">
@@ -301,7 +301,7 @@
         <Required type="66" schemaName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" displayName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" solution="msdyn_SalesOmniChannel (9.1.24023.10013)">
           <package>msdyn_AcceleratedSalesAnchor (9.1.24023.10013)</package>
         </Required>
-        <Dependent type="60" displayName="Membership main form" parentDisplayName="Account" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
+        <Dependent type="60" displayName="CFM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="MsdynControls.WKWControls.ConnectionsWidget" displayName="MsdynControls.WKWControls.ConnectionsWidget" solution="msdyn_connectiongraph (9.3.24023.2)">
