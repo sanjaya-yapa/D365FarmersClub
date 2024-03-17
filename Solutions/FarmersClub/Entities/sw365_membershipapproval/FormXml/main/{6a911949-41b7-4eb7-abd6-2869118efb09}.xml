@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{6a911949-41b7-4eb7-abd6-2869118efb09}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{438d02e7-67fe-4b04-9c45-eec3079b25f6}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{75c0ac03-2e84-41c6-8f53-c65967fc9aa6}" columns="11">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ef1296a0-0a02-4eb1-b9c0-ea740d87cc02}">
+                        <labels>
+                          <label description="Membership Approval No" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sw365_name" />
+                      </cell>
+                      <cell id="{7ea5cc6d-e7bb-4552-bcd8-e45daa2aeed3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Subject" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_subject" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_subject" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{95ff50f6-6f21-48ba-a3b9-06f40ec194a8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Membership" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_membership" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_membership" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{aaa65c0b-f111-406e-b60c-27b6db07ce1b}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell locklevel="0" id="{6e764233-4dc2-4be1-a917-86569538c472}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{349a0336-ba3c-4584-a4d7-f30880228c68}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{e6b56941-06a5-46bd-8006-8b32f45d890c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{a696e0b1-8493-4d38-869b-8803414a0699}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1937e06b-34da-409a-8aab-d6cd8f110ede}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{65ab5f96-a571-4da9-a09c-7f97082f98a0}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{3fb007d0-f4ea-4916-9acc-fbf42fbb5df9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{899260a0-6912-4c3a-bec8-acbfbb1f71fd}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{5cb6bbd2-73b4-413d-a1c4-787849edcd64}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
