@@ -40,6 +40,12 @@
                         </labels>
                         <control id="sw365_membership" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_membership" disabled="false" />
                       </cell>
+                      <cell id="{f680913d-caee-4c49-8c7c-bfa7e35b415c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approval Status" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_approvalstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sw365_approvalstatus" disabled="false" />
+                      </cell>
                     </row>
                     <row>
                       <cell id="{aaa65c0b-f111-406e-b60c-27b6db07ce1b}">

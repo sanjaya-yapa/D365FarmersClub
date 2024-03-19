@@ -25,9 +25,9 @@
         }
       },
       "triggers": {
-        "FM_-_When_a_Membership_is_Awaiting_Approval": {
+        "When_the_Membership_Approval_status_changed": {
           "metadata": {
-            "operationMetadataId": "2c3e4e82-c4fa-4c20-a6a2-4f0696f31d86"
+            "operationMetadataId": "ff4a52eb-dee2-4fb0-b78f-3576accccd26"
           },
           "type": "OpenApiConnectionWebhook",
           "inputs": {
@@ -37,58 +37,33 @@
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
             },
             "parameters": {
-              "subscriptionRequest/message": 1,
-              "subscriptionRequest/entityname": "account",
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "sw365_membershipapproval",
               "subscriptionRequest/scope": 4,
-              "subscriptionRequest/runas": 2
+              "subscriptionRequest/runas": 1
             },
             "authentication": "@parameters('$authentication')"
           }
         }
       },
       "actions": {
-        "Check_if_the_Membership_Status_is_Awaiting_Approval": {
+        "Condition": {
           "actions": {
-            "Create_Approval": {
+            "Get_Membership_record_from_approval": {
               "runAfter": {},
               "metadata": {
-                "operationMetadataId": "fd66208f-5e43-41cd-8b6a-c234c0d06a70"
+                "operationMetadataId": "287f0357-e8bc-4f54-9bd4-5a122f0fd963"
               },
               "type": "OpenApiConnection",
               "inputs": {
                 "host": {
                   "connectionName": "shared_commondataserviceforapps",
-                  "operationId": "CreateRecord",
-                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
-                },
-                "parameters": {
-                  "entityName": "sw365_membershipapprovals",
-                  "item/sw365_approvalstatus": 147980000,
-                  "item/sw365_membership@odata.bind": "accounts/(@{triggerOutputs()?['body/accountid']})"
-                },
-                "authentication": "@parameters('$authentication')"
-              }
-            },
-            "Set_Membership_status_to_Awaiting_Approval": {
-              "runAfter": {
-                "Create_Approval": [
-                  "Succeeded"
-                ]
-              },
-              "metadata": {
-                "operationMetadataId": "fbaa3b9b-3343-45e6-abb6-b86f3d852e25"
-              },
-              "type": "OpenApiConnection",
-              "inputs": {
-                "host": {
-                  "connectionName": "shared_commondataserviceforapps",
-                  "operationId": "UpdateRecord",
+                  "operationId": "GetItem",
                   "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
                 },
                 "parameters": {
                   "entityName": "accounts",
-                  "recordId": "@triggerOutputs()?['body/accountid']",
-                  "item/sw365_membershipstatus": 147980001
+                  "recordId": "@triggerOutputs()?['body/_sw365_membership_value']"
                 },
                 "authentication": "@parameters('$authentication')"
               }
@@ -97,19 +72,19 @@
           "runAfter": {},
           "expression": {
             "equals": [
-              "@triggerOutputs()?['body/sw365_membershipstatus']",
+              "@triggerOutputs()?['body/sw365_approvalstatus']",
               147980001
             ]
           },
           "metadata": {
-            "operationMetadataId": "c0d41b7e-ad6c-49b5-ac19-168f35a304f2"
+            "operationMetadataId": "5c57727f-65c8-4ad2-80f9-4b8c5d6a812d"
           },
           "type": "If"
         }
       },
       "outputs": {}
     },
-    "templateName": ""
+    "templateName": null
   },
   "schemaVersion": "1.0.0.0"
 }
