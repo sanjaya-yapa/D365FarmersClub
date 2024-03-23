@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SW365.OSIRIS.Plugins", "SW3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SW365.OSIRIS.Webresources", "SW365.OSIRIS.Webresources\SW365.OSIRIS.Webresources.csproj", "{886B2B32-88C2-4E62-BA62-2BE675057076}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SW365.OSIRIS.TableModel", "SW365.OSIRIS.TableModel\SW365.OSIRIS.TableModel.shproj", "{08A7E6FB-D33A-4FFE-B807-0967AD9A6C75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BDDCA6C-FF0E-443D-AC20-B92ABBE5FD94}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SW365.OSIRIS.TableModel\SW365.OSIRIS.TableModel.projitems*{08a7e6fb-d33a-4ffe-b807-0967ad9a6c75}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

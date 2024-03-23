@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>08a7e6fb-d33a-4ffe-b807-0967ad9a6c75</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SW365.OSIRIS.TableModel</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_AccountCategoryCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_AccountClassificationCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_AccountRatingCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_Address1_AddressTypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_Address1_FreightTermsCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_Address1_ShippingMethodCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_Address2_AddressTypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_Address2_FreightTermsCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_Address2_ShippingMethodCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_BusinessTypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_CustomerSizeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_CustomerTypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_IndustryCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_OwnershipCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_PaymentTermsCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_PreferredAppointmentDayCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_PreferredAppointmentTimeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_PreferredContactMethodCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_ShippingMethodCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_StatusCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_TerritoryCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\appaction_ClientType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Appointment_AttachmentErrors.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Appointment_InstanceTypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Appointment_PriorityCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Appointment_StatusCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\card_Sizes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_AccountRoleCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_Address1_AddressTypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_Address1_FreightTermsCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_Address1_ShippingMethodCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_Address2_AddressTypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_Address2_FreightTermsCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_Address2_ShippingMethodCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_Address3_AddressTypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_Address3_FreightTermsCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_Address3_ShippingMethodCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_CustomerSizeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_CustomerTypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_EducationCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_FamilyStatusCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_GenderCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_HasChildrenCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_LeadSourceCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_PaymentTermsCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_PreferredAppointmentDayCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_PreferredAppointmentTimeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_PreferredContactMethodCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_ShippingMethodCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_StatusCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Contact_TerritoryCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\msdyn_knowledgemanagementsetting_msdyn_actionlist.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\msft_DataState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\OnlineMeetingType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\OptionSets.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\powerpagelanguages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_AccountType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_ContactType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_AccessMode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_Address1_AddressTypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_Address1_ShippingMethodCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_Address2_AddressTypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_Address2_ShippingMethodCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_AzureState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_CALType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_DeletedState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_EmailRouterAccessApproval.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_IncomingEmailDeliveryMethod.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_InviteStatusCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_OutgoingEmailDeliveryMethod.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_PreferredAddressCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_PreferredEmailCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\SystemUser_PreferredPhoneCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Task_PriorityCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Task_StatusCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\Account.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\Appointment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\Contact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\CrmServiceContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\Incident.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\IncidentResolution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_attendees.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_casetype.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_communityevent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_eventregistration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_membershipapproval.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_payment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_subscription.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_subscriptiontype.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\SystemUser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\Task.cs" />
+  </ItemGroup>
+</Project>
