@@ -49,42 +49,101 @@
       "actions": {
         "Condition": {
           "actions": {
-            "Get_Membership_record_from_approval": {
+            "Membership_Application_is_Approved": {
               "runAfter": {},
               "metadata": {
-                "operationMetadataId": "287f0357-e8bc-4f54-9bd4-5a122f0fd963"
+                "operationMetadataId": "8612407e-84fb-4880-97c1-fc0ec43649c6"
               },
               "type": "OpenApiConnection",
               "inputs": {
                 "host": {
                   "connectionName": "shared_commondataserviceforapps",
-                  "operationId": "GetItem",
+                  "operationId": "UpdateRecord",
                   "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
                 },
                 "parameters": {
                   "entityName": "accounts",
-                  "recordId": "@triggerOutputs()?['body/_sw365_membership_value']"
+                  "recordId": "@outputs('Get_Membership_record_from_approval')?['body/accountid']",
+                  "item/sw365_membershipstatus": 147980002
                 },
                 "authentication": "@parameters('$authentication')"
               }
             }
           },
-          "runAfter": {},
+          "runAfter": {
+            "Get_Membership_record_from_approval": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Membership_Application_is_Rejected": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "885d3708-4566-42e8-8ed8-85dce5bcf876"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "UpdateRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "accounts",
+                    "recordId": "@outputs('Get_Membership_record_from_approval')?['body/accountid']",
+                    "item/sw365_membershipstatus": 147980005
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              }
+            }
+          },
           "expression": {
-            "equals": [
-              "@triggerOutputs()?['body/sw365_approvalstatus']",
-              147980001
+            "and": [
+              {
+                "equals": [
+                  "@triggerOutputs()?['body/sw365_approvalstatus']",
+                  147980001
+                ]
+              },
+              {
+                "equals": [
+                  "@outputs('Get_Membership_record_from_approval')?['body/sw365_membershipstatus']",
+                  147980001
+                ]
+              }
             ]
           },
           "metadata": {
             "operationMetadataId": "5c57727f-65c8-4ad2-80f9-4b8c5d6a812d"
           },
           "type": "If"
+        },
+        "Get_Membership_record_from_approval": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "287f0357-e8bc-4f54-9bd4-5a122f0fd963"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "accounts",
+              "recordId": "@triggerOutputs()?['body/_sw365_membership_value']",
+              "$select": "accountid,sw365_membershipstatus"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
         }
       },
       "outputs": {}
     },
-    "templateName": null
+    "templateName": ""
   },
   "schemaVersion": "1.0.0.0"
 }
