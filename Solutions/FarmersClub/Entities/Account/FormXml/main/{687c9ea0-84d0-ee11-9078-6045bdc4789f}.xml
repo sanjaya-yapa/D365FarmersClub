@@ -41,6 +41,14 @@
                       </cell>
                     </row>
                     <row>
+                      <cell id="{a44d3435-2477-486c-b7f9-8f1631286e7d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Subscription Type" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_subscriptiontype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_subscriptiontype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{c98f671f-59c1-467d-ab6f-f6f8eb4940ac}" locklevel="0" colspan="1" rowspan="1" labelid="{9c01dd74-475c-4d47-9472-2b5ad4e67723}">
                         <labels>
                           <label description="Applied Date" languagecode="1033" />
@@ -464,6 +472,81 @@
                     <label description="New Section" languagecode="1033" />
                   </labels>
                   <rows>
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_subscriptiondetails" id="ecdcd697-bef5-466e-98d3-02873eab5ad2" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Subscription Details" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_6_section_1" id="657d3eb1-5191-47ef-b02b-1034ad1d2e93" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Subscriptions" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{871a928e-cc46-4ecf-804f-b13b6e4c9491}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1710325578757" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sw365_subscription</TargetEntityType>
+                            <ViewId>{C22EE5CB-166D-4EA1-83E1-9A9873DD749B}</ViewId>
+                            <ViewIds>{C22EE5CB-166D-4EA1-83E1-9A9873DD749B}</ViewIds>
+                            <RelationshipName>sw365_subscription_membership</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="tab_subscriptionpayments" id="fe93f689-925f-49d7-b07e-26845da0fcc0" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Subscription Payments" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{06da0793-f4c0-45a3-b92d-4cf3efd205d5}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1710329581396" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_2" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sw365_payment</TargetEntityType>
+                            <ViewId>{5AA2E8A1-9C06-4EAA-8074-91E45A028CCF}</ViewId>
+                            <ViewIds>{5AA2E8A1-9C06-4EAA-8074-91E45A028CCF}</ViewIds>
+                            <RelationshipName>sw365_payment_membership</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
                     <row />
                   </rows>
                 </section>
@@ -1592,7 +1675,7 @@
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
     <LocalizedNames>
-      <LocalizedName description="Membership main form" languagecode="1033" />
+      <LocalizedName description="CFM - Membership main form" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
       <Description description="Updated default Account form." languagecode="1033" />

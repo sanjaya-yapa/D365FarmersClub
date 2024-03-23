@@ -5,16 +5,12 @@
     <CanBeDeleted>0</CanBeDeleted>
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
-    <isdefault>0</isdefault>
-    <savedqueryid>{9585079b-9690-4e6b-af61-8ff62830a090}</savedqueryid>
+    <isdefault>1</isdefault>
+    <savedqueryid>{d61eb1f8-e55b-4b6b-9258-aa7e6a1d23e2}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
-        <row name="result" id="sw365_subscriptionid">
-          <cell name="sw365_name" width="158" />
-          <cell name="sw365_membership" width="111" />
-          <cell name="sw365_subscriptionstartdate" width="171" />
-          <cell name="sw365_dubscriptionenddate" width="167" />
-          <cell name="statuscode" width="119" />
+        <row name="result" id="sw365_membershipapprovalid">
+          <cell name="sw365_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
@@ -22,24 +18,20 @@
     <querytype>0</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="sw365_subscription">
-          <attribute name="sw365_subscriptionid" />
+        <entity name="sw365_membershipapproval">
+          <attribute name="sw365_membershipapprovalid" />
           <attribute name="sw365_name" />
           <attribute name="createdon" />
           <order attribute="sw365_name" descending="false" />
           <filter type="and">
-            <condition attribute="statecode" operator="eq" value="1" />
+            <condition attribute="statecode" operator="eq" value="0" />
           </filter>
-          <attribute name="sw365_membership" />
-          <attribute name="sw365_subscriptionstartdate" />
-          <attribute name="sw365_dubscriptionenddate" />
-          <attribute name="statuscode" />
         </entity>
       </fetch>
     </fetchxml>
     <IntroducedVersion>1.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Inactive Subscriptions" languagecode="1033" />
+      <LocalizedName description="Active Membership Approvals" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

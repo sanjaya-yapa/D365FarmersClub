@@ -3,43 +3,38 @@
   <savedquery>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>0</CanBeDeleted>
-    <isquickfindquery>0</isquickfindquery>
+    <isquickfindquery>1</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{c22ee5cb-166d-4ea1-83e1-9a9873dd749b}</savedqueryid>
+    <savedqueryid>{c77b14e0-6c27-4460-8b78-9df6d9c4aebe}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
-        <row name="result" id="sw365_subscriptionid">
-          <cell name="sw365_name" width="171" />
-          <cell name="sw365_membership" width="111" />
-          <cell name="sw365_subscriptionstartdate" width="171" />
-          <cell name="sw365_dubscriptionenddate" width="167" />
-          <cell name="statuscode" width="119" />
+        <row name="result" id="sw365_membershipapprovalid">
+          <cell name="sw365_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
     </layoutxml>
-    <querytype>0</querytype>
+    <querytype>4</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="sw365_subscription">
-          <attribute name="sw365_subscriptionid" />
+        <entity name="sw365_membershipapproval">
+          <attribute name="sw365_membershipapprovalid" />
           <attribute name="sw365_name" />
           <attribute name="createdon" />
           <order attribute="sw365_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
-          <attribute name="sw365_membership" />
-          <attribute name="sw365_subscriptionstartdate" />
-          <attribute name="sw365_dubscriptionenddate" />
-          <attribute name="statuscode" />
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="sw365_name" operator="like" value="{0}" />
+          </filter>
         </entity>
       </fetch>
     </fetchxml>
     <IntroducedVersion>1.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Active Subscriptions" languagecode="1033" />
+      <LocalizedName description="Quick Find Active Membership Approvals" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>
