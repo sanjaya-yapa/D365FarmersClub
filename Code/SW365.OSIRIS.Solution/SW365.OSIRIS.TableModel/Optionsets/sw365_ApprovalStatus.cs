@@ -11,27 +11,19 @@ namespace SW365.OSIRIS.TableModel
 {
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum SystemUser_PreferredPhoneCode
+	public enum sw365_ApprovalStatus
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Home Phone", 2)]
-		HomePhone = 3,
+		[OptionSetMetadataAttribute("Approved", 1)]
+		Approved = 147980001,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Main Phone", 0)]
-		MainPhone = 1,
+		[OptionSetMetadataAttribute("Pending", 0)]
+		Pending = 147980000,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Mobile Phone", 3)]
-		MobilePhone = 4,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Omnichannel Phone", 4, "#0000ff")]
-		OmnichannelPhone = 192350005,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Other Phone", 1)]
-		OtherPhone = 2,
+		[OptionSetMetadataAttribute("Rejected", 2)]
+		Rejected = 147980002,
 	}
 }

@@ -11,27 +11,19 @@ namespace SW365.OSIRIS.TableModel
 {
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum SystemUser_PreferredPhoneCode
+	public enum Incident_CaseTypeCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Home Phone", 2)]
-		HomePhone = 3,
+		[OptionSetMetadataAttribute("Problem", 1, "#E71022")]
+		Problem = 2,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Main Phone", 0)]
-		MainPhone = 1,
+		[OptionSetMetadataAttribute("Question", 0, "#FF8C00")]
+		Question = 1,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Mobile Phone", 3)]
-		MobilePhone = 4,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Omnichannel Phone", 4, "#0000ff")]
-		OmnichannelPhone = 192350005,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Other Phone", 1)]
-		OtherPhone = 2,
+		[OptionSetMetadataAttribute("Request", 2, "#0072C6")]
+		Request = 3,
 	}
 }

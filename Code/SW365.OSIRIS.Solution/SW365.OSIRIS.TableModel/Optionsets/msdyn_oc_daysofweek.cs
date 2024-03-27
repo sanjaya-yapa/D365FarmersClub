@@ -11,27 +11,35 @@ namespace SW365.OSIRIS.TableModel
 {
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum SystemUser_PreferredPhoneCode
+	public enum msdyn_oc_daysofweek
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Home Phone", 2)]
-		HomePhone = 3,
+		[OptionSetMetadataAttribute("Sun", 0, "#0000ff", "Sunday")]
+		Sun = 192350000,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Main Phone", 0)]
-		MainPhone = 1,
+		[OptionSetMetadataAttribute("Mon", 1, "#0000ff", "Monday")]
+		Mon = 192350001,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Mobile Phone", 3)]
-		MobilePhone = 4,
+		[OptionSetMetadataAttribute("Tue", 2, "#0000ff", "Tuesday")]
+		Tue = 192350002,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Omnichannel Phone", 4, "#0000ff")]
-		OmnichannelPhone = 192350005,
+		[OptionSetMetadataAttribute("Wed", 3, "#0000ff", "Wednesday")]
+		Wed = 192350003,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Other Phone", 1)]
-		OtherPhone = 2,
+		[OptionSetMetadataAttribute("Thu", 4, "#0000ff", "Thursday")]
+		Thu = 192350004,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Fri", 5, "#0000ff", "Friday")]
+		Fri = 192350005,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Sat", 6, "#0000ff", "Saturday")]
+		Sat = 192350006,
 	}
 }

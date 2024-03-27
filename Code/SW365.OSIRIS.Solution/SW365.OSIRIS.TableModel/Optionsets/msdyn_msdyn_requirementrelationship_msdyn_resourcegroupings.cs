@@ -11,27 +11,19 @@ namespace SW365.OSIRIS.TableModel
 {
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum SystemUser_PreferredPhoneCode
+	public enum msdyn_msdyn_requirementrelationship_msdyn_resourcegroupings
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Home Phone", 2)]
-		HomePhone = 3,
+		[OptionSetMetadataAttribute("Organizational Unit", 0, "#0000ff")]
+		OrganizationalUnit = 192350000,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Main Phone", 0)]
-		MainPhone = 1,
+		[OptionSetMetadataAttribute("Related Resource Pools", 1, "#0000ff")]
+		RelatedResourcePools = 192350001,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Mobile Phone", 3)]
-		MobilePhone = 4,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Omnichannel Phone", 4, "#0000ff")]
-		OmnichannelPhone = 192350005,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Other Phone", 1)]
-		OtherPhone = 2,
+		[OptionSetMetadataAttribute("Location", 2, "#0000ff")]
+		Location = 192350002,
 	}
 }

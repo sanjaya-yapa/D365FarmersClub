@@ -11,27 +11,23 @@ namespace SW365.OSIRIS.TableModel
 {
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum SystemUser_PreferredPhoneCode
+	public enum msdyn_ocapplepay_msdyn_SupportedNetworks
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Home Phone", 2)]
-		HomePhone = 3,
+		[OptionSetMetadataAttribute("American Express", 0, "#0000ff")]
+		AmericanExpress = 192350000,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Main Phone", 0)]
-		MainPhone = 1,
+		[OptionSetMetadataAttribute("Visa", 1, "#0000ff")]
+		Visa = 192350001,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Mobile Phone", 3)]
-		MobilePhone = 4,
+		[OptionSetMetadataAttribute("Discover", 2, "#0000ff")]
+		Discover = 192350002,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Omnichannel Phone", 4, "#0000ff")]
-		OmnichannelPhone = 192350005,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Other Phone", 1)]
-		OtherPhone = 2,
+		[OptionSetMetadataAttribute("MasterCard", 3, "#0000ff")]
+		MasterCard = 192350003,
 	}
 }

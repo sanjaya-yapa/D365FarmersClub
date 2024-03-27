@@ -11,23 +11,15 @@ namespace SW365.OSIRIS.TableModel
 {
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum sw365_ContactType
+	public enum SystemUser_msdyn_AgentType
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Agriculture Officer", 3)]
-		AgricultureOfficer = 147980003,
+		[OptionSetMetadataAttribute("Application user", 0, "#0000ff")]
+		Applicationuser = 192350000,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Farm Owner", 0)]
-		FarmOwner = 147980000,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Farm Worker", 1)]
-		FarmWorker = 147980001,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Veterinarian", 2)]
-		Veterinarian = 147980002,
+		[OptionSetMetadataAttribute("Bot application user", 1, "#0000ff")]
+		Botapplicationuser = 192350001,
 	}
 }
