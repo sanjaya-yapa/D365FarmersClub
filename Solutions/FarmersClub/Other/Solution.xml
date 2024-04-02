@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24031.170" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.24032.186" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>FarmersClub</UniqueName>
     <LocalizedNames>
@@ -79,6 +79,7 @@
     </Publisher>
     <RootComponents>
       <RootComponent type="1" schemaName="account" behavior="2" />
+      <RootComponent type="1" schemaName="activitypointer" behavior="2" />
       <RootComponent type="1" schemaName="appointment" behavior="2" />
       <RootComponent type="1" schemaName="contact" behavior="2" />
       <RootComponent type="1" schemaName="incident" behavior="2" />
@@ -104,61 +105,61 @@
     <MissingDependencies>
       <MissingDependency>
         <Required type="1" schemaName="entitlement" displayName="Entitlement" solution="msdynce_Service (9.0.5.56)">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="incident" displayName="Case" solution="msdynce_Service (9.0.5.56)">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="1" schemaName="incident" displayName="Case" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="incidentresolution" displayName="Case Resolution" solution="msdynce_Service (9.0.5.56)">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="1" schemaName="incidentresolution" displayName="Case Resolution" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="incidentresolution" displayName="Case Resolution" solution="msdynce_Service (9.0.5.56)">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="62" schemaName="sw365_FarmClubMembersApp" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="incidentresolution" displayName="Case Resolution" solution="msdynce_Service (9.0.5.56)">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="80" schemaName="sw365_FarmClubMembersApp" displayName="Farm Club Members App" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="opportunity" displayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)">
-          <package>msdynce_SalesAnchor (9.0.24023.10004)</package>
+          <package>msdynce_SalesAnchor (9.0.24031.10007)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="businesscard" displayName="Business Card" parentSchemaName="contact" parentDisplayName="Contact" solution="msdynce_SalesPatch201904 (9.0.1912.1007)">
-          <package>msdynce_SalesAnchor (9.0.24023.10004)</package>
+          <package>msdynce_SalesAnchor (9.0.24031.10007)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="businesscard" displayName="Business Card" parentSchemaName="contact" parentDisplayName="Contact" solution="msdynce_SalesPatch201904 (9.0.1912.1007)">
-          <package>msdynce_SalesAnchor (9.0.24023.10004)</package>
+          <package>msdynce_SalesAnchor (9.0.24031.10007)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="businesscardattributes" displayName="BusinessCardAttributes" parentSchemaName="contact" parentDisplayName="Contact" solution="msdynce_SalesPatch201904 (9.0.1912.1007)">
-          <package>msdynce_SalesAnchor (9.0.24023.10004)</package>
+          <package>msdynce_SalesAnchor (9.0.24031.10007)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="businesscardattributes" displayName="BusinessCardAttributes" parentSchemaName="contact" parentDisplayName="Contact" solution="msdynce_SalesPatch201904 (9.0.1912.1007)">
-          <package>msdynce_SalesAnchor (9.0.24023.10004)</package>
+          <package>msdynce_SalesAnchor (9.0.24031.10007)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
@@ -176,49 +177,49 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="26" schemaName="All Entitlements" displayName="All Entitlements" parentSchemaName="entitlement" parentDisplayName="Entitlement" solution="msdynce_Service (9.0.5.56)" id="{aa69e7e2-913a-4a5a-8609-8ca443554909}">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="26" schemaName="My Active Cases" displayName="My Active Cases" parentSchemaName="incident" parentDisplayName="Case" solution="msdynce_Service (9.0.5.56)" id="{00000000-0000-0000-00aa-000010001028}">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="26" schemaName="My Open Opportunities" displayName="My Open Opportunities" parentSchemaName="opportunity" parentDisplayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" id="{00000000-0000-0000-00aa-000010003000}">
-          <package>msdynce_SalesAnchor (9.0.24023.10004)</package>
+          <package>msdynce_SalesAnchor (9.0.24031.10007)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="26" schemaName="Recent Cases" displayName="Recent Cases" parentSchemaName="incident" parentDisplayName="Case" solution="msdynce_Service (9.0.5.56)" id="{ebd1d24a-eea7-e211-9fb6-00155dd0ea05}">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="26" schemaName="Recent Opportunities" displayName="Recent Opportunities" parentSchemaName="opportunity" parentDisplayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" id="{9c3f7ee8-eca7-e211-9fb6-00155dd0ea05}">
-          <package>msdynce_SalesAnchor (9.0.24023.10004)</package>
+          <package>msdynce_SalesAnchor (9.0.24031.10007)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="59" schemaName="Case Mix (By Business Unit)" displayName="Case Mix (By Business Unit)" parentSchemaName="incident" parentDisplayName="Case" solution="msdynce_Service (9.0.5.56)" id="{f10375a6-4893-de11-97d4-00155da3b01e}">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="59" schemaName="Entitlements Expiration" displayName="Entitlements Expiration" parentSchemaName="entitlement" parentDisplayName="Entitlement" solution="msdynce_Service (9.0.5.56)" id="{fdb919bb-c6fc-4fc8-8fa5-67ace68e41d1}">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="59" schemaName="Top Customers" displayName="Top Customers" parentSchemaName="opportunity" parentDisplayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" id="{8bc5fb18-48f2-4782-9e16-3d452fa4ddce}">
-          <package>msdynce_SalesAnchor (9.0.24023.10004)</package>
+          <package>msdynce_SalesAnchor (9.0.24031.10007)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
@@ -247,20 +248,20 @@
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="LinkedInExtensions/Account/LinkedInExtensions_Account.js" displayName="LinkedInExtensions/Account/LinkedInExtensions_Account.js" solution="msdyn_LinkedInExtensions (9.0.24023.10011)">
-          <package>msdyn_SalesIntegrationsAddOns (9.0.24031.10003)</package>
+        <Required type="61" schemaName="LinkedInExtensions/Account/LinkedInExtensions_Account.js" displayName="LinkedInExtensions/Account/LinkedInExtensions_Account.js" solution="msdyn_LinkedInExtensions (9.0.24034.10011)">
+          <package>msdyn_SalesIntegrationsAddOns (9.0.24031.10004)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership portal form" parentDisplayName="Membership" id="{8194fe3b-d1e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="msdyn_/Account/AssetCommon.Account.Library.js" displayName="msdyn_/Account/AssetCommon.Account.Library.js" solution="msdyn_AssetCommon (1.0.26.9)">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="msdyn_/Account/AssetCommon.Account.Library.js" displayName="msdyn_/Account/AssetCommon.Account.Library.js" solution="msdyn_AssetCommon (1.0.26.9)">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership portal form" parentDisplayName="Membership" id="{8194fe3b-d1e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
@@ -281,26 +282,26 @@
         <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" displayName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" solution="msdyn_SalesOmniChannel (9.1.24023.10013)">
-          <package>msdyn_AcceleratedSalesAnchor (9.1.24023.10013)</package>
+        <Required type="61" schemaName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" displayName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" solution="msdyn_SalesOmniChannel (9.1.24031.10018)">
+          <package>msdyn_AcceleratedSalesAnchor (9.1.24031.10018)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" displayName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" solution="msdyn_SalesOmniChannel (9.1.24023.10013)">
-          <package>msdyn_AcceleratedSalesAnchor (9.1.24023.10013)</package>
+        <Required type="61" schemaName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" displayName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" solution="msdyn_SalesOmniChannel (9.1.24031.10018)">
+          <package>msdyn_AcceleratedSalesAnchor (9.1.24031.10018)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" displayName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" solution="msdyn_SalesOmniChannel (9.1.24023.10013)">
-          <package>msdyn_AcceleratedSalesAnchor (9.1.24023.10013)</package>
+        <Required type="61" schemaName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" displayName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" solution="msdyn_SalesOmniChannel (9.1.24031.10018)">
+          <package>msdyn_AcceleratedSalesAnchor (9.1.24031.10018)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership portal form" parentDisplayName="Membership" id="{8194fe3b-d1e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" displayName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" solution="msdyn_SalesOmniChannel (9.1.24023.10013)">
-          <package>msdyn_AcceleratedSalesAnchor (9.1.24023.10013)</package>
+        <Required type="61" schemaName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" displayName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" solution="msdyn_SalesOmniChannel (9.1.24031.10018)">
+          <package>msdyn_AcceleratedSalesAnchor (9.1.24031.10018)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
@@ -318,69 +319,69 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="Sales/ClientCommon/Sales_ClientCommon.js" displayName="Sales/ClientCommon/Sales_ClientCommon.js" solution="msdynce_Sales (9.0.4.0076)">
-          <package>msdynce_SalesAnchor (9.0.24023.10004)</package>
+          <package>msdynce_SalesAnchor (9.0.24031.10007)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="Sales/ClientCommon/Sales_ClientCommon.js" displayName="Sales/ClientCommon/Sales_ClientCommon.js" solution="msdynce_Sales (9.0.4.0076)">
-          <package>msdynce_SalesAnchor (9.0.24023.10004)</package>
+          <package>msdynce_SalesAnchor (9.0.24031.10007)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership portal form" parentDisplayName="Membership" id="{8194fe3b-d1e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="Sales/ClientCommon/Sales_ClientCommon.js" displayName="Sales/ClientCommon/Sales_ClientCommon.js" solution="msdynce_Sales (9.0.4.0076)">
-          <package>msdynce_SalesAnchor (9.0.24023.10004)</package>
+          <package>msdynce_SalesAnchor (9.0.24031.10007)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="Sales/Contact/Contact_main_system_library.js" displayName="Sales/Contact/Contact_main_system_library.js" solution="msdynce_SalesPatch201904 (9.0.1912.1007)">
-          <package>msdynce_SalesAnchor (9.0.24023.10004)</package>
+          <package>msdynce_SalesAnchor (9.0.24031.10007)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Intelligence.BusinessCardReaderControl.BusinessCardReader" displayName="Intelligence.BusinessCardReaderControl.BusinessCardReader" solution="BaseCustomControlsCore (9.0.2403.1011)" />
+        <Required type="66" schemaName="Intelligence.BusinessCardReaderControl.BusinessCardReader" displayName="Intelligence.BusinessCardReaderControl.BusinessCardReader" solution="BaseCustomControlsCore (9.0.2403.2019)" />
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Intelligence.BusinessCardReaderControl.BusinessCardReader" displayName="Intelligence.BusinessCardReaderControl.BusinessCardReader" solution="BaseCustomControlsCore (9.0.2403.1011)" />
+        <Required type="66" schemaName="Intelligence.BusinessCardReaderControl.BusinessCardReader" displayName="Intelligence.BusinessCardReaderControl.BusinessCardReader" solution="BaseCustomControlsCore (9.0.2403.2019)" />
         <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2403.1011)" />
+        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2403.2019)" />
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2403.1011)" />
+        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2403.2019)" />
         <Dependent type="60" displayName="FCM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2403.1011)" />
+        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2403.2019)" />
         <Dependent type="60" displayName="FCM - Membership portal form" parentDisplayName="Membership" id="{8194fe3b-d1e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2403.1011)" />
+        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2403.2019)" />
         <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2403.1011)" />
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2403.2019)" />
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2403.1011)" />
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2403.2019)" />
         <Dependent type="60" displayName="FCM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.LeadHygiene.ValidatedFieldControl" displayName="MscrmControls.LeadHygiene.ValidatedFieldControl" solution="msdyn_leadhygiene (9.1.2402.3001)">
-          <package>msdyn_AcceleratedSalesAnchor (9.1.24023.10013)</package>
+        <Required type="66" schemaName="MscrmControls.LeadHygiene.ValidatedFieldControl" displayName="MscrmControls.LeadHygiene.ValidatedFieldControl" solution="msdyn_leadhygiene (9.1.2403.1003)">
+          <package>msdyn_AcceleratedSalesAnchor (9.1.24031.10018)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.LeadHygiene.ValidatedFieldControl" displayName="MscrmControls.LeadHygiene.ValidatedFieldControl" solution="msdyn_leadhygiene (9.1.2402.3001)">
-          <package>msdyn_AcceleratedSalesAnchor (9.1.24023.10013)</package>
+        <Required type="66" schemaName="MscrmControls.LeadHygiene.ValidatedFieldControl" displayName="MscrmControls.LeadHygiene.ValidatedFieldControl" solution="msdyn_leadhygiene (9.1.2403.1003)">
+          <package>msdyn_AcceleratedSalesAnchor (9.1.24031.10018)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
@@ -392,37 +393,37 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="msdyn_MscrmControls.TreeView.TreeViewControl" displayName="msdyn_MscrmControls.TreeView.TreeViewControl" solution="msdyn_AssetCommon (1.0.26.9)">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="msdyn_MscrmControls.TreeView.TreeViewControl" displayName="msdyn_MscrmControls.TreeView.TreeViewControl" solution="msdyn_AssetCommon (1.0.26.9)">
-          <package>msdynce_ServiceAnchor (9.0.24023.2003)</package>
+          <package>msdynce_ServiceAnchor (9.0.24031.1014)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership portal form" parentDisplayName="Membership" id="{8194fe3b-d1e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" displayName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" solution="msdyn_SalesOmniChannel (9.1.24023.10013)">
-          <package>msdyn_AcceleratedSalesAnchor (9.1.24023.10013)</package>
+        <Required type="66" schemaName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" displayName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" solution="msdyn_SalesOmniChannel (9.1.24031.10018)">
+          <package>msdyn_AcceleratedSalesAnchor (9.1.24031.10018)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" displayName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" solution="msdyn_SalesOmniChannel (9.1.24023.10013)">
-          <package>msdyn_AcceleratedSalesAnchor (9.1.24023.10013)</package>
+        <Required type="66" schemaName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" displayName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" solution="msdyn_SalesOmniChannel (9.1.24031.10018)">
+          <package>msdyn_AcceleratedSalesAnchor (9.1.24031.10018)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership main form" parentDisplayName="Membership" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" displayName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" solution="msdyn_SalesOmniChannel (9.1.24023.10013)">
-          <package>msdyn_AcceleratedSalesAnchor (9.1.24023.10013)</package>
+        <Required type="66" schemaName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" displayName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" solution="msdyn_SalesOmniChannel (9.1.24031.10018)">
+          <package>msdyn_AcceleratedSalesAnchor (9.1.24031.10018)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership portal form" parentDisplayName="Membership" id="{8194fe3b-d1e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" displayName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" solution="msdyn_SalesOmniChannel (9.1.24023.10013)">
-          <package>msdyn_AcceleratedSalesAnchor (9.1.24023.10013)</package>
+        <Required type="66" schemaName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" displayName="msdyn_SalesOmniChannel.SalesPhoneNumberControl" solution="msdyn_SalesOmniChannel (9.1.24031.10018)">
+          <package>msdyn_AcceleratedSalesAnchor (9.1.24031.10018)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
