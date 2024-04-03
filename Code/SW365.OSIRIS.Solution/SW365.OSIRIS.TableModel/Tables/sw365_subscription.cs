@@ -35,6 +35,7 @@ namespace SW365.OSIRIS.TableModel
 			public const string CreatedBy = "createdby";
 			public const string CreatedOn = "createdon";
 			public const string CreatedOnBehalfBy = "createdonbehalfby";
+			public const string ExchangeRate = "exchangerate";
 			public const string ImportSequenceNumber = "importsequencenumber";
 			public const string ModifiedBy = "modifiedby";
 			public const string ModifiedOn = "modifiedon";
@@ -49,10 +50,14 @@ namespace SW365.OSIRIS.TableModel
 			public const string sw365_dubscriptionenddate = "sw365_dubscriptionenddate";
 			public const string sw365_membership = "sw365_membership";
 			public const string sw365_Name = "sw365_name";
+			public const string sw365_subscriptionenddate = "sw365_subscriptionenddate";
 			public const string sw365_subscriptionId = "sw365_subscriptionid";
 			public const string Id = "sw365_subscriptionid";
+			public const string sw365_subscriptionprice = "sw365_subscriptionprice";
+			public const string sw365_subscriptionprice_Base = "sw365_subscriptionprice_base";
 			public const string sw365_subscriptionstartdate = "sw365_subscriptionstartdate";
 			public const string TimeZoneRuleVersionNumber = "timezoneruleversionnumber";
+			public const string TransactionCurrencyId = "transactioncurrencyid";
 			public const string UTCConversionTimeZoneCode = "utcconversiontimezonecode";
 			public const string VersionNumber = "versionnumber";
 			public const string lk_sw365_subscription_createdby = "lk_sw365_subscription_createdby";
@@ -149,6 +154,19 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("CreatedOnBehalfBy");
 				this.SetAttributeValue("createdonbehalfby", value);
 				this.OnPropertyChanged("CreatedOnBehalfBy");
+			}
+		}
+		
+		/// <summary>
+		/// Exchange rate for the currency associated with the entity with respect to the base currency.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("exchangerate")]
+		public System.Nullable<decimal> ExchangeRate
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<decimal>>("exchangerate");
 			}
 		}
 		
@@ -413,6 +431,26 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionenddate")]
+		public System.Nullable<System.DateTime> sw365_subscriptionenddate
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("sw365_subscriptionenddate");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_subscriptionenddate");
+				this.SetAttributeValue("sw365_subscriptionenddate", value);
+				this.OnPropertyChanged("sw365_subscriptionenddate");
+			}
+		}
+		
+		/// <summary>
 		/// Unique identifier for entity instances
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionid")]
@@ -458,6 +496,39 @@ namespace SW365.OSIRIS.TableModel
 		/// <summary>
 		/// 
 		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionprice")]
+		public Microsoft.Xrm.Sdk.Money sw365_subscriptionprice
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("sw365_subscriptionprice");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_subscriptionprice");
+				this.SetAttributeValue("sw365_subscriptionprice", value);
+				this.OnPropertyChanged("sw365_subscriptionprice");
+			}
+		}
+		
+		/// <summary>
+		/// Value of the Subscription Price in base currency.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionprice_base")]
+		public Microsoft.Xrm.Sdk.Money sw365_subscriptionprice_Base
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("sw365_subscriptionprice_base");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionstartdate")]
 		public System.Nullable<System.DateTime> sw365_subscriptionstartdate
 		{
@@ -492,6 +563,26 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("TimeZoneRuleVersionNumber");
 				this.SetAttributeValue("timezoneruleversionnumber", value);
 				this.OnPropertyChanged("TimeZoneRuleVersionNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the currency associated with the entity.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("transactioncurrencyid")]
+		public Microsoft.Xrm.Sdk.EntityReference TransactionCurrencyId
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("transactioncurrencyid");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("TransactionCurrencyId");
+				this.SetAttributeValue("transactioncurrencyid", value);
+				this.OnPropertyChanged("TransactionCurrencyId");
 			}
 		}
 		
