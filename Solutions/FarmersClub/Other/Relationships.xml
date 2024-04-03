@@ -52,6 +52,7 @@
   <EntityRelationship Name="team_sw365_subscription" />
   <EntityRelationship Name="team_sw365_subscriptiontype" />
   <EntityRelationship Name="TransactionCurrency_sw365_payment" />
+  <EntityRelationship Name="TransactionCurrency_sw365_subscription" />
   <EntityRelationship Name="TransactionCurrency_sw365_subscriptiontype" />
   <EntityRelationship Name="user_sw365_attendees" />
   <EntityRelationship Name="user_sw365_casetype" />
