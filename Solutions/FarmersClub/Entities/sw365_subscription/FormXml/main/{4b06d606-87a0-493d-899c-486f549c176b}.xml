@@ -40,25 +40,38 @@
                         </labels>
                         <control id="sw365_subscriptionstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_subscriptionstartdate" disabled="false" />
                       </cell>
-                      <cell id="{993d026e-b86b-4f34-b03a-e4894c337322}" locklevel="0" colspan="1" rowspan="1">
+                      <cell locklevel="0" id="{3f2bd827-c352-4017-9e36-3eb49c760d22}">
                         <labels>
-                          <label description="Subscription End Date" languagecode="1033" />
+                          <label description="" languagecode="1033" />
                         </labels>
-                        <control id="sw365_dubscriptionenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_dubscriptionenddate" disabled="false" />
                       </cell>
                     </row>
                     <row>
+                      <cell id="{ee8f814a-2425-4cad-8fd3-57f13f227ced}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Subscription" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_subscriptionprice" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sw365_subscriptionprice" disabled="false" />
+                      </cell>
+                      <cell id="{97705ad3-f4c9-416f-991d-333240768075}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Subscription End Date" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_subscriptionenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_subscriptionenddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0b2306e2-35bb-4837-9fd2-19fbc0840739}" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
                       <cell id="{9f30b1be-d9d8-4fec-bced-cb4fc6379dcf}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
                           <label description="Status Reason" languagecode="1033" />
                         </labels>
                         <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
-                      </cell>
-                      <cell id="{0b2306e2-35bb-4837-9fd2-19fbc0840739}" colspan="1" rowspan="1">
-                        <labels>
-                          <label description="Owner" languagecode="1033" />
-                        </labels>
-                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
                       </cell>
                     </row>
                   </rows>
