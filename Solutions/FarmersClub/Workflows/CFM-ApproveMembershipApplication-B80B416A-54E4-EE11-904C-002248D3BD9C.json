@@ -64,7 +64,8 @@
                 "parameters": {
                   "entityName": "sw365_membershipapprovals",
                   "item/sw365_approvalstatus": 147980000,
-                  "item/sw365_membership@odata.bind": "accounts/(@{triggerOutputs()?['body/accountid']})"
+                  "item/sw365_membership@odata.bind": "accounts(@{triggerOutputs()?['body/accountid']})",
+                  "item/sw365_subject": "@{triggerOutputs()?['body/sw365_membershipnumber']} - Application Approval"
                 },
                 "authentication": "@parameters('$authentication')"
               }
@@ -98,7 +99,7 @@
           "expression": {
             "equals": [
               "@triggerOutputs()?['body/sw365_membershipstatus']",
-              147980001
+              147980000
             ]
           },
           "metadata": {

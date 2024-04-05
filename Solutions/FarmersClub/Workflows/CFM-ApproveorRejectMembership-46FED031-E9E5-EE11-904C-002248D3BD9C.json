@@ -43,7 +43,12 @@
               "subscriptionRequest/runas": 1
             },
             "authentication": "@parameters('$authentication')"
-          }
+          },
+          "conditions": [
+            {
+              "expression": "@not(equals(triggerBody()?['sw365_approvalstatus'], 147980000))"
+            }
+          ]
         }
       },
       "actions": {
@@ -64,7 +69,8 @@
                 "parameters": {
                   "entityName": "accounts",
                   "recordId": "@outputs('Get_Membership_record_from_approval')?['body/accountid']",
-                  "item/sw365_membershipstatus": 147980002
+                  "item/sw365_approveddate": "@utcNow()",
+                  "item/sw365_membershipstatus": 147980006
                 },
                 "authentication": "@parameters('$authentication')"
               }
