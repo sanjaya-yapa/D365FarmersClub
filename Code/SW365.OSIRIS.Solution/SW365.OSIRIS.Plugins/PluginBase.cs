@@ -101,7 +101,7 @@ namespace SW365.OSIRIS.Plugins
         /// </summary>
         /// <param name="childClassName">The <see cref=" cred="Type"/> of the derived class.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "PluginBase")]
-        internal PluginBase(Type childClassName)
+        protected PluginBase(Type childClassName)
         {
             ChildClassName = childClassName.ToString();
         }

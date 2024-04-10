@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)DataAccessBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MembershipDataAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PaymentDataAccess.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SubscriptionDataAccess.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SubscriptionTypeDataAccess.cs" />
   </ItemGroup>
