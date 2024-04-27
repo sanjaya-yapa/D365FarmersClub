@@ -1,0 +1,14 @@
+<entities >
+  <entity name="sw365_subscriptiontype" displayname="Subscription Type" etc="10998" primaryidfield="sw365_subscriptiontypeid" primarynamefield="sw365_name" disableplugins="false">
+    <fields>
+      <field displayname="Name" name="sw365_name" type="string" customfield="true" />
+      <field displayname="Subscription Fee" name="sw365_subscriptionfee" type="money" customfield="true" />
+      <field displayname="Subscription Fee (Base)" name="sw365_subscriptionfee_base" type="money" customfield="true" />
+      <field displayname="Subscription Type" name="sw365_subscriptiontypeid" type="guid" primaryKey="true" />
+      <field displayname="Valid From" name="sw365_validfrom" type="datetime" customfield="true" />
+      <field displayname="Valid To" name="sw365_validto" type="datetime" customfield="true" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+    </fields>
+  </entity>
+</entities>
