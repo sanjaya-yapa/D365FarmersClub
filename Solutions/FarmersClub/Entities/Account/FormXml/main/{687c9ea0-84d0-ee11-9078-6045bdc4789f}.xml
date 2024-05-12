@@ -89,6 +89,14 @@
                       </cell>
                     </row>
                     <row>
+                      <cell id="{a7e97bdf-0447-4676-8f60-e6ccb5411f9b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Payment Option" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_paymentpption" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sw365_paymentpption" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{93c1423d-84b4-7754-8ec2-934301809167}" showlabel="true" locklevel="0" visible="false" labelid="{0cbff96d-392c-4da5-8ff1-3c51dac2f2e2}">
                         <labels>
                           <label description="Phone" languagecode="1033" />
