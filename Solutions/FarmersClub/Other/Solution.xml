@@ -87,7 +87,10 @@
       <RootComponent type="1" schemaName="sw365_attendees" behavior="0" />
       <RootComponent type="1" schemaName="sw365_casetype" behavior="0" />
       <RootComponent type="1" schemaName="sw365_communityevent" behavior="0" />
+      <RootComponent type="1" schemaName="sw365_event" behavior="0" />
       <RootComponent type="1" schemaName="sw365_eventregistration" behavior="0" />
+      <RootComponent type="1" schemaName="sw365_eventtype" behavior="0" />
+      <RootComponent type="1" schemaName="sw365_eventvenue" behavior="0" />
       <RootComponent type="1" schemaName="sw365_membershipapproval" behavior="0" />
       <RootComponent type="1" schemaName="sw365_payment" behavior="0" />
       <RootComponent type="1" schemaName="sw365_subscription" behavior="0" />
