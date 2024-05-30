@@ -5,7 +5,7 @@
     <IntroducedVersion>1.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form>
+    <form headerdensity="HighWithControls">
       <tabs>
         <tab verticallayout="true" id="{8ecda84b-e803-4f84-9ae1-9b9c80c36e0e}" IsUserDefined="1">
           <labels>
@@ -14,7 +14,7 @@
           <columns>
             <column width="100%">
               <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{12aaa101-2bb9-4cb3-9a0c-ca0bc9fa3c3a}">
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{12aaa101-2bb9-4cb3-9a0c-ca0bc9fa3c3a}" columns="11">
                   <labels>
                     <label description="General" languagecode="1033" />
                   </labels>
@@ -22,9 +22,15 @@
                     <row>
                       <cell id="{23497743-ddb5-4034-82ea-f6cfec486cad}">
                         <labels>
-                          <label description="Name" languagecode="1033" />
+                          <label description="Case Type Name" languagecode="1033" />
                         </labels>
                         <control id="sw365_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sw365_name" />
+                      </cell>
+                      <cell id="{5110851a-7368-4e61-9680-9dbb5a9d14da}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Parent" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_parent" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_parent" disabled="false" />
                       </cell>
                     </row>
                     <row>
@@ -34,7 +40,44 @@
                         </labels>
                         <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
                       </cell>
+                      <cell locklevel="0" id="{382eb840-8402-4604-af08-690c53b00364}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
                     </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="b85ebd13-26f9-4543-8810-d9fda9a6fd20" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Child Case Types" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{a76edd63-9ad3-4841-b06a-00d5cdcd6e4d}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1717053512901" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sw365_casetype</TargetEntityType>
+                            <ViewId>{15481892-19EB-4C09-8B16-E4F4196C5B24}</ViewId>
+                            <ViewIds>{15481892-19EB-4C09-8B16-E4F4196C5B24}</ViewIds>
+                            <RelationshipName>sw365_casetype_parent</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
                   </rows>
                 </section>
               </sections>
@@ -42,6 +85,51 @@
           </columns>
         </tab>
       </tabs>
+      <header id="{030db6e0-761c-4f30-ac09-0e22294b4803}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{2e097736-e07b-4e49-afa4-ed0748b60f33}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{57989e13-87c2-49cf-bba5-fbc48e2e1c7e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{e081ce6c-bf79-4688-ad01-b6c7deb90d19}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{194afa21-1968-4852-953e-b42f54b807aa}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{911fcc35-c504-444c-88bb-36e7b2cf2455}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{53febdf6-b170-4a11-9c76-c628c5fbb7f4}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{eb5cf2f7-fcbc-46c1-841e-76caf7e7c9b5}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>

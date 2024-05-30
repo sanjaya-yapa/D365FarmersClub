@@ -45,6 +45,7 @@
   <EntityRelationship Name="owner_sw365_subscription" />
   <EntityRelationship Name="owner_sw365_subscriptiontype" />
   <EntityRelationship Name="sw365_account_sw365_subscriptiontype" />
+  <EntityRelationship Name="sw365_casetype_parent" />
   <EntityRelationship Name="sw365_farmer_incident" />
   <EntityRelationship Name="sw365_Incident_Appointment" />
   <EntityRelationship Name="sw365_Incident_Task" />
