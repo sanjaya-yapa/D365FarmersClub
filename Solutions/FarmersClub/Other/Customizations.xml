@@ -18,6 +18,7 @@
       <connectionreferencedisplayname>Approvals FarmersClub-37d1b</connectionreferencedisplayname>
       <connectorid>/providers/Microsoft.PowerApps/apis/shared_approvals</connectorid>
       <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
       <statecode>0</statecode>
       <statuscode>1</statuscode>
     </connectionreference>
@@ -25,6 +26,7 @@
       <connectionreferencedisplayname>Approvals FarmersClub-84f01</connectionreferencedisplayname>
       <connectorid>/providers/Microsoft.PowerApps/apis/shared_approvals</connectorid>
       <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
       <statecode>0</statecode>
       <statuscode>1</statuscode>
     </connectionreference>
@@ -32,6 +34,7 @@
       <connectionreferencedisplayname>Microsoft Dataverse FarmersClub-b2692</connectionreferencedisplayname>
       <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
       <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
       <statecode>0</statecode>
       <statuscode>1</statuscode>
     </connectionreference>
@@ -39,6 +42,15 @@
       <connectionreferencedisplayname>Microsoft Dataverse FarmersClub-e08cf</connectionreferencedisplayname>
       <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
       <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="sw365_sharedcommondataserviceforapps_f0d83">
+      <connectionreferencedisplayname>Microsoft Dataverse FarmersClub-f0d83</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
       <statecode>0</statecode>
       <statuscode>1</statuscode>
     </connectionreference>
