@@ -1,5 +1,50 @@
 
-<entities xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" timestamp="2024-05-30T12:48:17.9333185Z">
+<entities xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" timestamp="2024-05-30T12:59:08.5390923Z">
+  <entity name="sw365_subscriptiontype" displayname="Subscription Type">
+    <records>
+      <record id="408e4b2d-831e-ef11-840a-6045bd3d2806">
+        <field name="sw365_name" value="Premium" />
+        <field name="sw365_subscriptionfee" value="250.0000000000" />
+        <field name="sw365_subscriptionfee_base" value="250.0000000000" />
+        <field name="sw365_subscriptiontypeid" value="408e4b2d-831e-ef11-840a-6045bd3d2806" />
+        <field name="sw365_validfrom" value="2024-07-01T00:00:00.0000000Z" />
+        <field name="sw365_validto" value="2025-06-30T00:00:00.0000000Z" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="af9d3d42-831e-ef11-840a-6045bd3d2806">
+        <field name="sw365_name" value="Standard" />
+        <field name="sw365_subscriptionfee" value="180.0000000000" />
+        <field name="sw365_subscriptionfee_base" value="180.0000000000" />
+        <field name="sw365_subscriptiontypeid" value="af9d3d42-831e-ef11-840a-6045bd3d2806" />
+        <field name="sw365_validfrom" value="2024-07-01T00:00:00.0000000Z" />
+        <field name="sw365_validto" value="2024-06-30T00:00:00.0000000Z" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="f18a5a82-831e-ef11-840a-6045bd3d2806">
+        <field name="sw365_name" value="Basic" />
+        <field name="sw365_subscriptionfee" value="120.0000000000" />
+        <field name="sw365_subscriptionfee_base" value="120.0000000000" />
+        <field name="sw365_subscriptiontypeid" value="f18a5a82-831e-ef11-840a-6045bd3d2806" />
+        <field name="sw365_validfrom" value="2024-07-01T00:00:00.0000000Z" />
+        <field name="sw365_validto" value="2024-06-30T00:00:00.0000000Z" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="f83c95f1-831e-ef11-840a-6045bd3d2806">
+        <field name="sw365_name" value="One time member" />
+        <field name="sw365_subscriptionfee" value="75.0000000000" />
+        <field name="sw365_subscriptionfee_base" value="75.0000000000" />
+        <field name="sw365_subscriptiontypeid" value="f83c95f1-831e-ef11-840a-6045bd3d2806" />
+        <field name="sw365_validfrom" value="2024-07-01T00:00:00.0000000Z" />
+        <field name="sw365_validto" value="2024-06-30T00:00:00.0000000Z" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+    </records>
+    <m2mrelationships />
+  </entity>
   <entity name="sw365_casetype" displayname="Case Type">
     <records>
       <record id="64f75615-551e-ef11-840a-6045bd3d2806">
