@@ -11,4 +11,13 @@
       <field displayname="Status Reason" name="statuscode" type="status" />
     </fields>
   </entity>
+  <entity name="sw365_casetype" displayname="Case Type" etc="11065" primaryidfield="sw365_casetypeid" primarynamefield="sw365_name" disableplugins="false">
+    <fields>
+      <field displayname="Parent" name="sw365_parent" type="entityreference" lookupType="sw365_casetype" customfield="true" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+      <field displayname="Name" name="sw365_name" type="string" customfield="true" />
+      <field displayname="Case Type" name="sw365_casetypeid" type="guid" primaryKey="true" />
+    </fields>
+  </entity>
 </entities>
