@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name LocalizedName="Account" OriginalName="">Account</Name>
+  <Name LocalizedName="Membership" OriginalName="">Account</Name>
   <EntityInfo>
     <entity Name="Account">
       <attributes>
@@ -381,10 +381,10 @@
             <Description description="" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="sw365_paymentpption">
+        <attribute PhysicalName="sw365_paymentoption">
           <Type>picklist</Type>
-          <Name>sw365_paymentpption</Name>
-          <LogicalName>sw365_paymentpption</LogicalName>
+          <Name>sw365_paymentoption</Name>
+          <LogicalName>sw365_paymentoption</LogicalName>
           <RequiredLevel>required</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>

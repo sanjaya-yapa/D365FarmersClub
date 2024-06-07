@@ -10,8 +10,10 @@
     <layoutxml>
       <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
         <row name="result" id="sw365_membershipapprovalid">
-          <cell name="sw365_name" width="300" />
-          <cell name="createdon" width="125" />
+          <cell name="sw365_name" width="226" />
+          <cell name="sw365_subject" width="262" />
+          <cell name="sw365_approvalstatus" width="221" />
+          <cell name="createdon" width="139" />
         </row>
       </grid>
     </layoutxml>
@@ -26,6 +28,8 @@
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
+          <attribute name="sw365_subject" />
+          <attribute name="sw365_approvalstatus" />
         </entity>
       </fetch>
     </fetchxml>

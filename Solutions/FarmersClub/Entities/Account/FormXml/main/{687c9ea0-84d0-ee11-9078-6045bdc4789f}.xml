@@ -89,19 +89,19 @@
                       </cell>
                     </row>
                     <row>
-                      <cell id="{a7e97bdf-0447-4676-8f60-e6ccb5411f9b}" locklevel="0" colspan="1" rowspan="1">
-                        <labels>
-                          <label description="Payment Option" languagecode="1033" />
-                        </labels>
-                        <control id="sw365_paymentpption" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sw365_paymentpption" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
                       <cell id="{93c1423d-84b4-7754-8ec2-934301809167}" showlabel="true" locklevel="0" visible="false" labelid="{0cbff96d-392c-4da5-8ff1-3c51dac2f2e2}">
                         <labels>
                           <label description="Phone" languagecode="1033" />
                         </labels>
                         <control id="telephone1" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="telephone1" disabled="false" uniqueid="{771DB681-B422-E9C8-E112-C1396655459D}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{53570d48-87f6-4df6-8123-1fe18d3971b0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Payment Option" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_paymentoption" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sw365_paymentoption" disabled="false" />
                       </cell>
                     </row>
                   </rows>
@@ -685,6 +685,49 @@
                         <control id="name" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="name" disabled="false" uniqueid="{47183C8B-B45D-7551-25E7-14C19D3B21A8}" />
                       </cell>
                     </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_membership_approvals" id="fb01bdea-c038-48cb-818d-051bc26d6a72" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Membership Approvals" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_7_section_1" id="55fcea83-3b09-4a76-9f15-7e80f716569a" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{24dff12c-f0ae-4f28-a473-8450d04027fe}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1717745397231" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_3" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sw365_membershipapproval</TargetEntityType>
+                            <ViewId>{D61EB1F8-E55B-4B6B-9258-AA7E6A1D23E2}</ViewId>
+                            <ViewIds>{D61EB1F8-E55B-4B6B-9258-AA7E6A1D23E2},{651BF959-455F-4C61-959D-93F3038E251E}</ViewIds>
+                            <RelationshipName>sw365_membershipapproval_membership</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
                   </rows>
                 </section>
               </sections>
