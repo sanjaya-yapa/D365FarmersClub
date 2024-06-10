@@ -13,7 +13,8 @@
           <cell name="sw365_name" width="171" />
           <cell name="sw365_membership" width="111" />
           <cell name="sw365_subscriptionstartdate" width="171" />
-          <cell name="sw365_dubscriptionenddate" width="167" />
+          <cell name="sw365_subscriptionenddate" width="167" />
+          <cell name="sw365_subscriptionprice" width="144" />
           <cell name="statuscode" width="119" />
           <cell name="createdon" width="125" />
         </row>
@@ -32,8 +33,9 @@
           </filter>
           <attribute name="sw365_membership" />
           <attribute name="sw365_subscriptionstartdate" />
-          <attribute name="sw365_dubscriptionenddate" />
           <attribute name="statuscode" />
+          <attribute name="sw365_subscriptionenddate" />
+          <attribute name="sw365_subscriptionprice" />
         </entity>
       </fetch>
     </fetchxml>
