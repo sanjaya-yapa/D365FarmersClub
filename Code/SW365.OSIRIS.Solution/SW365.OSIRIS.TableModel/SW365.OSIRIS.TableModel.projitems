@@ -31,6 +31,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_StatusCode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Account_TerritoryCode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\activitypointer_DeliveryPriorityCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\ActivityPointer_InstanceTypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\ActivityPointer_PriorityCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\ActivityPointer_StatusCode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\appaction_ClientType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Appointment_AttachmentErrors.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Appointment_InstanceTypeCode.cs" />
@@ -97,8 +100,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_communityevent_StatusCode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_ContactType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_eventregistration_StatusCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_eventtype_StatusCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_eventvenue_StatusCode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_membershipapproval_StatusCode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_MembershipStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_PaymentOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_payment_StatusCode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_subscriptiontype_StatusCode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\sw365_subscription_StatusCode.cs" />
@@ -123,6 +129,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Task_PriorityCode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Optionsets\Task_StatusCode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\Account.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\ActivityPointer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\Appointment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\Contact.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\CrmServiceContext.cs" />
@@ -132,11 +139,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_casetype.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_communityevent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_eventregistration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_eventtype.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_eventvenue.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_membershipapproval.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_payment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_subscription.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_subscriptiontype.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\SystemUser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\Task.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)EarlyBoundSettings.xml" />
   </ItemGroup>
 </Project>

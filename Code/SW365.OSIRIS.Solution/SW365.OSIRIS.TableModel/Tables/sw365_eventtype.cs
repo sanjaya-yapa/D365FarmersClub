@@ -12,7 +12,7 @@ namespace SW365.OSIRIS.TableModel
 {
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum sw365_casetypeState
+	public enum sw365_eventtypeState
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
@@ -26,8 +26,8 @@ namespace SW365.OSIRIS.TableModel
 	/// 
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("sw365_casetype")]
-	public partial class sw365_casetype : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("sw365_eventtype")]
+	public partial class sw365_eventtype : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	{
 		
 		public static class Fields
@@ -46,41 +46,39 @@ namespace SW365.OSIRIS.TableModel
 			public const string OwningUser = "owninguser";
 			public const string StateCode = "statecode";
 			public const string StatusCode = "statuscode";
-			public const string sw365_casetypeId = "sw365_casetypeid";
-			public const string Id = "sw365_casetypeid";
+			public const string sw365_eventtypeId = "sw365_eventtypeid";
+			public const string Id = "sw365_eventtypeid";
 			public const string sw365_Name = "sw365_name";
-			public const string sw365_parent = "sw365_parent";
 			public const string TimeZoneRuleVersionNumber = "timezoneruleversionnumber";
 			public const string UTCConversionTimeZoneCode = "utcconversiontimezonecode";
 			public const string VersionNumber = "versionnumber";
-			public const string lk_sw365_casetype_createdby = "lk_sw365_casetype_createdby";
-			public const string lk_sw365_casetype_createdonbehalfby = "lk_sw365_casetype_createdonbehalfby";
-			public const string lk_sw365_casetype_modifiedby = "lk_sw365_casetype_modifiedby";
-			public const string lk_sw365_casetype_modifiedonbehalfby = "lk_sw365_casetype_modifiedonbehalfby";
-			public const string Referencingsw365_casetype_parent = "sw365_casetype_parent";
-			public const string user_sw365_casetype = "user_sw365_casetype";
+			public const string lk_sw365_eventtype_createdby = "lk_sw365_eventtype_createdby";
+			public const string lk_sw365_eventtype_createdonbehalfby = "lk_sw365_eventtype_createdonbehalfby";
+			public const string lk_sw365_eventtype_modifiedby = "lk_sw365_eventtype_modifiedby";
+			public const string lk_sw365_eventtype_modifiedonbehalfby = "lk_sw365_eventtype_modifiedonbehalfby";
+			public const string user_sw365_eventtype = "user_sw365_eventtype";
 		}
 		
 		/// <summary>
 		/// Default Constructor.
 		/// </summary>
 		[System.Diagnostics.DebuggerNonUserCode()]
-		public sw365_casetype() : 
+		public sw365_eventtype() : 
 				base(EntityLogicalName)
 		{
 		}
 		
-		public const string EntityLogicalName = "sw365_casetype";
+		public const string EntityLogicalName = "sw365_eventtype";
 		
-		public const string EntitySchemaName = "sw365_casetype";
+		public const string EntitySchemaName = "sw365_eventtype";
 		
-		public const string PrimaryIdAttribute = "sw365_casetypeid";
+		public const string PrimaryIdAttribute = "sw365_eventtypeid";
 		
 		public const string PrimaryNameAttribute = "sw365_name";
 		
-		public const string EntityLogicalCollectionName = "sw365_casetypes";
+		public const string EntityLogicalCollectionName = "sw365_eventtypes";
 		
-		public const string EntitySetName = "sw365_casetypes";
+		public const string EntitySetName = "sw365_eventtypes";
 		
 		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		
@@ -296,10 +294,10 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Status of the Case Type
+		/// Status of the Event Type
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
-		public System.Nullable<SW365.OSIRIS.TableModel.sw365_casetypeState> StateCode
+		public System.Nullable<SW365.OSIRIS.TableModel.sw365_eventtypeState> StateCode
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
@@ -307,7 +305,7 @@ namespace SW365.OSIRIS.TableModel
 				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statecode");
 				if ((optionSet != null))
 				{
-					return ((SW365.OSIRIS.TableModel.sw365_casetypeState)(System.Enum.ToObject(typeof(SW365.OSIRIS.TableModel.sw365_casetypeState), optionSet.Value)));
+					return ((SW365.OSIRIS.TableModel.sw365_eventtypeState)(System.Enum.ToObject(typeof(SW365.OSIRIS.TableModel.sw365_eventtypeState), optionSet.Value)));
 				}
 				else
 				{
@@ -331,15 +329,15 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Reason for the status of the Case Type
+		/// Reason for the status of the Event Type
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
-		public virtual sw365_casetype_StatusCode? StatusCode
+		public virtual sw365_eventtype_StatusCode? StatusCode
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((sw365_casetype_StatusCode?)(EntityOptionSetEnum.GetEnum(this, "statuscode")));
+				return ((sw365_eventtype_StatusCode?)(EntityOptionSetEnum.GetEnum(this, "statuscode")));
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
@@ -353,19 +351,19 @@ namespace SW365.OSIRIS.TableModel
 		/// <summary>
 		/// Unique identifier for entity instances
 		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_casetypeid")]
-		public System.Nullable<System.Guid> sw365_casetypeId
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_eventtypeid")]
+		public System.Nullable<System.Guid> sw365_eventtypeId
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetAttributeValue<System.Nullable<System.Guid>>("sw365_casetypeid");
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("sw365_eventtypeid");
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("sw365_casetypeId");
-				this.SetAttributeValue("sw365_casetypeid", value);
+				this.OnPropertyChanging("sw365_eventtypeId");
+				this.SetAttributeValue("sw365_eventtypeid", value);
 				if (value.HasValue)
 				{
 					base.Id = value.Value;
@@ -374,11 +372,11 @@ namespace SW365.OSIRIS.TableModel
 				{
 					base.Id = System.Guid.Empty;
 				}
-				this.OnPropertyChanged("sw365_casetypeId");
+				this.OnPropertyChanged("sw365_eventtypeId");
 			}
 		}
 		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_casetypeid")]
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_eventtypeid")]
 		public override System.Guid Id
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
@@ -389,7 +387,7 @@ namespace SW365.OSIRIS.TableModel
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.sw365_casetypeId = value;
+				this.sw365_eventtypeId = value;
 			}
 		}
 		
@@ -410,26 +408,6 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("sw365_Name");
 				this.SetAttributeValue("sw365_name", value);
 				this.OnPropertyChanged("sw365_Name");
-			}
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_parent")]
-		public Microsoft.Xrm.Sdk.EntityReference sw365_parent
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("sw365_parent");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("sw365_parent");
-				this.SetAttributeValue("sw365_parent", value);
-				this.OnPropertyChanged("sw365_parent");
 			}
 		}
 		
@@ -487,147 +465,86 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// 1:N sw365_casetype_parent
-		/// </summary>
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_casetype_parent", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
-		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_casetype> Referencedsw365_casetype_parent
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_casetype>("sw365_casetype_parent", Microsoft.Xrm.Sdk.EntityRole.Referenced);
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Referencedsw365_casetype_parent");
-				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_casetype>("sw365_casetype_parent", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
-				this.OnPropertyChanged("Referencedsw365_casetype_parent");
-			}
-		}
-		
-		/// <summary>
-		/// 1:N sw365_sw365_casetype_incident
-		/// </summary>
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_sw365_casetype_incident")]
-		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.Incident> sw365_sw365_casetype_incident
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.Incident>("sw365_sw365_casetype_incident", null);
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("sw365_sw365_casetype_incident");
-				this.SetRelatedEntities<SW365.OSIRIS.TableModel.Incident>("sw365_sw365_casetype_incident", null, value);
-				this.OnPropertyChanged("sw365_sw365_casetype_incident");
-			}
-		}
-		
-		/// <summary>
-		/// N:1 lk_sw365_casetype_createdby
+		/// N:1 lk_sw365_eventtype_createdby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_casetype_createdby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_casetype_createdby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventtype_createdby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_eventtype_createdby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_casetype_createdby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_eventtype_createdby", null);
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_sw365_casetype_createdonbehalfby
+		/// N:1 lk_sw365_eventtype_createdonbehalfby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_casetype_createdonbehalfby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_casetype_createdonbehalfby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventtype_createdonbehalfby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_eventtype_createdonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_casetype_createdonbehalfby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_eventtype_createdonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("lk_sw365_casetype_createdonbehalfby");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_casetype_createdonbehalfby", null, value);
-				this.OnPropertyChanged("lk_sw365_casetype_createdonbehalfby");
+				this.OnPropertyChanging("lk_sw365_eventtype_createdonbehalfby");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_eventtype_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_sw365_eventtype_createdonbehalfby");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_sw365_casetype_modifiedby
+		/// N:1 lk_sw365_eventtype_modifiedby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_casetype_modifiedby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_casetype_modifiedby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventtype_modifiedby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_eventtype_modifiedby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_casetype_modifiedby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_eventtype_modifiedby", null);
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_sw365_casetype_modifiedonbehalfby
+		/// N:1 lk_sw365_eventtype_modifiedonbehalfby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_casetype_modifiedonbehalfby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_casetype_modifiedonbehalfby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventtype_modifiedonbehalfby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_eventtype_modifiedonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_casetype_modifiedonbehalfby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_eventtype_modifiedonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("lk_sw365_casetype_modifiedonbehalfby");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_casetype_modifiedonbehalfby", null, value);
-				this.OnPropertyChanged("lk_sw365_casetype_modifiedonbehalfby");
+				this.OnPropertyChanging("lk_sw365_eventtype_modifiedonbehalfby");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_eventtype_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_sw365_eventtype_modifiedonbehalfby");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 sw365_casetype_parent
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_parent")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_casetype_parent", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
-		public SW365.OSIRIS.TableModel.sw365_casetype Referencingsw365_casetype_parent
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.sw365_casetype>("sw365_casetype_parent", Microsoft.Xrm.Sdk.EntityRole.Referencing);
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Referencingsw365_casetype_parent");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.sw365_casetype>("sw365_casetype_parent", Microsoft.Xrm.Sdk.EntityRole.Referencing, value);
-				this.OnPropertyChanged("Referencingsw365_casetype_parent");
-			}
-		}
-		
-		/// <summary>
-		/// N:1 user_sw365_casetype
+		/// N:1 user_sw365_eventtype
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_sw365_casetype")]
-		public SW365.OSIRIS.TableModel.SystemUser user_sw365_casetype
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_sw365_eventtype")]
+		public SW365.OSIRIS.TableModel.SystemUser user_sw365_eventtype
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("user_sw365_casetype", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("user_sw365_eventtype", null);
 			}
 		}
 		
@@ -636,7 +553,7 @@ namespace SW365.OSIRIS.TableModel
 		/// <param name="anonymousType">LINQ anonymous type.</param>
 		/// </summary>
 		[System.Diagnostics.DebuggerNonUserCode()]
-		public sw365_casetype(object anonymousType) : 
+		public sw365_eventtype(object anonymousType) : 
 				this()
 		{
             foreach (var p in anonymousType.GetType().GetProperties())
@@ -654,9 +571,9 @@ namespace SW365.OSIRIS.TableModel
                 {
                     case "id":
                         base.Id = (System.Guid)value;
-                        Attributes["sw365_casetypeid"] = base.Id;
+                        Attributes["sw365_eventtypeid"] = base.Id;
                         break;
-                    case "sw365_casetypeid":
+                    case "sw365_eventtypeid":
                         var id = (System.Nullable<System.Guid>) value;
                         if(id == null){ continue; }
                         base.Id = id.Value;

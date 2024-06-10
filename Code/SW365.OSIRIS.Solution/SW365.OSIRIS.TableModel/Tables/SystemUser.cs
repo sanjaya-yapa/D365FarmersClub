@@ -3173,6 +3173,86 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
+		/// 1:N lk_activitypointer_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_activitypointer_createdby")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.ActivityPointer> lk_activitypointer_createdby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("lk_activitypointer_createdby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("lk_activitypointer_createdby");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("lk_activitypointer_createdby", null, value);
+				this.OnPropertyChanged("lk_activitypointer_createdby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_activitypointer_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_activitypointer_createdonbehalfby")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.ActivityPointer> lk_activitypointer_createdonbehalfby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("lk_activitypointer_createdonbehalfby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("lk_activitypointer_createdonbehalfby");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("lk_activitypointer_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_activitypointer_createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_activitypointer_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_activitypointer_modifiedby")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.ActivityPointer> lk_activitypointer_modifiedby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("lk_activitypointer_modifiedby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("lk_activitypointer_modifiedby");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("lk_activitypointer_modifiedby", null, value);
+				this.OnPropertyChanged("lk_activitypointer_modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_activitypointer_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_activitypointer_modifiedonbehalfby")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.ActivityPointer> lk_activitypointer_modifiedonbehalfby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("lk_activitypointer_modifiedonbehalfby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("lk_activitypointer_modifiedonbehalfby");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("lk_activitypointer_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_activitypointer_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
 		/// 1:N lk_appointment_createdby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appointment_createdby")]
@@ -3813,6 +3893,166 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
+		/// 1:N lk_sw365_eventtype_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventtype_createdby")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_eventtype> lk_sw365_eventtype_createdby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventtype>("lk_sw365_eventtype_createdby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("lk_sw365_eventtype_createdby");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventtype>("lk_sw365_eventtype_createdby", null, value);
+				this.OnPropertyChanged("lk_sw365_eventtype_createdby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_sw365_eventtype_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventtype_createdonbehalfby")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_eventtype> lk_sw365_eventtype_createdonbehalfby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventtype>("lk_sw365_eventtype_createdonbehalfby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("lk_sw365_eventtype_createdonbehalfby");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventtype>("lk_sw365_eventtype_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_sw365_eventtype_createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_sw365_eventtype_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventtype_modifiedby")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_eventtype> lk_sw365_eventtype_modifiedby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventtype>("lk_sw365_eventtype_modifiedby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("lk_sw365_eventtype_modifiedby");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventtype>("lk_sw365_eventtype_modifiedby", null, value);
+				this.OnPropertyChanged("lk_sw365_eventtype_modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_sw365_eventtype_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventtype_modifiedonbehalfby")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_eventtype> lk_sw365_eventtype_modifiedonbehalfby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventtype>("lk_sw365_eventtype_modifiedonbehalfby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("lk_sw365_eventtype_modifiedonbehalfby");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventtype>("lk_sw365_eventtype_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_sw365_eventtype_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_sw365_eventvenue_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventvenue_createdby")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_eventvenue> lk_sw365_eventvenue_createdby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventvenue>("lk_sw365_eventvenue_createdby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("lk_sw365_eventvenue_createdby");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventvenue>("lk_sw365_eventvenue_createdby", null, value);
+				this.OnPropertyChanged("lk_sw365_eventvenue_createdby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_sw365_eventvenue_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventvenue_createdonbehalfby")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_eventvenue> lk_sw365_eventvenue_createdonbehalfby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventvenue>("lk_sw365_eventvenue_createdonbehalfby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("lk_sw365_eventvenue_createdonbehalfby");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventvenue>("lk_sw365_eventvenue_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_sw365_eventvenue_createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_sw365_eventvenue_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventvenue_modifiedby")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_eventvenue> lk_sw365_eventvenue_modifiedby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventvenue>("lk_sw365_eventvenue_modifiedby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("lk_sw365_eventvenue_modifiedby");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventvenue>("lk_sw365_eventvenue_modifiedby", null, value);
+				this.OnPropertyChanged("lk_sw365_eventvenue_modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_sw365_eventvenue_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventvenue_modifiedonbehalfby")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_eventvenue> lk_sw365_eventvenue_modifiedonbehalfby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventvenue>("lk_sw365_eventvenue_modifiedonbehalfby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("lk_sw365_eventvenue_modifiedonbehalfby");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventvenue>("lk_sw365_eventvenue_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_sw365_eventvenue_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
 		/// 1:N lk_sw365_membershipapproval_createdby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_membershipapproval_createdby")]
@@ -4373,6 +4613,26 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
+		/// 1:N user_activity
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_activity")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.ActivityPointer> user_activity
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("user_activity", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("user_activity");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("user_activity", null, value);
+				this.OnPropertyChanged("user_activity");
+			}
+		}
+		
+		/// <summary>
 		/// 1:N user_appointment
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_appointment")]
@@ -4509,6 +4769,46 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("user_sw365_eventregistration");
 				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventregistration>("user_sw365_eventregistration", null, value);
 				this.OnPropertyChanged("user_sw365_eventregistration");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N user_sw365_eventtype
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_sw365_eventtype")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_eventtype> user_sw365_eventtype
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventtype>("user_sw365_eventtype", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("user_sw365_eventtype");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventtype>("user_sw365_eventtype", null, value);
+				this.OnPropertyChanged("user_sw365_eventtype");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N user_sw365_eventvenue
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_sw365_eventvenue")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_eventvenue> user_sw365_eventvenue
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventvenue>("user_sw365_eventvenue", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("user_sw365_eventvenue");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_eventvenue>("user_sw365_eventvenue", null, value);
+				this.OnPropertyChanged("user_sw365_eventvenue");
 			}
 		}
 		

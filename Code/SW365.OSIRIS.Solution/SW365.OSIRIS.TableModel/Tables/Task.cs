@@ -87,12 +87,14 @@ namespace SW365.OSIRIS.TableModel
 			public const string UTCConversionTimeZoneCode = "utcconversiontimezonecode";
 			public const string VersionNumber = "versionnumber";
 			public const string Account_Tasks = "Account_Tasks";
+			public const string activity_pointer_task = "activity_pointer_task";
 			public const string Contact_Tasks = "Contact_Tasks";
 			public const string Incident_Tasks = "Incident_Tasks";
 			public const string lk_task_createdby = "lk_task_createdby";
 			public const string lk_task_createdonbehalfby = "lk_task_createdonbehalfby";
 			public const string lk_task_modifiedby = "lk_task_modifiedby";
 			public const string lk_task_modifiedonbehalfby = "lk_task_modifiedonbehalfby";
+			public const string sw365_eventregistration_Tasks = "sw365_eventregistration_Tasks";
 			public const string sw365_Incident_Task = "sw365_Incident_Task";
 			public const string user_task = "user_task";
 		}
@@ -1102,6 +1104,27 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
+		/// N:1 activity_pointer_task
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("activityid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("activity_pointer_task")]
+		public SW365.OSIRIS.TableModel.ActivityPointer activity_pointer_task
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.ActivityPointer>("activity_pointer_task", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("activity_pointer_task");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.ActivityPointer>("activity_pointer_task", null, value);
+				this.OnPropertyChanged("activity_pointer_task");
+			}
+		}
+		
+		/// <summary>
 		/// N:1 Contact_Tasks
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
@@ -1210,6 +1233,27 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("lk_task_modifiedonbehalfby");
 				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_task_modifiedonbehalfby", null, value);
 				this.OnPropertyChanged("lk_task_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 sw365_eventregistration_Tasks
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_eventregistration_Tasks")]
+		public SW365.OSIRIS.TableModel.sw365_eventregistration sw365_eventregistration_Tasks
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.sw365_eventregistration>("sw365_eventregistration_Tasks", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_eventregistration_Tasks");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.sw365_eventregistration>("sw365_eventregistration_Tasks", null, value);
+				this.OnPropertyChanged("sw365_eventregistration_Tasks");
 			}
 		}
 		

@@ -11,31 +11,23 @@ namespace SW365.OSIRIS.TableModel
 {
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum Incident_CaseOriginCode
+	public enum ActivityPointer_StatusCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Email", 2, "#00B294")]
-		Email = 2,
+		[OptionSetMetadataAttribute("Canceled", 2)]
+		Canceled = 3,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Facebook", 4, "#0086FF")]
-		Facebook = 2483,
+		[OptionSetMetadataAttribute("Completed", 1)]
+		Completed = 2,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("IoT", 0, "#0000ff")]
-		IoT = 700610000,
+		[OptionSetMetadataAttribute("Open", 0)]
+		Open = 1,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Phone", 1, "#FCD116")]
-		Phone = 1,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Twitter", 5, "#0086FF")]
-		Twitter = 3986,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Web", 3, "#FF8C00")]
-		Web = 3,
+		[OptionSetMetadataAttribute("Scheduled", 3)]
+		Scheduled = 4,
 	}
 }

@@ -111,12 +111,14 @@ namespace SW365.OSIRIS.TableModel
 			public const string UTCConversionTimeZoneCode = "utcconversiontimezonecode";
 			public const string VersionNumber = "versionnumber";
 			public const string Account_Appointments = "Account_Appointments";
+			public const string activity_pointer_appointment = "activity_pointer_appointment";
 			public const string Contact_Appointments = "Contact_Appointments";
 			public const string Incident_Appointments = "Incident_Appointments";
 			public const string lk_appointment_createdby = "lk_appointment_createdby";
 			public const string lk_appointment_createdonbehalfby = "lk_appointment_createdonbehalfby";
 			public const string lk_appointment_modifiedby = "lk_appointment_modifiedby";
 			public const string lk_appointment_modifiedonbehalfby = "lk_appointment_modifiedonbehalfby";
+			public const string sw365_eventregistration_Appointments = "sw365_eventregistration_Appointments";
 			public const string sw365_Incident_Appointment = "sw365_Incident_Appointment";
 			public const string user_appointment = "user_appointment";
 		}
@@ -1545,6 +1547,27 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
+		/// N:1 activity_pointer_appointment
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("activityid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("activity_pointer_appointment")]
+		public SW365.OSIRIS.TableModel.ActivityPointer activity_pointer_appointment
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.ActivityPointer>("activity_pointer_appointment", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("activity_pointer_appointment");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.ActivityPointer>("activity_pointer_appointment", null, value);
+				this.OnPropertyChanged("activity_pointer_appointment");
+			}
+		}
+		
+		/// <summary>
 		/// N:1 Contact_Appointments
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
@@ -1653,6 +1676,27 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("lk_appointment_modifiedonbehalfby");
 				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_appointment_modifiedonbehalfby", null, value);
 				this.OnPropertyChanged("lk_appointment_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 sw365_eventregistration_Appointments
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_eventregistration_Appointments")]
+		public SW365.OSIRIS.TableModel.sw365_eventregistration sw365_eventregistration_Appointments
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.sw365_eventregistration>("sw365_eventregistration_Appointments", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_eventregistration_Appointments");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.sw365_eventregistration>("sw365_eventregistration_Appointments", null, value);
+				this.OnPropertyChanged("sw365_eventregistration_Appointments");
 			}
 		}
 		

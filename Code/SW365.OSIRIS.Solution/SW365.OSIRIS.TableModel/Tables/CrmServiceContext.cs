@@ -5,7 +5,7 @@
 //     Changes to this file may cause incorrect behavior and will be lost if
 //     the code is regenerated.
 // </auto-generated>
-// Created via this command line: "C:\Users\sanja\AppData\Roaming\MscrmTools\XrmToolBox\Plugins\DLaB.EarlyBoundGenerator\crmsvcutil.exe" /url:"https://org84a1cc72.api.crm6.dynamics.com" /namespace:"SW365.OSIRIS.TableModel" /SuppressGeneratedCodeAttribute /out:"C:\Users\sanja\AppData\Roaming\MscrmTools\XrmToolBox\Settings\EBG\CrmServiceContext.cs" /servicecontextname:"CrmServiceContext" /codecustomization:"DLaB.CrmSvcUtilExtensions.Entity.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions" /codegenerationservice:"DLaB.CrmSvcUtilExtensions.Entity.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions" /codewriterfilter:"DLaB.CrmSvcUtilExtensions.Entity.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions" /namingservice:"DLaB.CrmSvcUtilExtensions.NamingService,DLaB.CrmSvcUtilExtensions" /metadataproviderservice:"DLaB.CrmSvcUtilExtensions.Entity.MetadataProviderService,DLaB.CrmSvcUtilExtensions" /username:"sanjaya@subwind365.com" /password:"*************" 
+// Created via this command line: "C:\Users\sanja\AppData\Roaming\MscrmTools\XrmToolBox\Plugins\DLaB.EarlyBoundGenerator\crmsvcutil.exe" /url:"https://fcm-dev0524.api.crm6.dynamics.com" /namespace:"SW365.OSIRIS.TableModel" /SuppressGeneratedCodeAttribute /out:"C:\PROJECTS\OSIRIS\Code\SW365.OSIRIS.Solution\SW365.OSIRIS.TableModel\Tables\CrmServiceContext.cs" /servicecontextname:"CrmServiceContext" /codecustomization:"DLaB.CrmSvcUtilExtensions.Entity.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions" /codegenerationservice:"DLaB.CrmSvcUtilExtensions.Entity.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions" /codewriterfilter:"DLaB.CrmSvcUtilExtensions.Entity.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions" /namingservice:"DLaB.CrmSvcUtilExtensions.NamingService,DLaB.CrmSvcUtilExtensions" /metadataproviderservice:"DLaB.CrmSvcUtilExtensions.Entity.MetadataProviderService,DLaB.CrmSvcUtilExtensions" /username:"sanjaya@subwind365.com" /password:"*************" 
 //------------------------------------------------------------------------------
 
 [assembly: Microsoft.Xrm.Sdk.Client.ProxyTypesAssemblyAttribute()]
@@ -38,6 +38,18 @@ namespace SW365.OSIRIS.TableModel
 			get
 			{
 				return this.CreateQuery<SW365.OSIRIS.TableModel.Account>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="SW365.OSIRIS.TableModel.ActivityPointer"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<SW365.OSIRIS.TableModel.ActivityPointer> ActivityPointerSet
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.CreateQuery<SW365.OSIRIS.TableModel.ActivityPointer>();
 			}
 		}
 		
@@ -134,6 +146,30 @@ namespace SW365.OSIRIS.TableModel
 			get
 			{
 				return this.CreateQuery<SW365.OSIRIS.TableModel.sw365_eventregistration>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="SW365.OSIRIS.TableModel.sw365_eventtype"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<SW365.OSIRIS.TableModel.sw365_eventtype> sw365_eventtypeSet
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.CreateQuery<SW365.OSIRIS.TableModel.sw365_eventtype>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="SW365.OSIRIS.TableModel.sw365_eventvenue"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<SW365.OSIRIS.TableModel.sw365_eventvenue> sw365_eventvenueSet
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.CreateQuery<SW365.OSIRIS.TableModel.sw365_eventvenue>();
 			}
 		}
 		

@@ -11,31 +11,19 @@ namespace SW365.OSIRIS.TableModel
 {
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum Incident_CaseOriginCode
+	public enum ActivityPointer_PriorityCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Email", 2, "#00B294")]
-		Email = 2,
+		[OptionSetMetadataAttribute("High", 2)]
+		High = 2,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Facebook", 4, "#0086FF")]
-		Facebook = 2483,
+		[OptionSetMetadataAttribute("Low", 0)]
+		Low = 0,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("IoT", 0, "#0000ff")]
-		IoT = 700610000,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Phone", 1, "#FCD116")]
-		Phone = 1,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Twitter", 5, "#0086FF")]
-		Twitter = 3986,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Web", 3, "#FF8C00")]
-		Web = 3,
+		[OptionSetMetadataAttribute("Normal", 1)]
+		Normal = 1,
 	}
 }

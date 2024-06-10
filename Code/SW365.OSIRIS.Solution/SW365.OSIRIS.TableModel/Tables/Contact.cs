@@ -125,7 +125,6 @@ namespace SW365.OSIRIS.TableModel
 			public const string Adx_ModifiedByIPAddress = "adx_modifiedbyipaddress";
 			public const string Adx_ModifiedByUsername = "adx_modifiedbyusername";
 			public const string Adx_OrganizationName = "adx_organizationname";
-			public const string adx_preferredlanguageid = "adx_preferredlanguageid";
 			public const string adx_preferredlcid = "adx_preferredlcid";
 			public const string adx_profilealert = "adx_profilealert";
 			public const string adx_profilealertdate = "adx_profilealertdate";
@@ -223,6 +222,7 @@ namespace SW365.OSIRIS.TableModel
 			public const string msdyn_isminorwithparentalconsent = "msdyn_isminorwithparentalconsent";
 			public const string msdyn_orgchangestatus = "msdyn_orgchangestatus";
 			public const string msdyn_portaltermsagreementdate = "msdyn_portaltermsagreementdate";
+			public const string msdyn_PrimaryTimeZone = "msdyn_primarytimezone";
 			public const string msdyn_segmentid = "msdyn_segmentid";
 			public const string mspp_userpreferredlcid = "mspp_userpreferredlcid";
 			public const string NickName = "nickname";
@@ -2163,26 +2163,6 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// User’s preferred portal language
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_preferredlanguageid")]
-		public Microsoft.Xrm.Sdk.EntityReference adx_preferredlanguageid
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("adx_preferredlanguageid");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("adx_preferredlanguageid");
-				this.SetAttributeValue("adx_preferredlanguageid", value);
-				this.OnPropertyChanged("adx_preferredlanguageid");
-			}
-		}
-		
-		/// <summary>
 		/// User’s preferred portal LCID
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_preferredlcid")]
@@ -3979,6 +3959,26 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
+		/// Indicates the primary time zone that the contact works on.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_primarytimezone")]
+		public System.Nullable<int> msdyn_PrimaryTimeZone
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("msdyn_primarytimezone");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("msdyn_PrimaryTimeZone");
+				this.SetAttributeValue("msdyn_primarytimezone", value);
+				this.OnPropertyChanged("msdyn_PrimaryTimeZone");
+			}
+		}
+		
+		/// <summary>
 		/// Unique identifier for Segment associated with contact.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_segmentid")]
@@ -4971,6 +4971,26 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
+		/// 1:N Contact_ActivityPointers
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Contact_ActivityPointers")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.ActivityPointer> Contact_ActivityPointers
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("Contact_ActivityPointers", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Contact_ActivityPointers");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("Contact_ActivityPointers", null, value);
+				this.OnPropertyChanged("Contact_ActivityPointers");
+			}
+		}
+		
+		/// <summary>
 		/// 1:N Contact_Appointments
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Contact_Appointments")]
@@ -5107,26 +5127,6 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("incident_customer_contacts");
 				this.SetRelatedEntities<SW365.OSIRIS.TableModel.Incident>("incident_customer_contacts", null, value);
 				this.OnPropertyChanged("incident_customer_contacts");
-			}
-		}
-		
-		/// <summary>
-		/// 1:N msa_contact_incident
-		/// </summary>
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("msa_contact_incident")]
-		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.Incident> msa_contact_incident
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.Incident>("msa_contact_incident", null);
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("msa_contact_incident");
-				this.SetRelatedEntities<SW365.OSIRIS.TableModel.Incident>("msa_contact_incident", null, value);
-				this.OnPropertyChanged("msa_contact_incident");
 			}
 		}
 		

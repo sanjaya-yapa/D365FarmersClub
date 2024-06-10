@@ -142,6 +142,7 @@ namespace SW365.OSIRIS.TableModel
 			public const string msa_managingpartnerid = "msa_managingpartnerid";
 			public const string msdyn_accountkpiid = "msdyn_accountkpiid";
 			public const string msdyn_gdproptout = "msdyn_gdproptout";
+			public const string msdyn_PrimaryTimeZone = "msdyn_primarytimezone";
 			public const string msdyn_salesaccelerationinsightid = "msdyn_salesaccelerationinsightid";
 			public const string msdyn_segmentid = "msdyn_segmentid";
 			public const string Name = "name";
@@ -192,6 +193,7 @@ namespace SW365.OSIRIS.TableModel
 			public const string sw365_membershipnumber = "sw365_membershipnumber";
 			public const string sw365_membershipstartdate = "sw365_membershipstartdate";
 			public const string sw365_membershipstatus = "sw365_membershipstatus";
+			public const string sw365_paymentoption = "sw365_paymentoption";
 			public const string sw365_subscriptiontype = "sw365_subscriptiontype";
 			public const string TeamsFollowed = "teamsfollowed";
 			public const string Telephone1 = "telephone1";
@@ -2314,6 +2316,26 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
+		/// Indicates the primary time zone that the client works on.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_primarytimezone")]
+		public System.Nullable<int> msdyn_PrimaryTimeZone
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("msdyn_primarytimezone");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("msdyn_PrimaryTimeZone");
+				this.SetAttributeValue("msdyn_primarytimezone", value);
+				this.OnPropertyChanged("msdyn_PrimaryTimeZone");
+			}
+		}
+		
+		/// <summary>
 		/// Sales Acceleration Insights ID
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_salesaccelerationinsightid")]
@@ -3240,6 +3262,26 @@ namespace SW365.OSIRIS.TableModel
 		/// <summary>
 		/// 
 		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_paymentoption")]
+		public virtual sw365_PaymentOptions? sw365_paymentoption
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((sw365_PaymentOptions?)(EntityOptionSetEnum.GetEnum(this, "sw365_paymentoption")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_paymentoption");
+				this.SetAttributeValue("sw365_paymentoption", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("sw365_paymentoption");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptiontype")]
 		public Microsoft.Xrm.Sdk.EntityReference sw365_subscriptiontype
 		{
@@ -3544,6 +3586,26 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
+		/// 1:N Account_ActivityPointers
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Account_ActivityPointers")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.ActivityPointer> Account_ActivityPointers
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("Account_ActivityPointers", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Account_ActivityPointers");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("Account_ActivityPointers", null, value);
+				this.OnPropertyChanged("Account_ActivityPointers");
+			}
+		}
+		
+		/// <summary>
 		/// 1:N Account_Appointments
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Account_Appointments")]
@@ -3680,26 +3742,6 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("incident_customer_accounts");
 				this.SetRelatedEntities<SW365.OSIRIS.TableModel.Incident>("incident_customer_accounts", null, value);
 				this.OnPropertyChanged("incident_customer_accounts");
-			}
-		}
-		
-		/// <summary>
-		/// 1:N msa_account_incident
-		/// </summary>
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("msa_account_incident")]
-		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.Incident> msa_account_incident
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.Incident>("msa_account_incident", null);
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("msa_account_incident");
-				this.SetRelatedEntities<SW365.OSIRIS.TableModel.Incident>("msa_account_incident", null, value);
-				this.OnPropertyChanged("msa_account_incident");
 			}
 		}
 		

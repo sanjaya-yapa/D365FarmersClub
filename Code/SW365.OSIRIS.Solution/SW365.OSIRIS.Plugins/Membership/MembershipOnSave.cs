@@ -26,17 +26,19 @@ namespace SW365.OSIRIS.Plugins
             tracingService = localcontext.TracingService;
             IPluginExecutionContext pluginExecutionContext = localcontext.PluginExecutionContext;
 
-            tracingService.Trace($"MembershipOnSave | ExecuteCrmPlugin | Get Post Image");
-            Account membership = (pluginExecutionContext.PostEntityImages != null && pluginExecutionContext.PostEntityImages.Contains("PostImage")) 
-                                    ? pluginExecutionContext.PostEntityImages["PostImage"].ToEntity<Account>() : null;
-
-            if (membership != null && membership.sw365_membershipstatus.Value == sw365_MembershipStatus.ApplicationApproved) 
+            if (pluginExecutionContext.Depth < 2)
             {
-                tracingService.Trace($"MembershipOnSave | ExecuteCrmPlugin | Calling Generate Subscription");
-                MembershipProcessor membershipProcessor = new MembershipProcessor(localcontext.OrganizationService, tracingService);
-                membershipProcessor.GenerateSubscription(membership);
-            }
+                tracingService.Trace($"MembershipOnSave | ExecuteCrmPlugin | Get Post Image");
+                Account membership = (pluginExecutionContext.PostEntityImages != null && pluginExecutionContext.PostEntityImages.Contains("PostImage"))
+                                        ? pluginExecutionContext.PostEntityImages["PostImage"].ToEntity<Account>() : null;
 
+                if (membership != null && membership.sw365_membershipstatus.Value == sw365_MembershipStatus.ApplicationApproved)
+                {
+                    tracingService.Trace($"MembershipOnSave | ExecuteCrmPlugin | Calling Generate Subscription");
+                    MembershipProcessor membershipProcessor = new MembershipProcessor(localcontext.OrganizationService, tracingService);
+                    membershipProcessor.GenerateSubscriptionAndPayments(membership);
+                }
+            }
         }
     }
 }

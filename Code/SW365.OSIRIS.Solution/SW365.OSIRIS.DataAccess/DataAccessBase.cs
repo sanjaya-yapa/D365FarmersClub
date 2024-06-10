@@ -25,6 +25,11 @@ namespace SW365.OSIRIS.DataAccess
         public virtual void CreateEntity(TEntity entity)
         {
             _organizationService.Create(entity);
+        }   
+
+        public virtual Guid CreateEntityReturnId(TEntity entity)
+        {
+            return _organizationService.Create(entity);
         }
 
         public virtual void UpdateEntity(TEntity entity)

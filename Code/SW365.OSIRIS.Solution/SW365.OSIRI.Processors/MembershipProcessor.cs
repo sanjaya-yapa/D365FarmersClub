@@ -5,6 +5,7 @@ using Microsoft.Xrm.Sdk;
 using SW365.OSIRIS.TableModel;
 using SW365.OSIRIS.DataAccess;
 using System.Web;
+using SW365.OSIRI.Processors;
 
 
 namespace SW365.OSIRIS.Processors
@@ -13,45 +14,35 @@ namespace SW365.OSIRIS.Processors
     {
         SubscriptionTypeDataAccess subscriptionTypeDataAccess;
         SubscriptionDataAccess subscriptionDataAccess;
+        PaymentDataAccess paymentDataAccess;
+        SubscriptionProcessor subscriptionProcessor;
         public MembershipProcessor(IOrganizationService organizationService, ITracingService tracingService) : base(organizationService, tracingService) 
         {
             subscriptionTypeDataAccess = new SubscriptionTypeDataAccess(organizationService);
             subscriptionDataAccess = new SubscriptionDataAccess(organizationService);
+            paymentDataAccess = new PaymentDataAccess(organizationService);
+            subscriptionProcessor = new SubscriptionProcessor(organizationService, tracingService);
         }
 
         public void GenerateSubscriptionAndPayments(Account membership) 
         {
+            // Generate the subscription
+            this._tracingService.Trace($"MembershipProcessor | GenerateSubscriptionAndPayments | Generate Subscription");
+            var subscriptionId = subscriptionProcessor.CreateSubscription(membership);
+            if (subscriptionId != null)
+            {
+                this._tracingService.Trace($"MembershipProcessor | GenerateSubscriptionAndPayments | subscriptionid: {subscriptionId}");
+            }
+
+
+
+            // Generate the payment
+            this._tracingService.Trace($"MembershipProcessor | GenerateSubscriptionAndPayments | Generate Payment");
+            
             
         }
 
-        private void CreateSubscription(Account membership) 
-        {
-            // Check for pending existging subscriptions
-            var pendingSubscriptions = subscriptionDataAccess.GetPendingSubscriptions(membership.Id);
-            if (pendingSubscriptions.Count > 0)
-            {
-                this._tracingService.Trace($"MembershipProcessor | CreateSubscription | There are exising pending subscriptions: { pendingSubscriptions.Count}");
-                return;
-            }
-            // Get the subscription type
-            this._tracingService.Trace($"MembershipProcessor | CreateSubscription | Get Subscription Type");
-            var subscriptiontype = subscriptionTypeDataAccess.GetEntity(membership.sw365_subscriptiontype.Id);
-
-            // Create the subscription record
-            this._tracingService.Trace($"MembershipProcessor | CreateSubscription | Create Subscription");
-            var subscription = new sw365_subscription()
-            {
-                sw365_membership = new EntityReference(Account.EntityLogicalName, membership.Id),
-                sw365_subscriptionstartdate = DateTime.Now,
-                sw365_subscriptionenddate = DateTime.Now.AddYears(1),
-                sw365_subscriptionprice = new Money(subscriptiontype.sw365_subscriptionfee.Value * 12.0m),
-                StatusCode = sw365_subscription_StatusCode.PendingPayment
-            };
-
-            // Create the subscription record
-            this._tracingService.Trace($"MembershipProcessor | CreateSubscription | Create Subscription");
-            subscriptionDataAccess.CreateEntity(subscription);
-        }
+        
 
         private void createPayment(sw365_subscription subscription)
         {
@@ -68,7 +59,7 @@ namespace SW365.OSIRIS.Processors
 
             // Create the payment record
             this._tracingService.Trace($"MembershipProcessor | CreatePayment | Create Payment");
-            
+            paymentDataAccess.CreateEntity(payment);
         }
     }
 }

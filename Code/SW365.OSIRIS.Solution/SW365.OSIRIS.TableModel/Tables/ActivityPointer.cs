@@ -12,7 +12,7 @@ namespace SW365.OSIRIS.TableModel
 {
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum IncidentResolutionState
+	public enum ActivityPointerState
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
@@ -23,14 +23,17 @@ namespace SW365.OSIRIS.TableModel
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		Canceled = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Scheduled = 3,
 	}
 	
 	/// <summary>
-	/// Special type of activity that includes description of the resolution, billing status, and the duration of the case.
+	/// Task performed, or to be performed, by a user. An activity is any action for which an entry can be made on a calendar.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("incidentresolution")]
-	public partial class IncidentResolution : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("activitypointer")]
+	public partial class ActivityPointer : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	{
 		
 		public static class Fields
@@ -42,24 +45,21 @@ namespace SW365.OSIRIS.TableModel
 			public const string ActualDurationMinutes = "actualdurationminutes";
 			public const string ActualEnd = "actualend";
 			public const string ActualStart = "actualstart";
-			public const string Bcc = "bcc";
-			public const string Category = "category";
-			public const string Cc = "cc";
+			public const string allparties = "allparties";
 			public const string Community = "community";
 			public const string CreatedBy = "createdby";
-			public const string CreatedByExternalParty = "createdbyexternalparty";
 			public const string CreatedOn = "createdon";
 			public const string CreatedOnBehalfBy = "createdonbehalfby";
-			public const string Customers = "customers";
 			public const string DeliveryLastAttemptedOn = "deliverylastattemptedon";
 			public const string DeliveryPriorityCode = "deliveryprioritycode";
 			public const string Description = "description";
+			public const string DescriptionBlobId = "descriptionblobid";
+			public const string DescriptionBlobId_Name = "descriptionblobid_name";
 			public const string ExchangeItemId = "exchangeitemid";
 			public const string ExchangeRate = "exchangerate";
 			public const string ExchangeWebLink = "exchangeweblink";
-			public const string From = "from";
-			public const string ImportSequenceNumber = "importsequencenumber";
-			public const string IncidentId = "incidentid";
+			public const string FormattedScheduledEnd = "formattedscheduledend";
+			public const string FormattedScheduledStart = "formattedscheduledstart";
 			public const string InstanceTypeCode = "instancetypecode";
 			public const string IsBilled = "isbilled";
 			public const string IsMapiPrivate = "ismapiprivate";
@@ -68,26 +68,17 @@ namespace SW365.OSIRIS.TableModel
 			public const string LastOnHoldTime = "lastonholdtime";
 			public const string LeftVoiceMail = "leftvoicemail";
 			public const string ModifiedBy = "modifiedby";
-			public const string ModifiedByExternalParty = "modifiedbyexternalparty";
 			public const string ModifiedOn = "modifiedon";
 			public const string ModifiedOnBehalfBy = "modifiedonbehalfby";
-			public const string msdyn_proposeknowledge = "msdyn_proposeknowledge";
 			public const string OnHoldTime = "onholdtime";
-			public const string OptionalAttendees = "optionalattendees";
-			public const string Organizer = "organizer";
-			public const string OverriddenCreatedOn = "overriddencreatedon";
 			public const string OwnerId = "ownerid";
 			public const string OwningBusinessUnit = "owningbusinessunit";
 			public const string OwningTeam = "owningteam";
 			public const string OwningUser = "owninguser";
-			public const string Partners = "partners";
 			public const string PostponeActivityProcessingUntil = "postponeactivityprocessinguntil";
 			public const string PriorityCode = "prioritycode";
 			public const string ProcessId = "processid";
 			public const string RegardingObjectId = "regardingobjectid";
-			public const string RequiredAttendees = "requiredattendees";
-			public const string ResolutionTypeCode = "resolutiontypecode";
-			public const string Resources = "resources";
 			public const string ScheduledDurationMinutes = "scheduleddurationminutes";
 			public const string ScheduledEnd = "scheduledend";
 			public const string ScheduledStart = "scheduledstart";
@@ -101,46 +92,43 @@ namespace SW365.OSIRIS.TableModel
 			public const string StageId = "stageid";
 			public const string StateCode = "statecode";
 			public const string StatusCode = "statuscode";
-			public const string Subcategory = "subcategory";
 			public const string Subject = "subject";
-			public const string TimeSpent = "timespent";
 			public const string TimeZoneRuleVersionNumber = "timezoneruleversionnumber";
-			public const string To = "to";
-			public const string TotalTimeSpent = "totaltimespent";
 			public const string TransactionCurrencyId = "transactioncurrencyid";
 			public const string TraversedPath = "traversedpath";
 			public const string UTCConversionTimeZoneCode = "utcconversiontimezonecode";
 			public const string VersionNumber = "versionnumber";
-			public const string account_IncidentResolutions = "account_IncidentResolutions";
-			public const string activity_pointer_incident_resolution = "activity_pointer_incident_resolution";
-			public const string Incident_IncidentResolutions = "Incident_IncidentResolutions";
-			public const string lk_incidentresolution_createdby = "lk_incidentresolution_createdby";
-			public const string lk_incidentresolution_createdonbehalfby = "lk_incidentresolution_createdonbehalfby";
-			public const string lk_incidentresolution_modifiedby = "lk_incidentresolution_modifiedby";
-			public const string lk_incidentresolution_modifiedonbehalfby = "lk_incidentresolution_modifiedonbehalfby";
-			public const string user_incidentresolution = "user_incidentresolution";
+			public const string Account_ActivityPointers = "Account_ActivityPointers";
+			public const string Contact_ActivityPointers = "Contact_ActivityPointers";
+			public const string Incident_ActivityPointers = "Incident_ActivityPointers";
+			public const string lk_activitypointer_createdby = "lk_activitypointer_createdby";
+			public const string lk_activitypointer_createdonbehalfby = "lk_activitypointer_createdonbehalfby";
+			public const string lk_activitypointer_modifiedby = "lk_activitypointer_modifiedby";
+			public const string lk_activitypointer_modifiedonbehalfby = "lk_activitypointer_modifiedonbehalfby";
+			public const string sw365_eventregistration_ActivityPointers = "sw365_eventregistration_ActivityPointers";
+			public const string user_activity = "user_activity";
 		}
 		
 		/// <summary>
 		/// Default Constructor.
 		/// </summary>
 		[System.Diagnostics.DebuggerNonUserCode()]
-		public IncidentResolution() : 
+		public ActivityPointer() : 
 				base(EntityLogicalName)
 		{
 		}
 		
-		public const string EntityLogicalName = "incidentresolution";
+		public const string EntityLogicalName = "activitypointer";
 		
-		public const string EntitySchemaName = "IncidentResolution";
+		public const string EntitySchemaName = "ActivityPointer";
 		
 		public const string PrimaryIdAttribute = "activityid";
 		
 		public const string PrimaryNameAttribute = "subject";
 		
-		public const string EntityLogicalCollectionName = "incidentresolutions";
+		public const string EntityLogicalCollectionName = "activitypointers";
 		
-		public const string EntitySetName = "incidentresolutions";
+		public const string EntitySetName = "activitypointers";
 		
 		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		
@@ -185,7 +173,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Unique identifier of the case resolution activity.
+		/// Unique identifier of the activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("activityid")]
 		public System.Nullable<System.Guid> ActivityId
@@ -241,7 +229,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Actual duration of the case resolution activity in minutes.
+		/// Actual duration of the activity in minutes.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("actualdurationminutes")]
 		public System.Nullable<int> ActualDurationMinutes
@@ -261,7 +249,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Actual end time of the case resolution activity.
+		/// Actual end time of the activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("actualend")]
 		public System.Nullable<System.DateTime> ActualEnd
@@ -281,7 +269,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Actual start time of the case resolution activity.
+		/// Actual start time of the activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("actualstart")]
 		public System.Nullable<System.DateTime> ActualStart
@@ -301,15 +289,15 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Blind Carbon-copy (bcc) recipients of the activity.
+		/// All activity parties associated with this activity.
 		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bcc")]
-		public System.Collections.Generic.IEnumerable<Microsoft.Xrm.Sdk.Entity> Bcc
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allparties")]
+		public System.Collections.Generic.IEnumerable<Microsoft.Xrm.Sdk.Entity> allparties
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				Microsoft.Xrm.Sdk.EntityCollection collection = this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityCollection>("bcc");
+				Microsoft.Xrm.Sdk.EntityCollection collection = this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityCollection>("allparties");
 				if (((collection != null) 
 							&& (collection.Entities != null)))
 				{
@@ -319,76 +307,6 @@ namespace SW365.OSIRIS.TableModel
 				{
 					return null;
 				}
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Bcc");
-				if ((value == null))
-				{
-					this.SetAttributeValue("bcc", value);
-				}
-				else
-				{
-					this.SetAttributeValue("bcc", new Microsoft.Xrm.Sdk.EntityCollection(new System.Collections.Generic.List<Microsoft.Xrm.Sdk.Entity>(value)));
-				}
-				this.OnPropertyChanged("Bcc");
-			}
-		}
-		
-		/// <summary>
-		/// Category for the case resolution activity.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("category")]
-		public string Category
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<string>("category");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Category");
-				this.SetAttributeValue("category", value);
-				this.OnPropertyChanged("Category");
-			}
-		}
-		
-		/// <summary>
-		/// Carbon-copy (cc) recipients of the activity.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cc")]
-		public System.Collections.Generic.IEnumerable<Microsoft.Xrm.Sdk.Entity> Cc
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				Microsoft.Xrm.Sdk.EntityCollection collection = this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityCollection>("cc");
-				if (((collection != null) 
-							&& (collection.Entities != null)))
-				{
-					return System.Linq.Enumerable.Cast<Microsoft.Xrm.Sdk.Entity>(collection.Entities);
-				}
-				else
-				{
-					return null;
-				}
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Cc");
-				if ((value == null))
-				{
-					this.SetAttributeValue("cc", value);
-				}
-				else
-				{
-					this.SetAttributeValue("cc", new Microsoft.Xrm.Sdk.EntityCollection(new System.Collections.Generic.List<Microsoft.Xrm.Sdk.Entity>(value)));
-				}
-				this.OnPropertyChanged("Cc");
 			}
 		}
 		
@@ -413,7 +331,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Unique identifier of the user who created the case resolution activity.
+		/// Unique identifier of the user who created the activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
 		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
@@ -426,20 +344,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Shows the external party who created the record.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdbyexternalparty")]
-		public Microsoft.Xrm.Sdk.EntityReference CreatedByExternalParty
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdbyexternalparty");
-			}
-		}
-		
-		/// <summary>
-		/// Date and time when the case resolution activity was created.
+		/// Date and time when the activity was created.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
 		public System.Nullable<System.DateTime> CreatedOn
@@ -452,7 +357,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Unique identifier of the delegate user who created the incidentresolution.
+		/// Unique identifier of the delegate user who created the activitypointer.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
 		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
@@ -468,42 +373,6 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("CreatedOnBehalfBy");
 				this.SetAttributeValue("createdonbehalfby", value);
 				this.OnPropertyChanged("CreatedOnBehalfBy");
-			}
-		}
-		
-		/// <summary>
-		/// Customer with which the activity is associated.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("customers")]
-		public System.Collections.Generic.IEnumerable<Microsoft.Xrm.Sdk.Entity> Customers
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				Microsoft.Xrm.Sdk.EntityCollection collection = this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityCollection>("customers");
-				if (((collection != null) 
-							&& (collection.Entities != null)))
-				{
-					return System.Linq.Enumerable.Cast<Microsoft.Xrm.Sdk.Entity>(collection.Entities);
-				}
-				else
-				{
-					return null;
-				}
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Customers");
-				if ((value == null))
-				{
-					this.SetAttributeValue("customers", value);
-				}
-				else
-				{
-					this.SetAttributeValue("customers", new Microsoft.Xrm.Sdk.EntityCollection(new System.Collections.Generic.List<Microsoft.Xrm.Sdk.Entity>(value)));
-				}
-				this.OnPropertyChanged("Customers");
 			}
 		}
 		
@@ -541,7 +410,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Type additional information that describes the case resolution.
+		/// Description of the activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("description")]
 		public string Description
@@ -557,6 +426,32 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("Description");
 				this.SetAttributeValue("description", value);
 				this.OnPropertyChanged("Description");
+			}
+		}
+		
+		/// <summary>
+		/// File that contains description content.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("descriptionblobid")]
+		public object DescriptionBlobId
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<object>("descriptionblobid");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("descriptionblobid_name")]
+		public string DescriptionBlobId_Name
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("descriptionblobid_name");
 			}
 		}
 		
@@ -614,78 +509,28 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Person who the activity is from.
+		/// Formatted scheduled end time of the activity.
 		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("from")]
-		public System.Collections.Generic.IEnumerable<Microsoft.Xrm.Sdk.Entity> From
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("formattedscheduledend")]
+		public System.Nullable<System.DateTime> FormattedScheduledEnd
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				Microsoft.Xrm.Sdk.EntityCollection collection = this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityCollection>("from");
-				if (((collection != null) 
-							&& (collection.Entities != null)))
-				{
-					return System.Linq.Enumerable.Cast<Microsoft.Xrm.Sdk.Entity>(collection.Entities);
-				}
-				else
-				{
-					return null;
-				}
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("From");
-				if ((value == null))
-				{
-					this.SetAttributeValue("from", value);
-				}
-				else
-				{
-					this.SetAttributeValue("from", new Microsoft.Xrm.Sdk.EntityCollection(new System.Collections.Generic.List<Microsoft.Xrm.Sdk.Entity>(value)));
-				}
-				this.OnPropertyChanged("From");
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("formattedscheduledend");
 			}
 		}
 		
 		/// <summary>
-		/// Sequence number of the import that created this record.
+		/// Formatted scheduled start time of the activity.
 		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("importsequencenumber")]
-		public System.Nullable<int> ImportSequenceNumber
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("formattedscheduledstart")]
+		public System.Nullable<System.DateTime> FormattedScheduledStart
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetAttributeValue<System.Nullable<int>>("importsequencenumber");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("ImportSequenceNumber");
-				this.SetAttributeValue("importsequencenumber", value);
-				this.OnPropertyChanged("ImportSequenceNumber");
-			}
-		}
-		
-		/// <summary>
-		/// Unique identifier of the case.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("incidentid")]
-		public Microsoft.Xrm.Sdk.EntityReference IncidentId
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("incidentid");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("IncidentId");
-				this.SetAttributeValue("incidentid", value);
-				this.OnPropertyChanged("IncidentId");
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("formattedscheduledstart");
 			}
 		}
 		
@@ -693,17 +538,17 @@ namespace SW365.OSIRIS.TableModel
 		/// Type of instance of a recurring series.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("instancetypecode")]
-		public virtual IncidentResolution_InstanceTypeCode? InstanceTypeCode
+		public virtual ActivityPointer_InstanceTypeCode? InstanceTypeCode
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((IncidentResolution_InstanceTypeCode?)(EntityOptionSetEnum.GetEnum(this, "instancetypecode")));
+				return ((ActivityPointer_InstanceTypeCode?)(EntityOptionSetEnum.GetEnum(this, "instancetypecode")));
 			}
 		}
 		
 		/// <summary>
-		/// Information about whether the case resolution activity was billed as part of resolving a case.
+		/// Information regarding whether the activity was billed as part of resolving a case.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isbilled")]
 		public System.Nullable<bool> IsBilled
@@ -756,7 +601,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Information that specifies if the case resolution activity was created from a workflow rule.
+		/// Information regarding whether the activity was created from a workflow rule.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isworkflowcreated")]
 		public System.Nullable<bool> IsWorkflowCreated
@@ -816,7 +661,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Unique identifier of the user who last modified the case resolution activity.
+		/// Unique identifier of user who last modified the activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
 		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
@@ -829,20 +674,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Shows the external party who modified the record.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedbyexternalparty")]
-		public Microsoft.Xrm.Sdk.EntityReference ModifiedByExternalParty
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedbyexternalparty");
-			}
-		}
-		
-		/// <summary>
-		/// Date and time when the case resolution activity was last modified.
+		/// Date and time when activity was last modified.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
 		public System.Nullable<System.DateTime> ModifiedOn
@@ -855,7 +687,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Unique identifier of the delegate user who last modified the incidentresolution.
+		/// Unique identifier of the delegate user who last modified the activitypointer.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
 		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
@@ -875,26 +707,6 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Use this setting to generate knowledge article from the case using copilot if you did not find a relevant article.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_proposeknowledge")]
-		public System.Nullable<bool> msdyn_proposeknowledge
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<System.Nullable<bool>>("msdyn_proposeknowledge");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("msdyn_proposeknowledge");
-				this.SetAttributeValue("msdyn_proposeknowledge", value);
-				this.OnPropertyChanged("msdyn_proposeknowledge");
-			}
-		}
-		
-		/// <summary>
 		/// Shows how long, in minutes, that the record was on hold.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("onholdtime")]
@@ -904,98 +716,6 @@ namespace SW365.OSIRIS.TableModel
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("onholdtime");
-			}
-		}
-		
-		/// <summary>
-		/// List of optional attendees for the activity.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("optionalattendees")]
-		public System.Collections.Generic.IEnumerable<Microsoft.Xrm.Sdk.Entity> OptionalAttendees
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				Microsoft.Xrm.Sdk.EntityCollection collection = this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityCollection>("optionalattendees");
-				if (((collection != null) 
-							&& (collection.Entities != null)))
-				{
-					return System.Linq.Enumerable.Cast<Microsoft.Xrm.Sdk.Entity>(collection.Entities);
-				}
-				else
-				{
-					return null;
-				}
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("OptionalAttendees");
-				if ((value == null))
-				{
-					this.SetAttributeValue("optionalattendees", value);
-				}
-				else
-				{
-					this.SetAttributeValue("optionalattendees", new Microsoft.Xrm.Sdk.EntityCollection(new System.Collections.Generic.List<Microsoft.Xrm.Sdk.Entity>(value)));
-				}
-				this.OnPropertyChanged("OptionalAttendees");
-			}
-		}
-		
-		/// <summary>
-		/// Person who organized the activity.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("organizer")]
-		public System.Collections.Generic.IEnumerable<Microsoft.Xrm.Sdk.Entity> Organizer
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				Microsoft.Xrm.Sdk.EntityCollection collection = this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityCollection>("organizer");
-				if (((collection != null) 
-							&& (collection.Entities != null)))
-				{
-					return System.Linq.Enumerable.Cast<Microsoft.Xrm.Sdk.Entity>(collection.Entities);
-				}
-				else
-				{
-					return null;
-				}
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Organizer");
-				if ((value == null))
-				{
-					this.SetAttributeValue("organizer", value);
-				}
-				else
-				{
-					this.SetAttributeValue("organizer", new Microsoft.Xrm.Sdk.EntityCollection(new System.Collections.Generic.List<Microsoft.Xrm.Sdk.Entity>(value)));
-				}
-				this.OnPropertyChanged("Organizer");
-			}
-		}
-		
-		/// <summary>
-		/// Date and time that the record was migrated.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overriddencreatedon")]
-		public System.Nullable<System.DateTime> OverriddenCreatedOn
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overriddencreatedon");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("OverriddenCreatedOn");
-				this.SetAttributeValue("overriddencreatedon", value);
-				this.OnPropertyChanged("OverriddenCreatedOn");
 			}
 		}
 		
@@ -1059,42 +779,6 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Outsource vendor with which activity is associated.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("partners")]
-		public System.Collections.Generic.IEnumerable<Microsoft.Xrm.Sdk.Entity> Partners
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				Microsoft.Xrm.Sdk.EntityCollection collection = this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityCollection>("partners");
-				if (((collection != null) 
-							&& (collection.Entities != null)))
-				{
-					return System.Linq.Enumerable.Cast<Microsoft.Xrm.Sdk.Entity>(collection.Entities);
-				}
-				else
-				{
-					return null;
-				}
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Partners");
-				if ((value == null))
-				{
-					this.SetAttributeValue("partners", value);
-				}
-				else
-				{
-					this.SetAttributeValue("partners", new Microsoft.Xrm.Sdk.EntityCollection(new System.Collections.Generic.List<Microsoft.Xrm.Sdk.Entity>(value)));
-				}
-				this.OnPropertyChanged("Partners");
-			}
-		}
-		
-		/// <summary>
 		/// For internal use only.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("postponeactivityprocessinguntil")]
@@ -1111,12 +795,12 @@ namespace SW365.OSIRIS.TableModel
 		/// Priority of the activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("prioritycode")]
-		public virtual IncidentResolution_PriorityCode? PriorityCode
+		public virtual ActivityPointer_PriorityCode? PriorityCode
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((IncidentResolution_PriorityCode?)(EntityOptionSetEnum.GetEnum(this, "prioritycode")));
+				return ((ActivityPointer_PriorityCode?)(EntityOptionSetEnum.GetEnum(this, "prioritycode")));
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
@@ -1168,99 +852,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// List of required attendees for the activity.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("requiredattendees")]
-		public System.Collections.Generic.IEnumerable<Microsoft.Xrm.Sdk.Entity> RequiredAttendees
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				Microsoft.Xrm.Sdk.EntityCollection collection = this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityCollection>("requiredattendees");
-				if (((collection != null) 
-							&& (collection.Entities != null)))
-				{
-					return System.Linq.Enumerable.Cast<Microsoft.Xrm.Sdk.Entity>(collection.Entities);
-				}
-				else
-				{
-					return null;
-				}
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("RequiredAttendees");
-				if ((value == null))
-				{
-					this.SetAttributeValue("requiredattendees", value);
-				}
-				else
-				{
-					this.SetAttributeValue("requiredattendees", new Microsoft.Xrm.Sdk.EntityCollection(new System.Collections.Generic.List<Microsoft.Xrm.Sdk.Entity>(value)));
-				}
-				this.OnPropertyChanged("RequiredAttendees");
-			}
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("resolutiontypecode")]
-		public virtual IncidentResolution_ResolutionTypeCode? ResolutionTypeCode
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return ((IncidentResolution_ResolutionTypeCode?)(EntityOptionSetEnum.GetEnum(this, "resolutiontypecode")));
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("ResolutionTypeCode");
-				this.SetAttributeValue("resolutiontypecode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("ResolutionTypeCode");
-			}
-		}
-		
-		/// <summary>
-		/// Users or facility/equipment that are required for the activity.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("resources")]
-		public System.Collections.Generic.IEnumerable<Microsoft.Xrm.Sdk.Entity> Resources
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				Microsoft.Xrm.Sdk.EntityCollection collection = this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityCollection>("resources");
-				if (((collection != null) 
-							&& (collection.Entities != null)))
-				{
-					return System.Linq.Enumerable.Cast<Microsoft.Xrm.Sdk.Entity>(collection.Entities);
-				}
-				else
-				{
-					return null;
-				}
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Resources");
-				if ((value == null))
-				{
-					this.SetAttributeValue("resources", value);
-				}
-				else
-				{
-					this.SetAttributeValue("resources", new Microsoft.Xrm.Sdk.EntityCollection(new System.Collections.Generic.List<Microsoft.Xrm.Sdk.Entity>(value)));
-				}
-				this.OnPropertyChanged("Resources");
-			}
-		}
-		
-		/// <summary>
-		/// Scheduled duration of the case resolution activity, specified in minutes.
+		/// Scheduled duration of the activity, specified in minutes.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("scheduleddurationminutes")]
 		public System.Nullable<int> ScheduledDurationMinutes
@@ -1270,10 +862,17 @@ namespace SW365.OSIRIS.TableModel
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("scheduleddurationminutes");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ScheduledDurationMinutes");
+				this.SetAttributeValue("scheduleddurationminutes", value);
+				this.OnPropertyChanged("ScheduledDurationMinutes");
+			}
 		}
 		
 		/// <summary>
-		/// Scheduled end time of the case resolution activity.
+		/// Scheduled end time of the activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("scheduledend")]
 		public System.Nullable<System.DateTime> ScheduledEnd
@@ -1293,7 +892,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Scheduled start time of the case resolution activity.
+		/// Scheduled start time of the activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("scheduledstart")]
 		public System.Nullable<System.DateTime> ScheduledStart
@@ -1352,7 +951,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Unique identifier of the service with which the case resolution activity is associated.
+		/// Unique identifier of an associated service.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("serviceid")]
 		public Microsoft.Xrm.Sdk.EntityReference ServiceId
@@ -1445,10 +1044,10 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Shows whether the case resolution is open, completed, or canceled. By default, all case resolutions are completed and the status value can't be changed.
+		/// Status of the activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
-		public System.Nullable<SW365.OSIRIS.TableModel.IncidentResolutionState> StateCode
+		public System.Nullable<SW365.OSIRIS.TableModel.ActivityPointerState> StateCode
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
@@ -1456,7 +1055,7 @@ namespace SW365.OSIRIS.TableModel
 				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statecode");
 				if ((optionSet != null))
 				{
-					return ((SW365.OSIRIS.TableModel.IncidentResolutionState)(System.Enum.ToObject(typeof(SW365.OSIRIS.TableModel.IncidentResolutionState), optionSet.Value)));
+					return ((SW365.OSIRIS.TableModel.ActivityPointerState)(System.Enum.ToObject(typeof(SW365.OSIRIS.TableModel.ActivityPointerState), optionSet.Value)));
 				}
 				else
 				{
@@ -1480,15 +1079,15 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Reason for the status of the case resolution activity.
+		/// Reason for the status of the activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
-		public virtual IncidentResolution_StatusCode? StatusCode
+		public virtual ActivityPointer_StatusCode? StatusCode
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((IncidentResolution_StatusCode?)(EntityOptionSetEnum.GetEnum(this, "statuscode")));
+				return ((ActivityPointer_StatusCode?)(EntityOptionSetEnum.GetEnum(this, "statuscode")));
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
@@ -1500,27 +1099,7 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Subcategory of the case resolution activity.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("subcategory")]
-		public string Subcategory
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<string>("subcategory");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Subcategory");
-				this.SetAttributeValue("subcategory", value);
-				this.OnPropertyChanged("Subcategory");
-			}
-		}
-		
-		/// <summary>
-		/// Subject associated with the case resolution activity.
+		/// Subject associated with the activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("subject")]
 		public string Subject
@@ -1536,26 +1115,6 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("Subject");
 				this.SetAttributeValue("subject", value);
 				this.OnPropertyChanged("Subject");
-			}
-		}
-		
-		/// <summary>
-		/// Time spent on the case resolution activity.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timespent")]
-		public System.Nullable<int> TimeSpent
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<System.Nullable<int>>("timespent");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("TimeSpent");
-				this.SetAttributeValue("timespent", value);
-				this.OnPropertyChanged("TimeSpent");
 			}
 		}
 		
@@ -1576,62 +1135,6 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("TimeZoneRuleVersionNumber");
 				this.SetAttributeValue("timezoneruleversionnumber", value);
 				this.OnPropertyChanged("TimeZoneRuleVersionNumber");
-			}
-		}
-		
-		/// <summary>
-		/// Person who is the receiver of the activity.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("to")]
-		public System.Collections.Generic.IEnumerable<Microsoft.Xrm.Sdk.Entity> To
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				Microsoft.Xrm.Sdk.EntityCollection collection = this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityCollection>("to");
-				if (((collection != null) 
-							&& (collection.Entities != null)))
-				{
-					return System.Linq.Enumerable.Cast<Microsoft.Xrm.Sdk.Entity>(collection.Entities);
-				}
-				else
-				{
-					return null;
-				}
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("To");
-				if ((value == null))
-				{
-					this.SetAttributeValue("to", value);
-				}
-				else
-				{
-					this.SetAttributeValue("to", new Microsoft.Xrm.Sdk.EntityCollection(new System.Collections.Generic.List<Microsoft.Xrm.Sdk.Entity>(value)));
-				}
-				this.OnPropertyChanged("To");
-			}
-		}
-		
-		/// <summary>
-		/// Total time spent on the case resolution activity.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("totaltimespent")]
-		public System.Nullable<int> TotalTimeSpent
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<System.Nullable<int>>("totaltimespent");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("TotalTimeSpent");
-				this.SetAttributeValue("totaltimespent", value);
-				this.OnPropertyChanged("TotalTimeSpent");
 			}
 		}
 		
@@ -1709,149 +1212,230 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// N:1 account_IncidentResolutions
+		/// 1:N activity_pointer_appointment
 		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("account_IncidentResolutions")]
-		public SW365.OSIRIS.TableModel.Account account_IncidentResolutions
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("activity_pointer_appointment")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.Appointment> activity_pointer_appointment
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.Account>("account_IncidentResolutions", null);
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.Appointment>("activity_pointer_appointment", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("account_IncidentResolutions");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.Account>("account_IncidentResolutions", null, value);
-				this.OnPropertyChanged("account_IncidentResolutions");
+				this.OnPropertyChanging("activity_pointer_appointment");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.Appointment>("activity_pointer_appointment", null, value);
+				this.OnPropertyChanged("activity_pointer_appointment");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 activity_pointer_incident_resolution
+		/// 1:N activity_pointer_incident_resolution
 		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("activityid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("activity_pointer_incident_resolution")]
-		public SW365.OSIRIS.TableModel.ActivityPointer activity_pointer_incident_resolution
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.IncidentResolution> activity_pointer_incident_resolution
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.ActivityPointer>("activity_pointer_incident_resolution", null);
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.IncidentResolution>("activity_pointer_incident_resolution", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
 				this.OnPropertyChanging("activity_pointer_incident_resolution");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.ActivityPointer>("activity_pointer_incident_resolution", null, value);
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.IncidentResolution>("activity_pointer_incident_resolution", null, value);
 				this.OnPropertyChanged("activity_pointer_incident_resolution");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 Incident_IncidentResolutions
+		/// 1:N activity_pointer_task
 		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("incidentid")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Incident_IncidentResolutions")]
-		public SW365.OSIRIS.TableModel.Incident Incident_IncidentResolutions
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("activity_pointer_task")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.Task> activity_pointer_task
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.Incident>("Incident_IncidentResolutions", null);
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.Task>("activity_pointer_task", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Incident_IncidentResolutions");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.Incident>("Incident_IncidentResolutions", null, value);
-				this.OnPropertyChanged("Incident_IncidentResolutions");
+				this.OnPropertyChanging("activity_pointer_task");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.Task>("activity_pointer_task", null, value);
+				this.OnPropertyChanged("activity_pointer_task");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_incidentresolution_createdby
+		/// N:1 Account_ActivityPointers
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Account_ActivityPointers")]
+		public SW365.OSIRIS.TableModel.Account Account_ActivityPointers
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.Account>("Account_ActivityPointers", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Account_ActivityPointers");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.Account>("Account_ActivityPointers", null, value);
+				this.OnPropertyChanged("Account_ActivityPointers");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 Contact_ActivityPointers
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Contact_ActivityPointers")]
+		public SW365.OSIRIS.TableModel.Contact Contact_ActivityPointers
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.Contact>("Contact_ActivityPointers", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Contact_ActivityPointers");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.Contact>("Contact_ActivityPointers", null, value);
+				this.OnPropertyChanged("Contact_ActivityPointers");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 Incident_ActivityPointers
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Incident_ActivityPointers")]
+		public SW365.OSIRIS.TableModel.Incident Incident_ActivityPointers
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.Incident>("Incident_ActivityPointers", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Incident_ActivityPointers");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.Incident>("Incident_ActivityPointers", null, value);
+				this.OnPropertyChanged("Incident_ActivityPointers");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_activitypointer_createdby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_incidentresolution_createdby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_incidentresolution_createdby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_activitypointer_createdby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_activitypointer_createdby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_incidentresolution_createdby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_activitypointer_createdby", null);
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_incidentresolution_createdonbehalfby
+		/// N:1 lk_activitypointer_createdonbehalfby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_incidentresolution_createdonbehalfby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_incidentresolution_createdonbehalfby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_activitypointer_createdonbehalfby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_activitypointer_createdonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_incidentresolution_createdonbehalfby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_activitypointer_createdonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("lk_incidentresolution_createdonbehalfby");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_incidentresolution_createdonbehalfby", null, value);
-				this.OnPropertyChanged("lk_incidentresolution_createdonbehalfby");
+				this.OnPropertyChanging("lk_activitypointer_createdonbehalfby");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_activitypointer_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_activitypointer_createdonbehalfby");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_incidentresolution_modifiedby
+		/// N:1 lk_activitypointer_modifiedby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_incidentresolution_modifiedby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_incidentresolution_modifiedby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_activitypointer_modifiedby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_activitypointer_modifiedby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_incidentresolution_modifiedby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_activitypointer_modifiedby", null);
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_incidentresolution_modifiedonbehalfby
+		/// N:1 lk_activitypointer_modifiedonbehalfby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_incidentresolution_modifiedonbehalfby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_incidentresolution_modifiedonbehalfby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_activitypointer_modifiedonbehalfby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_activitypointer_modifiedonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_incidentresolution_modifiedonbehalfby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_activitypointer_modifiedonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("lk_incidentresolution_modifiedonbehalfby");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_incidentresolution_modifiedonbehalfby", null, value);
-				this.OnPropertyChanged("lk_incidentresolution_modifiedonbehalfby");
+				this.OnPropertyChanging("lk_activitypointer_modifiedonbehalfby");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_activitypointer_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_activitypointer_modifiedonbehalfby");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 user_incidentresolution
+		/// N:1 sw365_eventregistration_ActivityPointers
 		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_incidentresolution")]
-		public SW365.OSIRIS.TableModel.SystemUser user_incidentresolution
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_eventregistration_ActivityPointers")]
+		public SW365.OSIRIS.TableModel.sw365_eventregistration sw365_eventregistration_ActivityPointers
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("user_incidentresolution", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.sw365_eventregistration>("sw365_eventregistration_ActivityPointers", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_eventregistration_ActivityPointers");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.sw365_eventregistration>("sw365_eventregistration_ActivityPointers", null, value);
+				this.OnPropertyChanged("sw365_eventregistration_ActivityPointers");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 user_activity
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_activity")]
+		public SW365.OSIRIS.TableModel.SystemUser user_activity
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("user_activity", null);
 			}
 		}
 		
@@ -1860,7 +1444,7 @@ namespace SW365.OSIRIS.TableModel
 		/// <param name="anonymousType">LINQ anonymous type.</param>
 		/// </summary>
 		[System.Diagnostics.DebuggerNonUserCode()]
-		public IncidentResolution(object anonymousType) : 
+		public ActivityPointer(object anonymousType) : 
 				this()
 		{
             foreach (var p in anonymousType.GetType().GetProperties())

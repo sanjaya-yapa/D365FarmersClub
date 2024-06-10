@@ -38,14 +38,6 @@ namespace SW365.OSIRIS.TableModel
 			public const string AccountId = "accountid";
 			public const string ActivitiesComplete = "activitiescomplete";
 			public const string ActualServiceUnits = "actualserviceunits";
-			public const string Adx_CreatedByIPAddress = "adx_createdbyipaddress";
-			public const string Adx_CreatedByUsername = "adx_createdbyusername";
-			public const string Adx_ModifiedByIPAddress = "adx_modifiedbyipaddress";
-			public const string Adx_ModifiedByUsername = "adx_modifiedbyusername";
-			public const string adx_publishtoweb = "adx_publishtoweb";
-			public const string adx_resolution = "adx_resolution";
-			public const string adx_resolutiondate = "adx_resolutiondate";
-			public const string adx_stepstoreproduce = "adx_stepstoreproduce";
 			public const string BilledServiceUnits = "billedserviceunits";
 			public const string BlockedProfile = "blockedprofile";
 			public const string caseage = "caseage";
@@ -97,8 +89,7 @@ namespace SW365.OSIRIS.TableModel
 			public const string ModifiedByExternalParty = "modifiedbyexternalparty";
 			public const string ModifiedOn = "modifiedon";
 			public const string ModifiedOnBehalfBy = "modifiedonbehalfby";
-			public const string msa_partnercontactid = "msa_partnercontactid";
-			public const string msa_partnerid = "msa_partnerid";
+			public const string msdyn_CaseSurveyInviteUrl = "msdyn_casesurveyinviteurl";
 			public const string msdyn_copilotengaged = "msdyn_copilotengaged";
 			public const string msdyn_iotalert = "msdyn_iotalert";
 			public const string msdyn_precreateattachmentsid = "msdyn_precreateattachmentsid";
@@ -154,8 +145,6 @@ namespace SW365.OSIRIS.TableModel
 			public const string lk_incidentbase_createdonbehalfby = "lk_incidentbase_createdonbehalfby";
 			public const string lk_incidentbase_modifiedby = "lk_incidentbase_modifiedby";
 			public const string lk_incidentbase_modifiedonbehalfby = "lk_incidentbase_modifiedonbehalfby";
-			public const string msa_account_incident = "msa_account_incident";
-			public const string msa_contact_incident = "msa_contact_incident";
 			public const string sw365_farmer_incident = "sw365_farmer_incident";
 			public const string sw365_membership_Incident = "sw365_membership_Incident";
 			public const string sw365_sw365_casetype_incident = "sw365_sw365_casetype_incident";
@@ -255,166 +244,6 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("ActualServiceUnits");
 				this.SetAttributeValue("actualserviceunits", value);
 				this.OnPropertyChanged("ActualServiceUnits");
-			}
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_createdbyipaddress")]
-		public string Adx_CreatedByIPAddress
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<string>("adx_createdbyipaddress");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Adx_CreatedByIPAddress");
-				this.SetAttributeValue("adx_createdbyipaddress", value);
-				this.OnPropertyChanged("Adx_CreatedByIPAddress");
-			}
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_createdbyusername")]
-		public string Adx_CreatedByUsername
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<string>("adx_createdbyusername");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Adx_CreatedByUsername");
-				this.SetAttributeValue("adx_createdbyusername", value);
-				this.OnPropertyChanged("Adx_CreatedByUsername");
-			}
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_modifiedbyipaddress")]
-		public string Adx_ModifiedByIPAddress
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<string>("adx_modifiedbyipaddress");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Adx_ModifiedByIPAddress");
-				this.SetAttributeValue("adx_modifiedbyipaddress", value);
-				this.OnPropertyChanged("Adx_ModifiedByIPAddress");
-			}
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_modifiedbyusername")]
-		public string Adx_ModifiedByUsername
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<string>("adx_modifiedbyusername");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("Adx_ModifiedByUsername");
-				this.SetAttributeValue("adx_modifiedbyusername", value);
-				this.OnPropertyChanged("Adx_ModifiedByUsername");
-			}
-		}
-		
-		/// <summary>
-		/// If set to Yes, the case will be visible and searchable on portals connected to this organization.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_publishtoweb")]
-		public System.Nullable<bool> adx_publishtoweb
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<System.Nullable<bool>>("adx_publishtoweb");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("adx_publishtoweb");
-				this.SetAttributeValue("adx_publishtoweb", value);
-				this.OnPropertyChanged("adx_publishtoweb");
-			}
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_resolution")]
-		public string adx_resolution
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<string>("adx_resolution");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("adx_resolution");
-				this.SetAttributeValue("adx_resolution", value);
-				this.OnPropertyChanged("adx_resolution");
-			}
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_resolutiondate")]
-		public System.Nullable<System.DateTime> adx_resolutiondate
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<System.Nullable<System.DateTime>>("adx_resolutiondate");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("adx_resolutiondate");
-				this.SetAttributeValue("adx_resolutiondate", value);
-				this.OnPropertyChanged("adx_resolutiondate");
-			}
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_stepstoreproduce")]
-		public string adx_stepstoreproduce
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<string>("adx_stepstoreproduce");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("adx_stepstoreproduce");
-				this.SetAttributeValue("adx_stepstoreproduce", value);
-				this.OnPropertyChanged("adx_stepstoreproduce");
 			}
 		}
 		
@@ -1337,42 +1166,22 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Allows a partner contact to be assigned to a specific case.
+		/// Survey invite url for customer feedback.
 		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msa_partnercontactid")]
-		public Microsoft.Xrm.Sdk.EntityReference msa_partnercontactid
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_casesurveyinviteurl")]
+		public string msdyn_CaseSurveyInviteUrl
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("msa_partnercontactid");
+				return this.GetAttributeValue<string>("msdyn_casesurveyinviteurl");
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("msa_partnercontactid");
-				this.SetAttributeValue("msa_partnercontactid", value);
-				this.OnPropertyChanged("msa_partnercontactid");
-			}
-		}
-		
-		/// <summary>
-		/// Creates a Relationship between a Partner (account) and a case for indirect service arrangements.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msa_partnerid")]
-		public Microsoft.Xrm.Sdk.EntityReference msa_partnerid
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("msa_partnerid");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("msa_partnerid");
-				this.SetAttributeValue("msa_partnerid", value);
-				this.OnPropertyChanged("msa_partnerid");
+				this.OnPropertyChanging("msdyn_CaseSurveyInviteUrl");
+				this.SetAttributeValue("msdyn_casesurveyinviteurl", value);
+				this.OnPropertyChanged("msdyn_CaseSurveyInviteUrl");
 			}
 		}
 		
@@ -2224,6 +2033,26 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
+		/// 1:N Incident_ActivityPointers
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Incident_ActivityPointers")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.ActivityPointer> Incident_ActivityPointers
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("Incident_ActivityPointers", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Incident_ActivityPointers");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("Incident_ActivityPointers", null, value);
+				this.OnPropertyChanged("Incident_ActivityPointers");
+			}
+		}
+		
+		/// <summary>
 		/// 1:N Incident_Appointments
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Incident_Appointments")]
@@ -2597,48 +2426,6 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("lk_incidentbase_modifiedonbehalfby");
 				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_incidentbase_modifiedonbehalfby", null, value);
 				this.OnPropertyChanged("lk_incidentbase_modifiedonbehalfby");
-			}
-		}
-		
-		/// <summary>
-		/// N:1 msa_account_incident
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msa_partnerid")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("msa_account_incident")]
-		public SW365.OSIRIS.TableModel.Account msa_account_incident
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.Account>("msa_account_incident", null);
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("msa_account_incident");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.Account>("msa_account_incident", null, value);
-				this.OnPropertyChanged("msa_account_incident");
-			}
-		}
-		
-		/// <summary>
-		/// N:1 msa_contact_incident
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msa_partnercontactid")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("msa_contact_incident")]
-		public SW365.OSIRIS.TableModel.Contact msa_contact_incident
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.Contact>("msa_contact_incident", null);
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("msa_contact_incident");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.Contact>("msa_contact_incident", null, value);
-				this.OnPropertyChanged("msa_contact_incident");
 			}
 		}
 		

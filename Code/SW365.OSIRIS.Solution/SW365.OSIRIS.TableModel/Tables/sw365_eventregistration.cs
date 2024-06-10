@@ -465,6 +465,66 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
+		/// 1:N sw365_eventregistration_ActivityPointers
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_eventregistration_ActivityPointers")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.ActivityPointer> sw365_eventregistration_ActivityPointers
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("sw365_eventregistration_ActivityPointers", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_eventregistration_ActivityPointers");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.ActivityPointer>("sw365_eventregistration_ActivityPointers", null, value);
+				this.OnPropertyChanged("sw365_eventregistration_ActivityPointers");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N sw365_eventregistration_Appointments
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_eventregistration_Appointments")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.Appointment> sw365_eventregistration_Appointments
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.Appointment>("sw365_eventregistration_Appointments", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_eventregistration_Appointments");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.Appointment>("sw365_eventregistration_Appointments", null, value);
+				this.OnPropertyChanged("sw365_eventregistration_Appointments");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N sw365_eventregistration_Tasks
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_eventregistration_Tasks")]
+		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.Task> sw365_eventregistration_Tasks
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.Task>("sw365_eventregistration_Tasks", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_eventregistration_Tasks");
+				this.SetRelatedEntities<SW365.OSIRIS.TableModel.Task>("sw365_eventregistration_Tasks", null, value);
+				this.OnPropertyChanged("sw365_eventregistration_Tasks");
+			}
+		}
+		
+		/// <summary>
 		/// N:1 lk_sw365_eventregistration_createdby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
