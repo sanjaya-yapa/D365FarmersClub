@@ -5,7 +5,7 @@
     <IntroducedVersion>1.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form>
+    <form headerdensity="HighWithControls">
       <tabs>
         <tab verticallayout="true" id="{6bd88b89-6432-434c-9b62-b3936c37d697}" IsUserDefined="1">
           <labels>
@@ -14,27 +14,178 @@
           <columns>
             <column width="100%">
               <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{b530cf18-5fe8-497c-b237-0c7a07a77d2b}">
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{b530cf18-5fe8-497c-b237-0c7a07a77d2b}" columns="11">
                   <labels>
                     <label description="General" languagecode="1033" />
                   </labels>
                   <rows>
                     <row>
-                      <cell id="{5c7969da-164d-4008-8dea-405a654afbd7}">
+                      <cell id="{0f406d9c-7e7e-41af-8143-4bb7b21f39bc}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
-                          <label description="Name" languagecode="1033" />
+                          <label description="Event Code" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventcode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_eventcode" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{0032a099-876c-45c7-b049-f9f3bf1bf844}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5c7969da-164d-4008-8dea-405a654afbd7}" colspan="2">
+                        <labels>
+                          <label description="Subject" languagecode="1033" />
                         </labels>
                         <control id="sw365_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sw365_name" />
                       </cell>
                     </row>
                     <row>
-                      <cell id="{afb2fbb5-a98d-49c0-a635-d7e71822907d}">
+                      <cell id="{109d765b-6b90-403d-a6a6-fd22b7ca61eb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_eventstartdate" disabled="false" />
+                      </cell>
+                      <cell id="{fa2f1238-9656-48ab-b909-34b6d21d96d6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event End Date" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_eventenddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{22bc50b4-e449-4d9c-b701-5edd0e6ff324}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event Type" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventtype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_eventtype" disabled="false" />
+                      </cell>
+                      <cell id="{8673ba4c-d6bd-4103-9644-4fdf2e5968c6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event Status" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sw365_eventstatus" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{92eacabe-b328-40d5-b826-7a9724a46f6d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event Venue" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventvenue" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_eventvenue" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{45e271a3-6247-4ad9-9efc-bcc1def882c7}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d0c906d8-fefa-4d55-b6a3-5f78272cad55}" locklevel="0" colspan="2" rowspan="4">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_description" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="sw365_description" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row>
+                      <cell id="{afb2fbb5-a98d-49c0-a635-d7e71822907d}" visible="false">
                         <labels>
                           <label description="Owner" languagecode="1033" />
                         </labels>
                         <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
                       </cell>
+                      <cell locklevel="0" id="{5ff6af00-ad93-429e-aa1c-111e5e37a058}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
                     </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="298fc0c1-6514-42d1-a127-0702dee572f8" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Registration and Attendenace" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c2ac49be-b8a9-40d7-9909-fad11add724d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Registration Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_registrationstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_registrationstartdate" disabled="false" />
+                      </cell>
+                      <cell id="{17af1234-6f32-4886-bb11-a7740e3ae8da}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Registration End Date" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_registrationenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_registrationenddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e4bfaf77-6814-4350-83e1-f55dd27e2757}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Number of Attendees" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_numberofattendees" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="sw365_numberofattendees" disabled="false" />
+                      </cell>
+                      <cell id="{c150a02b-29d0-415d-a776-64732a35850b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Attendee Count" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_attendeecount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="sw365_attendeecount" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{826bb134-097f-4864-ba4d-d718a58d6969}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Is Guests Allowed" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_isguestsallowed" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="sw365_isguestsallowed" disabled="false" uniqueid="{56ba58d6-f1b5-44e1-a914-66c96f63f5d9}" />
+                      </cell>
+                      <cell id="{ca6b93f2-23ce-4131-ae0d-636d52b96a40}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Registration Count" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_registrationcount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="sw365_registrationcount" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="section_ticketpricing" id="3abab091-9009-47ec-9499-8d4949d4b6c9" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Ticket Pricing" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{d43e601a-7050-4b70-8fd2-7ef136ee1263}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1719143275527" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sw365_eventticketprice</TargetEntityType>
+                            <ViewId>{2F7139CD-7DC9-4023-A187-FE775152C9ED}</ViewId>
+                            <ViewIds>{2F7139CD-7DC9-4023-A187-FE775152C9ED}</ViewIds>
+                            <RelationshipName>sw365_communityevent_sw365_eventticketprice</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
                   </rows>
                 </section>
               </sections>
@@ -42,6 +193,105 @@
           </columns>
         </tab>
       </tabs>
+      <header id="{2196e7e9-92f0-486e-bf06-c3fc08eaf59d}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{7f9f5b41-2d9b-4877-ac0c-e7bb3d8bfd0d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1ae51954-7d66-4729-9910-68dbf964e51d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{63e460e5-d02c-4924-8479-ad12ccfe9112}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{12e7fe29-73b2-434f-b581-9d20f8d6a6c7}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{77fde1da-8287-4c63-af55-b4fd4540087c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{ec529d4e-3da6-4111-b722-5e7fb4132f03}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{6b8d7be4-ebd4-4716-93a3-74406ec45687}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <controlDescriptions>
+        <controlDescription forControl="{56ba58d6-f1b5-44e1-a914-66c96f63f5d9}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>sw365_isguestsallowed</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">sw365_isguestsallowed</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">sw365_isguestsallowed</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">sw365_isguestsallowed</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>

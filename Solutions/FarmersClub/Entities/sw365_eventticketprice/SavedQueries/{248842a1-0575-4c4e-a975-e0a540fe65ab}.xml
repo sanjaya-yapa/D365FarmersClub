@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{248842a1-0575-4c4e-a975-e0a540fe65ab}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
+        <row name="result" id="sw365_eventticketpriceid">
+          <cell name="sw365_name" width="200" />
+          <cell name="sw365_communityevent" width="144" />
+          <cell name="sw365_subscriptiontype" width="143" />
+          <cell name="sw365_ticketprice" width="108" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="sw365_eventticketprice">
+          <attribute name="sw365_eventticketpriceid" />
+          <attribute name="sw365_name" />
+          <order attribute="sw365_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+          <attribute name="sw365_communityevent" />
+          <attribute name="sw365_subscriptiontype" />
+          <attribute name="sw365_ticketprice" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Event Ticket Prices" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

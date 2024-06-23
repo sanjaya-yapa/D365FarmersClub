@@ -6,12 +6,12 @@
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{720ad55c-fb18-ef11-9f8a-002248d3c505}</savedqueryid>
+    <savedqueryid>{6bf00f95-5331-ef11-8e4f-002248d3cb11}</savedqueryid>
     <querytype>8192</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical" output-format="xml-platform">
-        <entity name="sw365_event">
-          <attribute name="sw365_eventid" />
+        <entity name="sw365_eventticketprice">
+          <attribute name="sw365_eventticketpriceid" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
             <condition attribute="ownerid" operator="eq-userid" />
@@ -21,10 +21,10 @@
     </fetchxml>
     <IntroducedVersion>1.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="My Events" languagecode="1033" />
+      <LocalizedName description="My Event Ticket Prices" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="Active Events owned by me" languagecode="1033" />
+      <Description description="Active Event Ticket Prices owned by me" languagecode="1033" />
     </Descriptions>
   </savedquery>
 </savedqueries>

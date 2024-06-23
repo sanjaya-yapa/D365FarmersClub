@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <systemform>
-    <formid>{ca70adb1-6979-4eba-aaea-3e8120866edb}</formid>
+    <formid>{0ffdf053-2aff-4125-bca2-ad3deba21230}</formid>
     <IntroducedVersion>1.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
     <form>
       <tabs>
-        <tab verticallayout="true" id="{b647fa06-96e1-458f-badc-33ac383f0e34}" IsUserDefined="1">
+        <tab verticallayout="true" id="{f99ca25e-f7dc-4c9e-b1bd-d6dd0ea68a21}" IsUserDefined="1">
           <labels>
             <label description="" languagecode="1033" />
           </labels>
           <columns>
             <column width="100%">
               <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{4939afe2-dd71-41c9-b3a7-ff8094ac6e41}">
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{62a67f5d-e384-4a99-8d60-097f33b67226}">
                   <labels>
                     <label description="GENERAL" languagecode="1033" />
                   </labels>
                   <rows>
                     <row>
-                      <cell id="{01eb0f38-f7e8-4106-b4e7-d4e666345360}">
+                      <cell id="{d636802b-a40c-4028-84e0-298e2bd09e7b}">
                         <labels>
-                          <label description="Name" languagecode="1033" />
+                          <label description="Ticket Price Code" languagecode="1033" />
                         </labels>
                         <control id="sw365_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sw365_name" />
                       </cell>
                     </row>
                     <row>
-                      <cell id="{11e18ec8-9905-49d2-9617-914cb1da1f19}">
+                      <cell id="{885d55d3-e818-4dcb-b40c-89bd4f45af4e}">
                         <labels>
                           <label description="Owner" languagecode="1033" />
                         </labels>

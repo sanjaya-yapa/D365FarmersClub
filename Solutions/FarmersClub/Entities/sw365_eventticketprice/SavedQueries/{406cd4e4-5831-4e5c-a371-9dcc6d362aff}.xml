@@ -6,23 +6,22 @@
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{95587333-edf7-45f4-b416-931d66db76b9}</savedqueryid>
+    <savedqueryid>{406cd4e4-5831-4e5c-a371-9dcc6d362aff}</savedqueryid>
     <layoutxml>
-      <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
-        <row name="result" id="sw365_eventid">
+      <grid name="sw365_eventticketprices" jump="sw365_name" select="1" icon="1" preview="0">
+        <row name="sw365_eventticketprice" id="sw365_eventticketpriceid">
           <cell name="sw365_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
     </layoutxml>
-    <querytype>0</querytype>
+    <querytype>64</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="sw365_event">
-          <attribute name="sw365_eventid" />
+        <entity name="sw365_eventticketprice">
+          <attribute name="sw365_eventticketpriceid" />
           <attribute name="sw365_name" />
           <attribute name="createdon" />
-          <order attribute="sw365_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
@@ -31,7 +30,7 @@
     </fetchxml>
     <IntroducedVersion>1.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Active Events" languagecode="1033" />
+      <LocalizedName description="Event Ticket Price Lookup View" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

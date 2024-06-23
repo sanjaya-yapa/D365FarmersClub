@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{fa5bdec1-b22d-454e-8f97-63191bd20fbd}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{53984715-c809-4f0a-879c-2ae581cf6246}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{5ef32c93-e03e-4d7c-9448-72b83260d321}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2b46acb8-0188-47ee-b52a-b6620e63248b}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Ticket Price Code" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sw365_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{95bc5799-baed-4ad6-9825-a917531fc69e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Community Event" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_communityevent" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_communityevent" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{80c3367c-6fb1-4e92-9207-8d66ccc6078c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Subscription Type" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_subscriptiontype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_subscriptiontype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{70f2cc60-e51c-495a-a687-bdfc6edb3a62}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Ticket Price" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_ticketprice" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sw365_ticketprice" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f52c167e-2be0-4293-b001-625e9ecb0d2e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Ticket Status" languagecode="1033" />
+                        </labels>
+                        <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{134fcc04-adeb-4d9f-bf8e-b01c85585e3b}" showlabel="true" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{63d418fe-7dfa-4999-a560-c41877548c8b}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{471f5797-3eff-4ca3-9018-e2352a7e1526}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b81eb8f1-cf1b-4b8a-be3d-7b358f9c79dd}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0a67e487-c865-4476-b94a-5fb0117e227b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{f0fea9a3-8dbf-4187-a902-471ca902ee16}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{725f512d-1d8b-4933-9c39-ab7e4112b992}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{52e4ac2b-6ecd-476b-8891-5074a5198a19}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{d3b0c96c-ceba-4096-9363-8a20aa045e6b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

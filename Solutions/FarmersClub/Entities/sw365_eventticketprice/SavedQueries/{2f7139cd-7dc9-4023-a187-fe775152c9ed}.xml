@@ -3,38 +3,39 @@
   <savedquery>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>0</CanBeDeleted>
-    <isquickfindquery>1</isquickfindquery>
+    <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{0e4eb3bb-cfb1-4d32-a3b2-36168c44998d}</savedqueryid>
+    <savedqueryid>{2f7139cd-7dc9-4023-a187-fe775152c9ed}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
-        <row name="result" id="sw365_eventid">
-          <cell name="sw365_name" width="300" />
-          <cell name="createdon" width="125" />
+        <row name="result" id="sw365_eventticketpriceid">
+          <cell name="sw365_name" width="200" />
+          <cell name="sw365_communityevent" width="144" />
+          <cell name="sw365_subscriptiontype" width="143" />
+          <cell name="sw365_ticketprice" width="108" />
         </row>
       </grid>
     </layoutxml>
-    <querytype>4</querytype>
+    <querytype>0</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
-        <entity name="sw365_event">
-          <attribute name="sw365_eventid" />
+        <entity name="sw365_eventticketprice">
+          <attribute name="sw365_eventticketpriceid" />
           <attribute name="sw365_name" />
-          <attribute name="createdon" />
           <order attribute="sw365_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
-          <filter type="or" isquickfindfields="1">
-            <condition attribute="sw365_name" operator="like" value="{0}" />
-          </filter>
+          <attribute name="sw365_communityevent" />
+          <attribute name="sw365_subscriptiontype" />
+          <attribute name="sw365_ticketprice" />
         </entity>
       </fetch>
     </fetchxml>
     <IntroducedVersion>1.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Quick Find Active Events" languagecode="1033" />
+      <LocalizedName description="Active Event Ticket Prices" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

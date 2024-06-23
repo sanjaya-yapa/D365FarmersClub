@@ -22,7 +22,7 @@
                     <row>
                       <cell id="{f56e2b55-8772-4ed4-b039-c88b5e72b0be}">
                         <labels>
-                          <label description="Name" languagecode="1033" />
+                          <label description="Event Type Title" languagecode="1033" />
                         </labels>
                         <control id="sw365_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sw365_name" />
                       </cell>
