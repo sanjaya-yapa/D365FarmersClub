@@ -10,8 +10,16 @@
     <layoutxml>
       <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
         <row name="result" id="sw365_communityeventid">
-          <cell name="sw365_name" width="300" />
-          <cell name="createdon" width="125" />
+          <cell name="sw365_eventcode" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="sw365_name" width="200" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="sw365_eventstartdate" width="125" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="sw365_eventenddate" width="100" />
+          <cell name="sw365_eventtype" width="100" />
+          <cell name="sw365_eventvenue" width="100" />
+          <cell name="sw365_numberofattendees" width="125" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="sw365_registrationstartdate" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="sw365_registrationenddate" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="sw365_eventstatus" width="100" />
         </row>
       </grid>
     </layoutxml>
@@ -19,13 +27,21 @@
     <fetchxml>
       <fetch version="1.0" mapping="logical">
         <entity name="sw365_communityevent">
-          <attribute name="sw365_communityeventid" />
           <attribute name="sw365_name" />
-          <attribute name="createdon" />
           <order attribute="sw365_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="1" />
           </filter>
+          <attribute name="sw365_registrationstartdate" />
+          <attribute name="sw365_registrationenddate" />
+          <attribute name="sw365_numberofattendees" />
+          <attribute name="sw365_eventvenue" />
+          <attribute name="sw365_eventtype" />
+          <attribute name="sw365_eventstatus" />
+          <attribute name="sw365_eventstartdate" />
+          <attribute name="sw365_eventenddate" />
+          <attribute name="sw365_eventcode" />
+          <attribute name="sw365_communityeventid" />
         </entity>
       </fetch>
     </fetchxml>
