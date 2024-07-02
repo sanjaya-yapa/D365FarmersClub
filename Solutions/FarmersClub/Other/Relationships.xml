@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_sw365_address" />
   <EntityRelationship Name="business_unit_sw365_attendees" />
   <EntityRelationship Name="business_unit_sw365_casetype" />
   <EntityRelationship Name="business_unit_sw365_communityevent" />
@@ -11,6 +12,8 @@
   <EntityRelationship Name="business_unit_sw365_payment" />
   <EntityRelationship Name="business_unit_sw365_subscription" />
   <EntityRelationship Name="business_unit_sw365_subscriptiontype" />
+  <EntityRelationship Name="lk_sw365_address_createdby" />
+  <EntityRelationship Name="lk_sw365_address_modifiedby" />
   <EntityRelationship Name="lk_sw365_attendees_createdby" />
   <EntityRelationship Name="lk_sw365_attendees_modifiedby" />
   <EntityRelationship Name="lk_sw365_casetype_createdby" />
@@ -33,6 +36,7 @@
   <EntityRelationship Name="lk_sw365_subscription_modifiedby" />
   <EntityRelationship Name="lk_sw365_subscriptiontype_createdby" />
   <EntityRelationship Name="lk_sw365_subscriptiontype_modifiedby" />
+  <EntityRelationship Name="owner_sw365_address" />
   <EntityRelationship Name="owner_sw365_attendees" />
   <EntityRelationship Name="owner_sw365_casetype" />
   <EntityRelationship Name="owner_sw365_communityevent" />
@@ -60,7 +64,9 @@
   <EntityRelationship Name="sw365_payment_sw365_subscription" />
   <EntityRelationship Name="sw365_subscription_membership" />
   <EntityRelationship Name="sw365_subscriptiontype_sw365_eventticketprice" />
+  <EntityRelationship Name="sw365_sw365_address_sw365_eventvenue_sw365_regardingid" />
   <EntityRelationship Name="sw365_sw365_casetype_incident" />
+  <EntityRelationship Name="team_sw365_address" />
   <EntityRelationship Name="team_sw365_attendees" />
   <EntityRelationship Name="team_sw365_casetype" />
   <EntityRelationship Name="team_sw365_communityevent" />
@@ -76,6 +82,7 @@
   <EntityRelationship Name="TransactionCurrency_sw365_payment" />
   <EntityRelationship Name="TransactionCurrency_sw365_subscription" />
   <EntityRelationship Name="TransactionCurrency_sw365_subscriptiontype" />
+  <EntityRelationship Name="user_sw365_address" />
   <EntityRelationship Name="user_sw365_attendees" />
   <EntityRelationship Name="user_sw365_casetype" />
   <EntityRelationship Name="user_sw365_communityevent" />
