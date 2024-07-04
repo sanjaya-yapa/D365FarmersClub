@@ -28,6 +28,14 @@
                       </cell>
                     </row>
                     <row>
+                      <cell id="{04fb2265-d145-4d23-a3b6-daca464b1530}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Is Primary" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_isprimary" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="sw365_isprimary" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{213860c3-3659-4c26-9c77-a4485d7ae179}" locklevel="0" colspan="1" rowspan="1" labelid="{c727c6fe-2905-42c0-8292-022fc5004e04}">
                         <labels>
                           <label description="Address Line 1" languagecode="1033" />

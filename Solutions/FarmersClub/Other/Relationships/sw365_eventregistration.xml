@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <EntityRelationship Name="sw365_communityevent_sw365_eventregistration">
+  <EntityRelationship Name="sw365_eventregistration_sw365_attendees">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>sw365_eventregistration</ReferencingEntityName>
-    <ReferencedEntityName>sw365_communityevent</ReferencedEntityName>
+    <ReferencingEntityName>sw365_attendees</ReferencingEntityName>
+    <ReferencedEntityName>sw365_eventregistration</ReferencedEntityName>
     <CascadeAssign>NoCascade</CascadeAssign>
     <CascadeDelete>RemoveLink</CascadeDelete>
     <CascadeArchive>RemoveLink</CascadeArchive>
@@ -15,7 +15,7 @@
     <CascadeUnshare>NoCascade</CascadeUnshare>
     <CascadeRollupView>NoCascade</CascadeRollupView>
     <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
-    <ReferencingAttributeName>sw365_communityevent</ReferencingAttributeName>
+    <ReferencingAttributeName>sw365_eventregistration</ReferencingAttributeName>
     <RelationshipDescription>
       <Descriptions>
         <Description description="" languagecode="1033" />
@@ -26,22 +26,22 @@
         <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
         <NavPaneArea>Details</NavPaneArea>
         <NavPaneOrder>10000</NavPaneOrder>
-        <NavigationPropertyName>sw365_communityevent</NavigationPropertyName>
+        <NavigationPropertyName>sw365_eventregistration</NavigationPropertyName>
         <RelationshipRoleType>1</RelationshipRoleType>
       </EntityRelationshipRole>
       <EntityRelationshipRole>
-        <NavigationPropertyName>sw365_communityevent_sw365_eventregistration</NavigationPropertyName>
+        <NavigationPropertyName>sw365_eventregistration_sw365_attendees</NavigationPropertyName>
         <RelationshipRoleType>0</RelationshipRoleType>
       </EntityRelationshipRole>
     </EntityRelationshipRoles>
   </EntityRelationship>
-  <EntityRelationship Name="sw365_communityevent_sw365_eventticketprice">
+  <EntityRelationship Name="sw365_eventregistration_sw365_payment">
     <EntityRelationshipType>OneToMany</EntityRelationshipType>
     <IsCustomizable>1</IsCustomizable>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <IsHierarchical>0</IsHierarchical>
-    <ReferencingEntityName>sw365_eventticketprice</ReferencingEntityName>
-    <ReferencedEntityName>sw365_communityevent</ReferencedEntityName>
+    <ReferencingEntityName>sw365_payment</ReferencingEntityName>
+    <ReferencedEntityName>sw365_eventregistration</ReferencedEntityName>
     <CascadeAssign>NoCascade</CascadeAssign>
     <CascadeDelete>RemoveLink</CascadeDelete>
     <CascadeArchive>RemoveLink</CascadeArchive>
@@ -50,7 +50,7 @@
     <CascadeUnshare>NoCascade</CascadeUnshare>
     <CascadeRollupView>NoCascade</CascadeRollupView>
     <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
-    <ReferencingAttributeName>sw365_communityevent</ReferencingAttributeName>
+    <ReferencingAttributeName>sw365_eventregistration</ReferencingAttributeName>
     <RelationshipDescription>
       <Descriptions>
         <Description description="" languagecode="1033" />
@@ -61,11 +61,11 @@
         <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
         <NavPaneArea>Details</NavPaneArea>
         <NavPaneOrder>10000</NavPaneOrder>
-        <NavigationPropertyName>sw365_communityevent</NavigationPropertyName>
+        <NavigationPropertyName>sw365_eventregistration</NavigationPropertyName>
         <RelationshipRoleType>1</RelationshipRoleType>
       </EntityRelationshipRole>
       <EntityRelationshipRole>
-        <NavigationPropertyName>sw365_communityevent_sw365_eventticketprice</NavigationPropertyName>
+        <NavigationPropertyName>sw365_eventregistration_sw365_payment</NavigationPropertyName>
         <RelationshipRoleType>0</RelationshipRoleType>
       </EntityRelationshipRole>
     </EntityRelationshipRoles>

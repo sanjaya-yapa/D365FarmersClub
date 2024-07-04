@@ -19,6 +19,7 @@
     <AppModuleComponent type="1" schemaName="sw365_casetype" />
     <AppModuleComponent type="1" schemaName="sw365_communityevent" />
     <AppModuleComponent type="1" schemaName="sw365_eventregistration" />
+    <AppModuleComponent type="1" schemaName="sw365_eventvenue" />
     <AppModuleComponent type="1" schemaName="sw365_payment" />
     <AppModuleComponent type="1" schemaName="sw365_subscription" />
     <AppModuleComponent type="1" schemaName="sw365_subscriptiontype" />
@@ -40,6 +41,14 @@
     <appsetting settingdefinitionid.uniquename="AppChannel">
       <iscustomizable>1</iscustomizable>
       <value>1</value>
+    </appsetting>
+    <appsetting settingdefinitionid.uniquename="msdyn_enablertecopilot">
+      <iscustomizable>1</iscustomizable>
+      <value>true</value>
+    </appsetting>
+    <appsetting settingdefinitionid.uniquename="msdyn_rtecopilotdefaultonruncompleted">
+      <iscustomizable>1</iscustomizable>
+      <value>true</value>
     </appsetting>
   </appsettings>
 </AppModule>

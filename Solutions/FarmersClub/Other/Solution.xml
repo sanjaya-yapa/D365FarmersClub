@@ -356,12 +356,6 @@
         <Required type="61" schemaName="Sales/ClientCommon/Sales_ClientCommon.js" displayName="Sales/ClientCommon/Sales_ClientCommon.js" solution="msdynce_Sales (9.0.4.0076)">
           <package>msdynce_SalesAnchor (9.0.24062.10003)</package>
         </Required>
-        <Dependent type="60" displayName="FCM - Membership main form" parentDisplayName="Account" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="61" schemaName="Sales/ClientCommon/Sales_ClientCommon.js" displayName="Sales/ClientCommon/Sales_ClientCommon.js" solution="msdynce_Sales (9.0.4.0076)">
-          <package>msdynce_SalesAnchor (9.0.24062.10003)</package>
-        </Required>
         <Dependent type="60" displayName="FCM - Membership portal form - Readonly" parentDisplayName="Account" id="{692e7a05-3af1-ee11-904b-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
@@ -369,6 +363,12 @@
           <package>msdynce_SalesAnchor (9.0.24062.10003)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership portal form" parentDisplayName="Account" id="{8194fe3b-d1e9-ee11-a203-002248d3bd9c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/ClientCommon/Sales_ClientCommon.js" displayName="Sales/ClientCommon/Sales_ClientCommon.js" solution="msdynce_Sales (9.0.4.0076)">
+          <package>msdynce_SalesAnchor (9.0.24062.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="Sales/Contact/Contact_main_system_library.js" displayName="Sales/Contact/Contact_main_system_library.js" solution="msdynce_SalesPatch201904 (9.0.1912.1007)">
@@ -491,6 +491,18 @@
       <MissingDependency>
         <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.11)" id.uniquename="AppChannel" />
         <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=sw365_FarmClubMembersApp,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="sw365_FarmClubMembersApp" id.settingdefinitionid.uniquename="AppChannel" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="msdyn_enablertecopilot" solution="msdyn_SalesCopilot (9.1.24062.10004)" id.uniquename="msdyn_enablertecopilot">
+          <package>msdynce_SalesAnchor (9.0.24062.10003)</package>
+        </Required>
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=sw365_FarmClubMembersApp,settingdefinitionid.uniquename=msdyn_enablertecopilot" id.parentappmoduleid.uniquename="sw365_FarmClubMembersApp" id.settingdefinitionid.uniquename="msdyn_enablertecopilot" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="msdyn_rtecopilotdefaultonruncompleted" solution="msdyn_CSIntelligence (9.1.24062.1020)" id.uniquename="msdyn_rtecopilotdefaultonruncompleted">
+          <package>msdyn_ServiceIntelligenceAnchor (9.1.24062.1020)</package>
+        </Required>
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=sw365_FarmClubMembersApp,settingdefinitionid.uniquename=msdyn_rtecopilotdefaultonruncompleted" id.parentappmoduleid.uniquename="sw365_FarmClubMembersApp" id.settingdefinitionid.uniquename="msdyn_rtecopilotdefaultonruncompleted" />
       </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>

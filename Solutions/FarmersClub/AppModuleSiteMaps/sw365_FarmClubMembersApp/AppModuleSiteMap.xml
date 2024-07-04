@@ -44,6 +44,7 @@
             <Title LCID="1033" Title="Event Payments" />
           </Titles>
         </SubArea>
+        <SubArea Id="subarea_737034a7" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="sw365_eventvenue" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
       </Group>
       <Group Id="group_d632b64e" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
         <Titles>
