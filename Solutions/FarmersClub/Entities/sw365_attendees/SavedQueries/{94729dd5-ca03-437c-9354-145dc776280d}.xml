@@ -10,8 +10,10 @@
     <layoutxml>
       <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
         <row name="result" id="sw365_attendeesid">
-          <cell name="sw365_name" width="300" />
-          <cell name="createdon" width="125" />
+          <cell name="sw365_attendeecode" width="124" />
+          <cell name="sw365_contact" width="150" />
+          <cell name="sw365_eventregistration" width="145" />
+          <cell name="sw365_attendeestatus" width="129" />
         </row>
       </grid>
     </layoutxml>
@@ -20,12 +22,13 @@
       <fetch version="1.0" mapping="logical">
         <entity name="sw365_attendees">
           <attribute name="sw365_attendeesid" />
-          <attribute name="sw365_name" />
-          <attribute name="createdon" />
-          <order attribute="sw365_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="1" />
           </filter>
+          <attribute name="sw365_attendeecode" />
+          <attribute name="sw365_contact" />
+          <attribute name="sw365_eventregistration" />
+          <attribute name="sw365_attendeestatus" />
         </entity>
       </fetch>
     </fetchxml>
