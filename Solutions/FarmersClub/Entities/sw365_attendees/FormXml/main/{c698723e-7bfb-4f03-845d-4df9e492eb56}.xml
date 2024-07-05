@@ -5,20 +5,36 @@
     <IntroducedVersion>1.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form>
+    <form headerdensity="HighWithControls">
       <tabs>
         <tab verticallayout="true" id="{86a8343c-7846-4296-9ede-c94a90a411e0}" IsUserDefined="1">
           <labels>
             <label description="General" languagecode="1033" />
           </labels>
           <columns>
-            <column width="100%">
+            <column width="50%">
               <sections>
                 <section showlabel="false" showbar="false" IsUserDefined="0" id="{2ae3d27e-e527-4364-a245-a67397b72e8b}">
                   <labels>
                     <label description="General" languagecode="1033" />
                   </labels>
                   <rows>
+                    <row>
+                      <cell id="{328e8a66-a9ad-4010-8a3d-5de5ca948b79}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Attendee Code" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_attendeecode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_attendeecode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f9bb15ad-5928-4738-a7aa-43002cc56bcf}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event Registration" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventregistration" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_eventregistration" disabled="false" />
+                      </cell>
+                    </row>
                     <row>
                       <cell id="{37ff1005-be02-43ae-8d72-71836d052bd8}">
                         <labels>
@@ -37,11 +53,97 @@
                     </row>
                   </rows>
                 </section>
+                <section name="section_contact_details" id="fd45a389-3913-44d7-821b-664d9ba8ea1d" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Contact Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{50531f70-37bc-4f5b-acc9-71140c1c768d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contact" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_contact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_contact" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{40dc8dde-93ec-4e36-a71b-fba2bf8bdec4}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="New QV control 1720208744841" languagecode="1033" />
+                        </labels>
+                        <control id="QuickviewControl1720208744841" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="sw365_contact">
+                          <parameters>
+                            <DisplayAsCustomer360Tile>false</DisplayAsCustomer360Tile>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="contact"&gt;923c268c-9e3a-ef11-a316-000d3ae18015&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="null_section_4" id="8d8a70b1-279b-415c-9e13-bc5f64c6eee5" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
               </sections>
             </column>
           </columns>
         </tab>
       </tabs>
+      <header id="{94a9d2ad-7349-451c-a35e-aa447e01b231}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{5bb61efa-27a3-41b2-93b8-2e0983d8e082}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{6839bb28-aee6-48e7-9848-b40d5a231e80}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{49dff5e0-644a-41ba-b589-a04bea527f74}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{391bf724-452b-4c7b-b94e-9675e05440a7}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{cd54c1e5-3b56-46fb-801f-4364da6bfe82}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4d074c35-3d44-47bd-9674-35e692278153}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{5d03f1d5-7931-467e-9e1f-f29017d0bb82}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>

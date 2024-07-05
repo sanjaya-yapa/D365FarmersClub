@@ -20,11 +20,59 @@
                   </labels>
                   <rows>
                     <row>
+                      <cell id="{21138b22-3aa9-4e85-8fbf-8c6e200ddee6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event Code" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventcode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_eventcode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{9fbfddec-5b1e-4c11-9052-f0da64dc0617}">
                         <labels>
                           <label description="Name" languagecode="1033" />
                         </labels>
                         <control id="sw365_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sw365_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{381d315c-a2b6-4706-91d3-8d09d0f18eea}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event Type" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventtype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_eventtype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{db43551f-b0d8-4ce2-95de-f4e4ba42a68d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_eventstartdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5cdbc86b-c955-47c2-8d3b-225b0c50ce20}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event End Date" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_eventenddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cf1acdf7-df71-43e6-a794-1d6713fd2e9d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event Venue" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventvenue" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_eventvenue" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3ce5960d-54bf-4b69-aabd-2c167f22dacc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event Status" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sw365_eventstatus" disabled="false" />
                       </cell>
                     </row>
                     <row>
@@ -42,6 +90,9 @@
           </columns>
         </tab>
       </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
