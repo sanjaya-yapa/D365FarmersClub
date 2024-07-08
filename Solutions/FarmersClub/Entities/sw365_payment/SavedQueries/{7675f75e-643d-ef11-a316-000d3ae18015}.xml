@@ -2,48 +2,48 @@
 <savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <savedquery>
     <IsCustomizable>1</IsCustomizable>
-    <CanBeDeleted>0</CanBeDeleted>
+    <CanBeDeleted>1</CanBeDeleted>
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
-    <isdefault>0</isdefault>
-    <savedqueryid>{2d66359c-5fe4-4a92-9589-1cf1e26374a2}</savedqueryid>
+    <isdefault>1</isdefault>
+    <savedqueryid>{7675f75e-643d-ef11-a316-000d3ae18015}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
         <row name="result" id="sw365_paymentid">
           <cell name="sw365_name" width="200" />
-          <cell name="sw365_communityevent" width="144" />
-          <cell name="sw365_eventregistration" width="145" />
           <cell name="sw365_paymenttype" width="121" />
           <cell name="sw365_fee" width="100" />
           <cell name="sw365_paymentduedate" width="146" />
-          <cell name="sw365_datepaid" width="100" />
           <cell name="statuscode" width="119" />
+          <cell name="sw365_datepaid" width="100" />
+          <cell name="sw365_membership" width="111" />
+          <cell name="sw365_subscription" width="111" />
+          <cell name="sw365_communityevent" width="144" />
+          <cell name="sw365_eventregistration" width="145" />
         </row>
       </grid>
     </layoutxml>
     <querytype>0</querytype>
     <fetchxml>
-      <fetch version="1.0" mapping="logical">
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
         <entity name="sw365_payment">
-          <attribute name="sw365_paymentid" />
           <attribute name="sw365_name" />
-          <order attribute="sw365_name" descending="false" />
-          <filter type="and">
-            <condition attribute="statecode" operator="eq" value="1" />
-          </filter>
-          <attribute name="sw365_communityevent" />
-          <attribute name="sw365_eventregistration" />
+          <attribute name="sw365_paymentid" />
           <attribute name="sw365_paymenttype" />
-          <attribute name="sw365_fee" />
           <attribute name="sw365_paymentduedate" />
           <attribute name="statuscode" />
+          <attribute name="sw365_fee" />
+          <attribute name="sw365_subscription" />
+          <attribute name="sw365_membership" />
+          <attribute name="sw365_communityevent" />
+          <attribute name="sw365_eventregistration" />
           <attribute name="sw365_datepaid" />
         </entity>
       </fetch>
     </fetchxml>
-    <IntroducedVersion>1.0</IntroducedVersion>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Inactive Payments - Events" languagecode="1033" />
+      <LocalizedName description="All Payments" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

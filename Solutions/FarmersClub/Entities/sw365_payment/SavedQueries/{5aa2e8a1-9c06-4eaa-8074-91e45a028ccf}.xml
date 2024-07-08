@@ -5,33 +5,47 @@
     <CanBeDeleted>0</CanBeDeleted>
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
-    <isdefault>1</isdefault>
+    <isdefault>0</isdefault>
     <savedqueryid>{5aa2e8a1-9c06-4eaa-8074-91e45a028ccf}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
         <row name="result" id="sw365_paymentid">
-          <cell name="sw365_name" width="300" />
-          <cell name="createdon" width="125" />
+          <cell name="sw365_name" width="200" />
+          <cell name="sw365_membership" width="200" />
+          <cell name="sw365_subscription" width="200" />
+          <cell name="sw365_paymenttype" width="121" />
+          <cell name="sw365_fee" width="100" />
+          <cell name="sw365_paymentduedate" width="146" />
+          <cell name="sw365_datepaid" width="100" />
+          <cell name="statuscode" width="119" />
         </row>
       </grid>
     </layoutxml>
     <querytype>0</querytype>
     <fetchxml>
-      <fetch version="1.0" mapping="logical">
+      <fetch version="1.0" mapping="logical" distinct="true">
         <entity name="sw365_payment">
           <attribute name="sw365_paymentid" />
           <attribute name="sw365_name" />
-          <attribute name="createdon" />
           <order attribute="sw365_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
+            <condition attribute="sw365_membership" operator="not-null" />
+            <condition attribute="sw365_subscription" operator="not-null" />
           </filter>
+          <attribute name="sw365_membership" />
+          <attribute name="sw365_subscription" />
+          <attribute name="sw365_fee" />
+          <attribute name="sw365_paymentduedate" />
+          <attribute name="sw365_paymenttype" />
+          <attribute name="statuscode" />
+          <attribute name="sw365_datepaid" />
         </entity>
       </fetch>
     </fetchxml>
     <IntroducedVersion>1.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Active Payments" languagecode="1033" />
+      <LocalizedName description="Active Payments - Membership" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>

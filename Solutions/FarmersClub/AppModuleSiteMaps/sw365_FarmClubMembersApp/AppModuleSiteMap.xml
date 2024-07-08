@@ -17,11 +17,6 @@
         <SubArea Id="NewSubArea_66149727" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="account" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
         <SubArea Id="NewSubArea_a7436721" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="contact" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
         <SubArea Id="NewSubArea_9ac2f18b" Entity="sw365_subscription" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
-        <SubArea Id="NewSubArea_e8a7e759" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="sw365_payment" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
-          <Titles>
-            <Title LCID="1033" Title="Subscription Payment" />
-          </Titles>
-        </SubArea>
       </Group>
       <Group Id="NewGroup_60550944" ResourceId="SitemapDesigner.NewGroup" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
         <Titles>
@@ -45,12 +40,13 @@
           </Titles>
         </SubArea>
         <SubArea Id="subarea_737034a7" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="sw365_eventvenue" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_7070002f" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="sw365_payment" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
       </Group>
-      <Group Id="group_d632b64e" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+      <Group Id="group_payments" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
         <Titles>
-          <Title LCID="1033" Title="Settings" />
+          <Title LCID="1033" Title="Payments" />
         </Titles>
-        <SubArea Id="subarea_3d72b8e2" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="sw365_subscriptiontype" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_b68a046d" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="sw365_payment" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
       </Group>
     </Area>
     <Area Id="NewArea_d07c6b29" ResourceId="SitemapDesigner.NewArea" ShowGroups="false">

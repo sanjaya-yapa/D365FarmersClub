@@ -34,17 +34,17 @@
                       </cell>
                     </row>
                     <row>
-                      <cell id="{fce5c092-b34f-4414-afe5-829450e23c90}" locklevel="0" colspan="1" rowspan="1">
+                      <cell id="{b95630e2-dc37-4907-b7e1-f7984494a8e8}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
-                          <label description="Account" languagecode="1033" />
+                          <label description="Payment Type" languagecode="1033" />
                         </labels>
-                        <control id="sw365_membership" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_membership" disabled="true" />
+                        <control id="sw365_paymenttype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sw365_paymenttype" disabled="true" />
                       </cell>
-                      <cell id="{4f8a797a-e916-4366-8a68-a9bf631f90e6}" locklevel="0" colspan="1" rowspan="1">
+                      <cell id="{c7e9ea2f-d1f2-43ec-9b26-387d1a073e00}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
-                          <label description="Subscription" languagecode="1033" />
+                          <label description="Status Reason" languagecode="1033" />
                         </labels>
-                        <control id="sw365_subscription" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_subscription" disabled="true" />
+                        <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="true" />
                       </cell>
                     </row>
                     <row>
@@ -54,24 +54,71 @@
                         </labels>
                         <control id="sw365_paymentduedate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_paymentduedate" disabled="true" />
                       </cell>
-                      <cell id="{c7e9ea2f-d1f2-43ec-9b26-387d1a073e00}" locklevel="0" colspan="1" rowspan="1">
+                      <cell id="{7ffba17f-df82-49e3-b5d1-e89d25bf0847}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
-                          <label description="Status Reason" languagecode="1033" />
+                          <label description="Date Paid" languagecode="1033" />
                         </labels>
-                        <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                        <control id="sw365_datepaid" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_datepaid" disabled="false" />
                       </cell>
                     </row>
                     <row>
-                      <cell id="{9cb637ce-5396-4e8d-90d4-051e631838c1}">
+                      <cell id="{9cb637ce-5396-4e8d-90d4-051e631838c1}" colspan="1" rowspan="1">
                         <labels>
                           <label description="Owner" languagecode="1033" />
                         </labels>
-                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="true" />
                       </cell>
-                      <cell locklevel="0" id="{f15dc758-16ed-4bae-a886-6d1f590a5380}">
+                      <cell locklevel="0" id="{ac24a2cd-a059-47cc-a024-93e3184450c3}">
                         <labels>
                           <label description="" languagecode="1033" />
                         </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="568c87aa-d410-4c09-8402-39fd9e4ea8ef" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{5636aaf1-703d-40fb-a762-62209b128bdd}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{bbe0119e-41db-49d9-ad47-7b7ca538a89e}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4f8a797a-e916-4366-8a68-a9bf631f90e6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Subscription" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_subscription" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_subscription" disabled="true" />
+                      </cell>
+                      <cell id="{fce5c092-b34f-4414-afe5-829450e23c90}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Membership" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_membership" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_membership" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c10747ae-fcda-4d81-84ed-22c417ab6cdf}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event Registration" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventregistration" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_eventregistration" disabled="true" />
+                      </cell>
+                      <cell id="{37f91384-dced-41ef-aff6-5f4c4da97613}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Community Event" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_communityevent" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_communityevent" disabled="true" />
                       </cell>
                     </row>
                   </rows>
@@ -130,7 +177,7 @@
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
     <LocalizedNames>
-      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="FCM - Payments Main" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
       <Description description="A form for this entity." languagecode="1033" />
