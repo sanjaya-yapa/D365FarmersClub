@@ -93,12 +93,12 @@
                             <RecordsPerPage>4</RecordsPerPage>
                             <AutoExpand>Fixed</AutoExpand>
                             <EnableQuickFind>false</EnableQuickFind>
-                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableViewPicker>true</EnableViewPicker>
                             <EnableChartPicker>true</EnableChartPicker>
                             <ChartGridMode>All</ChartGridMode>
                             <TargetEntityType>sw365_payment</TargetEntityType>
-                            <ViewId>{5AA2E8A1-9C06-4EAA-8074-91E45A028CCF}</ViewId>
-                            <ViewIds>{5AA2E8A1-9C06-4EAA-8074-91E45A028CCF}</ViewIds>
+                            <ViewId>{7675F75E-643D-EF11-A316-000D3AE18015}</ViewId>
+                            <ViewIds>{7675F75E-643D-EF11-A316-000D3AE18015},{A1DD43DF-633D-EF11-A316-000D3AE18015},{2D66359C-5FE4-4A92-9589-1CF1E26374A2}</ViewIds>
                             <RelationshipName>sw365_eventregistration_sw365_payment</RelationshipName>
                           </parameters>
                         </control>

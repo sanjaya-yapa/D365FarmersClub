@@ -38,7 +38,7 @@
                         <labels>
                           <label description="Subscription Start Date" languagecode="1033" />
                         </labels>
-                        <control id="sw365_subscriptionstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_subscriptionstartdate" disabled="false" />
+                        <control id="sw365_subscriptionstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_subscriptionstartdate" disabled="true" />
                       </cell>
                       <cell locklevel="0" id="{3f2bd827-c352-4017-9e36-3eb49c760d22}">
                         <labels>
@@ -51,13 +51,13 @@
                         <labels>
                           <label description="Subscription" languagecode="1033" />
                         </labels>
-                        <control id="sw365_subscriptionprice" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sw365_subscriptionprice" disabled="false" />
+                        <control id="sw365_subscriptionprice" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="sw365_subscriptionprice" disabled="true" />
                       </cell>
                       <cell id="{97705ad3-f4c9-416f-991d-333240768075}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
                           <label description="Subscription End Date" languagecode="1033" />
                         </labels>
-                        <control id="sw365_subscriptionenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_subscriptionenddate" disabled="false" />
+                        <control id="sw365_subscriptionenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_subscriptionenddate" disabled="true" />
                       </cell>
                     </row>
                     <row>
@@ -71,9 +71,41 @@
                         <labels>
                           <label description="Status Reason" languagecode="1033" />
                         </labels>
-                        <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                        <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="true" />
                       </cell>
                     </row>
+                  </rows>
+                </section>
+                <section name="section_subscription_payment" id="94f74098-4ef2-4ffb-8825-a1046ead5a43" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Related Payment" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{12c5a7d2-e6b0-4784-b784-38f8d5e69410}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="Related Payments" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="subsgrid_subscription_payment" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sw365_payment</TargetEntityType>
+                            <ViewId>{5AA2E8A1-9C06-4EAA-8074-91E45A028CCF}</ViewId>
+                            <ViewIds>{5AA2E8A1-9C06-4EAA-8074-91E45A028CCF},{0B6763C2-653D-EF11-A316-000D3AE18015}</ViewIds>
+                            <RelationshipName>sw365_payment_sw365_subscription</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
                   </rows>
                 </section>
               </sections>
@@ -130,7 +162,7 @@
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
     <LocalizedNames>
-      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="FCM - Subscription Main Form" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
       <Description description="A form for this entity." languagecode="1033" />
