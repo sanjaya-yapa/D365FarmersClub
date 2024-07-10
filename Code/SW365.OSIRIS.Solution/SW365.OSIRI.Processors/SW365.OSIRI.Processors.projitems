@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AbstractProcessor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MembershipProcessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PaymentProcessor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SubscriptionProcessor.cs" />
   </ItemGroup>
 </Project>

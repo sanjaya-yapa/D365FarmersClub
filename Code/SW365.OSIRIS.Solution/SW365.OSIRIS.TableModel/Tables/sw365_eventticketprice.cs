@@ -13,10 +13,10 @@ namespace SW365.OSIRIS.TableModel
 	
 	
 	/// <summary>
-	/// Reason for the status of the Subscription
+	/// Reason for the status of the Event Ticket Price
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum sw365_subscription_StatusCode
+	public enum sw365_eventticketprice_StatusCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
@@ -26,21 +26,13 @@ namespace SW365.OSIRIS.TableModel
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		[OptionSetMetadataAttribute("Inactive", 1)]
 		Inactive = 2,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Overdue", 3)]
-		Overdue = 147980002,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Pending Payment", 2)]
-		PendingPayment = 147980001,
 	}
 	
 	/// <summary>
-	/// Status of the Subscription
+	/// Status of the Event Ticket Price
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum sw365_subscriptionState
+	public enum sw365_eventticketpriceState
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
@@ -53,12 +45,12 @@ namespace SW365.OSIRIS.TableModel
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("sw365_subscription")]
-	public partial class sw365_subscription : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("sw365_eventticketprice")]
+	public partial class sw365_eventticketprice : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	{
 		
 		/// <summary>
-		/// Available fields, a the time of codegen, for the sw365_subscription entity
+		/// Available fields, a the time of codegen, for the sw365_eventticketprice entity
 		/// </summary>
 		public partial class Fields
 		{
@@ -71,10 +63,10 @@ namespace SW365.OSIRIS.TableModel
 			public const string CreatedOnBehalfByYomiName = "createdonbehalfbyyominame";
 			public const string ExchangeRate = "exchangerate";
 			public const string ImportSequenceNumber = "importsequencenumber";
-			public const string lk_sw365_subscription_createdby = "lk_sw365_subscription_createdby";
-			public const string lk_sw365_subscription_createdonbehalfby = "lk_sw365_subscription_createdonbehalfby";
-			public const string lk_sw365_subscription_modifiedby = "lk_sw365_subscription_modifiedby";
-			public const string lk_sw365_subscription_modifiedonbehalfby = "lk_sw365_subscription_modifiedonbehalfby";
+			public const string lk_sw365_eventticketprice_createdby = "lk_sw365_eventticketprice_createdby";
+			public const string lk_sw365_eventticketprice_createdonbehalfby = "lk_sw365_eventticketprice_createdonbehalfby";
+			public const string lk_sw365_eventticketprice_modifiedby = "lk_sw365_eventticketprice_modifiedby";
+			public const string lk_sw365_eventticketprice_modifiedonbehalfby = "lk_sw365_eventticketprice_modifiedonbehalfby";
 			public const string ModifiedBy = "modifiedby";
 			public const string ModifiedByName = "modifiedbyname";
 			public const string ModifiedByYomiName = "modifiedbyyominame";
@@ -94,23 +86,21 @@ namespace SW365.OSIRIS.TableModel
 			public const string statecodeName = "statecodename";
 			public const string StatusCode = "statuscode";
 			public const string statuscodeName = "statuscodename";
-			public const string sw365_dubscriptionenddate = "sw365_dubscriptionenddate";
-			public const string sw365_membership = "sw365_membership";
-			public const string sw365_membershipName = "sw365_membershipname";
-			public const string sw365_membershipYomiName = "sw365_membershipyominame";
+			public const string sw365_communityevent = "sw365_communityevent";
+			public const string sw365_communityevent_sw365_eventticketprice = "sw365_communityevent_sw365_eventticketprice";
+			public const string sw365_communityeventName = "sw365_communityeventname";
+			public const string sw365_eventticketpriceId = "sw365_eventticketpriceid";
+			public const string Id = "sw365_eventticketpriceid";
 			public const string sw365_Name = "sw365_name";
-			public const string sw365_payment_sw365_subscription = "sw365_payment_sw365_subscription";
-			public const string sw365_subscription_membership = "sw365_subscription_membership";
-			public const string sw365_subscriptionenddate = "sw365_subscriptionenddate";
-			public const string sw365_subscriptionId = "sw365_subscriptionid";
-			public const string Id = "sw365_subscriptionid";
-			public const string sw365_subscriptionprice = "sw365_subscriptionprice";
-			public const string sw365_subscriptionprice_Base = "sw365_subscriptionprice_base";
-			public const string sw365_subscriptionstartdate = "sw365_subscriptionstartdate";
+			public const string sw365_subscriptiontype = "sw365_subscriptiontype";
+			public const string sw365_subscriptiontype_sw365_eventticketprice = "sw365_subscriptiontype_sw365_eventticketprice";
+			public const string sw365_subscriptiontypeName = "sw365_subscriptiontypename";
+			public const string sw365_ticketprice = "sw365_ticketprice";
+			public const string sw365_ticketprice_Base = "sw365_ticketprice_base";
 			public const string TimeZoneRuleVersionNumber = "timezoneruleversionnumber";
 			public const string TransactionCurrencyId = "transactioncurrencyid";
 			public const string TransactionCurrencyIdName = "transactioncurrencyidname";
-			public const string user_sw365_subscription = "user_sw365_subscription";
+			public const string user_sw365_eventticketprice = "user_sw365_eventticketprice";
 			public const string UTCConversionTimeZoneCode = "utcconversiontimezonecode";
 			public const string VersionNumber = "versionnumber";
 		}
@@ -119,22 +109,22 @@ namespace SW365.OSIRIS.TableModel
 		/// Default Constructor.
 		/// </summary>
 		[System.Diagnostics.DebuggerNonUserCode()]
-		public sw365_subscription() : 
+		public sw365_eventticketprice() : 
 				base(EntityLogicalName)
 		{
 		}
 		
-		public const string PrimaryIdAttribute = "sw365_subscriptionid";
+		public const string PrimaryIdAttribute = "sw365_eventticketpriceid";
 		
 		public const string PrimaryNameAttribute = "sw365_name";
 		
-		public const string EntitySchemaName = "sw365_subscription";
+		public const string EntitySchemaName = "sw365_eventticketprice";
 		
-		public const string EntityLogicalName = "sw365_subscription";
+		public const string EntityLogicalName = "sw365_eventticketprice";
 		
-		public const string EntityLogicalCollectionName = "sw365_subscriptions";
+		public const string EntityLogicalCollectionName = "sw365_eventticketprices";
 		
-		public const string EntitySetName = "sw365_subscriptions";
+		public const string EntitySetName = "sw365_eventticketprices";
 		
 		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		
@@ -556,15 +546,15 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Status of the Subscription
+		/// Status of the Event Ticket Price
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
-		public virtual sw365_subscriptionState? StateCode
+		public virtual sw365_eventticketpriceState? StateCode
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((sw365_subscriptionState?)(EntityOptionSetEnum.GetEnum(this, "statecode")));
+				return ((sw365_eventticketpriceState?)(EntityOptionSetEnum.GetEnum(this, "statecode")));
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
@@ -593,15 +583,15 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Reason for the status of the Subscription
+		/// Reason for the status of the Event Ticket Price
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
-		public virtual sw365_subscription_StatusCode? StatusCode
+		public virtual sw365_eventticketprice_StatusCode? StatusCode
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((sw365_subscription_StatusCode?)(EntityOptionSetEnum.GetEnum(this, "statuscode")));
+				return ((sw365_eventticketprice_StatusCode?)(EntityOptionSetEnum.GetEnum(this, "statuscode")));
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
@@ -629,49 +619,32 @@ namespace SW365.OSIRIS.TableModel
 			}
 		}
 		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_dubscriptionenddate")]
-		public System.Nullable<System.DateTime> sw365_dubscriptionenddate
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_communityevent")]
+		public Microsoft.Xrm.Sdk.EntityReference sw365_communityevent
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetAttributeValue<System.Nullable<System.DateTime>>("sw365_dubscriptionenddate");
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("sw365_communityevent");
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("sw365_dubscriptionenddate");
-				this.SetAttributeValue("sw365_dubscriptionenddate", value);
-				this.OnPropertyChanged("sw365_dubscriptionenddate");
+				this.OnPropertyChanging("sw365_communityevent");
+				this.SetAttributeValue("sw365_communityevent", value);
+				this.OnPropertyChanged("sw365_communityevent");
 			}
 		}
 		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_membership")]
-		public Microsoft.Xrm.Sdk.EntityReference sw365_membership
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_communityeventname")]
+		public string sw365_communityeventName
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("sw365_membership");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("sw365_membership");
-				this.SetAttributeValue("sw365_membership", value);
-				this.OnPropertyChanged("sw365_membership");
-			}
-		}
-		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_membershipname")]
-		public string sw365_membershipName
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				if (this.FormattedValues.Contains("sw365_membership"))
+				if (this.FormattedValues.Contains("sw365_communityevent"))
 				{
-					return this.FormattedValues["sw365_membership"];
+					return this.FormattedValues["sw365_communityevent"];
 				}
 				else
 				{
@@ -680,20 +653,46 @@ namespace SW365.OSIRIS.TableModel
 			}
 		}
 		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_membershipyominame")]
-		public string sw365_membershipYomiName
+		/// <summary>
+		/// Unique identifier for entity instances
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_eventticketpriceid")]
+		public System.Nullable<System.Guid> sw365_eventticketpriceId
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				if (this.FormattedValues.Contains("sw365_membership"))
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("sw365_eventticketpriceid");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_eventticketpriceId");
+				this.SetAttributeValue("sw365_eventticketpriceid", value);
+				if (value.HasValue)
 				{
-					return this.FormattedValues["sw365_membership"];
+					base.Id = value.Value;
 				}
 				else
 				{
-					return default(string);
+					base.Id = System.Guid.Empty;
 				}
+				this.OnPropertyChanged("sw365_eventticketpriceId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_eventticketpriceid")]
+		public override System.Guid Id
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return base.Id;
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.sw365_eventticketpriceId = value;
 			}
 		}
 		
@@ -714,110 +713,67 @@ namespace SW365.OSIRIS.TableModel
 			}
 		}
 		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionenddate")]
-		public System.Nullable<System.DateTime> sw365_subscriptionenddate
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptiontype")]
+		public Microsoft.Xrm.Sdk.EntityReference sw365_subscriptiontype
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetAttributeValue<System.Nullable<System.DateTime>>("sw365_subscriptionenddate");
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("sw365_subscriptiontype");
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("sw365_subscriptionenddate");
-				this.SetAttributeValue("sw365_subscriptionenddate", value);
-				this.OnPropertyChanged("sw365_subscriptionenddate");
+				this.OnPropertyChanging("sw365_subscriptiontype");
+				this.SetAttributeValue("sw365_subscriptiontype", value);
+				this.OnPropertyChanged("sw365_subscriptiontype");
 			}
 		}
 		
-		/// <summary>
-		/// Unique identifier for entity instances
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionid")]
-		public System.Nullable<System.Guid> sw365_subscriptionId
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptiontypename")]
+		public string sw365_subscriptiontypeName
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetAttributeValue<System.Nullable<System.Guid>>("sw365_subscriptionid");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("sw365_subscriptionId");
-				this.SetAttributeValue("sw365_subscriptionid", value);
-				if (value.HasValue)
+				if (this.FormattedValues.Contains("sw365_subscriptiontype"))
 				{
-					base.Id = value.Value;
+					return this.FormattedValues["sw365_subscriptiontype"];
 				}
 				else
 				{
-					base.Id = System.Guid.Empty;
+					return default(string);
 				}
-				this.OnPropertyChanged("sw365_subscriptionId");
 			}
 		}
 		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionid")]
-		public override System.Guid Id
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_ticketprice")]
+		public Microsoft.Xrm.Sdk.Money sw365_ticketprice
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return base.Id;
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("sw365_ticketprice");
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.sw365_subscriptionId = value;
-			}
-		}
-		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionprice")]
-		public Microsoft.Xrm.Sdk.Money sw365_subscriptionprice
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("sw365_subscriptionprice");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("sw365_subscriptionprice");
-				this.SetAttributeValue("sw365_subscriptionprice", value);
-				this.OnPropertyChanged("sw365_subscriptionprice");
+				this.OnPropertyChanging("sw365_ticketprice");
+				this.SetAttributeValue("sw365_ticketprice", value);
+				this.OnPropertyChanged("sw365_ticketprice");
 			}
 		}
 		
 		/// <summary>
-		/// Value of the Subscription Price in base currency.
+		/// Value of the Ticket Price in base currency.
 		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionprice_base")]
-		public Microsoft.Xrm.Sdk.Money sw365_subscriptionprice_Base
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_ticketprice_base")]
+		public Microsoft.Xrm.Sdk.Money sw365_ticketprice_Base
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("sw365_subscriptionprice_base");
-			}
-		}
-		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionstartdate")]
-		public System.Nullable<System.DateTime> sw365_subscriptionstartdate
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<System.Nullable<System.DateTime>>("sw365_subscriptionstartdate");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("sw365_subscriptionstartdate");
-				this.SetAttributeValue("sw365_subscriptionstartdate", value);
-				this.OnPropertyChanged("sw365_subscriptionstartdate");
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("sw365_ticketprice_base");
 			}
 		}
 		
@@ -912,127 +868,128 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// 1:N sw365_payment_sw365_subscription
-		/// </summary>
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_payment_sw365_subscription")]
-		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_payment> sw365_payment_sw365_subscription
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_payment>("sw365_payment_sw365_subscription", null);
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("sw365_payment_sw365_subscription");
-				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_payment>("sw365_payment_sw365_subscription", null, value);
-				this.OnPropertyChanged("sw365_payment_sw365_subscription");
-			}
-		}
-		
-		/// <summary>
-		/// N:1 lk_sw365_subscription_createdby
+		/// N:1 lk_sw365_eventticketprice_createdby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_subscription_createdby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_subscription_createdby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventticketprice_createdby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_eventticketprice_createdby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_subscription_createdby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_eventticketprice_createdby", null);
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_sw365_subscription_createdonbehalfby
+		/// N:1 lk_sw365_eventticketprice_createdonbehalfby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_subscription_createdonbehalfby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_subscription_createdonbehalfby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventticketprice_createdonbehalfby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_eventticketprice_createdonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_subscription_createdonbehalfby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_eventticketprice_createdonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("lk_sw365_subscription_createdonbehalfby");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_subscription_createdonbehalfby", null, value);
-				this.OnPropertyChanged("lk_sw365_subscription_createdonbehalfby");
+				this.OnPropertyChanging("lk_sw365_eventticketprice_createdonbehalfby");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_eventticketprice_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_sw365_eventticketprice_createdonbehalfby");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_sw365_subscription_modifiedby
+		/// N:1 lk_sw365_eventticketprice_modifiedby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_subscription_modifiedby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_subscription_modifiedby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventticketprice_modifiedby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_eventticketprice_modifiedby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_subscription_modifiedby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_eventticketprice_modifiedby", null);
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_sw365_subscription_modifiedonbehalfby
+		/// N:1 lk_sw365_eventticketprice_modifiedonbehalfby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_subscription_modifiedonbehalfby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_subscription_modifiedonbehalfby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_eventticketprice_modifiedonbehalfby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_eventticketprice_modifiedonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_subscription_modifiedonbehalfby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_eventticketprice_modifiedonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("lk_sw365_subscription_modifiedonbehalfby");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_subscription_modifiedonbehalfby", null, value);
-				this.OnPropertyChanged("lk_sw365_subscription_modifiedonbehalfby");
+				this.OnPropertyChanging("lk_sw365_eventticketprice_modifiedonbehalfby");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_eventticketprice_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_sw365_eventticketprice_modifiedonbehalfby");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 sw365_subscription_membership
+		/// N:1 sw365_communityevent_sw365_eventticketprice
 		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_membership")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_subscription_membership")]
-		public SW365.OSIRIS.TableModel.Account sw365_subscription_membership
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_communityevent")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_communityevent_sw365_eventticketprice")]
+		public SW365.OSIRIS.TableModel.sw365_communityevent sw365_communityevent_sw365_eventticketprice
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.Account>("sw365_subscription_membership", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.sw365_communityevent>("sw365_communityevent_sw365_eventticketprice", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("sw365_subscription_membership");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.Account>("sw365_subscription_membership", null, value);
-				this.OnPropertyChanged("sw365_subscription_membership");
+				this.OnPropertyChanging("sw365_communityevent_sw365_eventticketprice");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.sw365_communityevent>("sw365_communityevent_sw365_eventticketprice", null, value);
+				this.OnPropertyChanged("sw365_communityevent_sw365_eventticketprice");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 user_sw365_subscription
+		/// N:1 sw365_subscriptiontype_sw365_eventticketprice
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptiontype")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_subscriptiontype_sw365_eventticketprice")]
+		public SW365.OSIRIS.TableModel.sw365_subscriptiontype sw365_subscriptiontype_sw365_eventticketprice
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.sw365_subscriptiontype>("sw365_subscriptiontype_sw365_eventticketprice", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_subscriptiontype_sw365_eventticketprice");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.sw365_subscriptiontype>("sw365_subscriptiontype_sw365_eventticketprice", null, value);
+				this.OnPropertyChanged("sw365_subscriptiontype_sw365_eventticketprice");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 user_sw365_eventticketprice
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_sw365_subscription")]
-		public SW365.OSIRIS.TableModel.SystemUser user_sw365_subscription
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_sw365_eventticketprice")]
+		public SW365.OSIRIS.TableModel.SystemUser user_sw365_eventticketprice
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("user_sw365_subscription", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("user_sw365_eventticketprice", null);
 			}
 		}
 		
@@ -1041,7 +998,7 @@ namespace SW365.OSIRIS.TableModel
 		/// <param name="anonymousType">LINQ anonymous type.</param>
 		/// </summary>
 		[System.Diagnostics.DebuggerNonUserCode()]
-		public sw365_subscription(object anonymousType) : 
+		public sw365_eventticketprice(object anonymousType) : 
 				this()
 		{
             foreach (var p in anonymousType.GetType().GetProperties())
@@ -1059,9 +1016,9 @@ namespace SW365.OSIRIS.TableModel
                 {
                     case "id":
                         base.Id = (System.Guid)value;
-                        Attributes["sw365_subscriptionid"] = base.Id;
+                        Attributes["sw365_eventticketpriceid"] = base.Id;
                         break;
-                    case "sw365_subscriptionid":
+                    case "sw365_eventticketpriceid":
                         var id = (System.Nullable<System.Guid>) value;
                         if(id == null){ continue; }
                         base.Id = id.Value;

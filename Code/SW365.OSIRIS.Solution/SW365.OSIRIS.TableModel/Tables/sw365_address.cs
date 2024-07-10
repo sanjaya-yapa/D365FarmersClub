@@ -13,10 +13,10 @@ namespace SW365.OSIRIS.TableModel
 	
 	
 	/// <summary>
-	/// Reason for the status of the Subscription
+	/// Reason for the status of the Address
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum sw365_subscription_StatusCode
+	public enum sw365_address_StatusCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
@@ -26,21 +26,30 @@ namespace SW365.OSIRIS.TableModel
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		[OptionSetMetadataAttribute("Inactive", 1)]
 		Inactive = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum sw365_address_sw365_AddressType
+	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Overdue", 3)]
-		Overdue = 147980002,
+		[OptionSetMetadataAttribute("Business", 1)]
+		Business = 147980001,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		[OptionSetMetadataAttribute("Pending Payment", 2)]
-		PendingPayment = 147980001,
+		[OptionSetMetadataAttribute("Home", 0)]
+		Home = 147980000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Postal", 2)]
+		Postal = 147980002,
 	}
 	
 	/// <summary>
-	/// Status of the Subscription
+	/// Status of the Address
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum sw365_subscriptionState
+	public enum sw365_addressState
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
@@ -53,12 +62,12 @@ namespace SW365.OSIRIS.TableModel
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("sw365_subscription")]
-	public partial class sw365_subscription : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("sw365_address")]
+	public partial class sw365_address : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	{
 		
 		/// <summary>
-		/// Available fields, a the time of codegen, for the sw365_subscription entity
+		/// Available fields, a the time of codegen, for the sw365_address entity
 		/// </summary>
 		public partial class Fields
 		{
@@ -69,12 +78,11 @@ namespace SW365.OSIRIS.TableModel
 			public const string CreatedOnBehalfBy = "createdonbehalfby";
 			public const string CreatedOnBehalfByName = "createdonbehalfbyname";
 			public const string CreatedOnBehalfByYomiName = "createdonbehalfbyyominame";
-			public const string ExchangeRate = "exchangerate";
 			public const string ImportSequenceNumber = "importsequencenumber";
-			public const string lk_sw365_subscription_createdby = "lk_sw365_subscription_createdby";
-			public const string lk_sw365_subscription_createdonbehalfby = "lk_sw365_subscription_createdonbehalfby";
-			public const string lk_sw365_subscription_modifiedby = "lk_sw365_subscription_modifiedby";
-			public const string lk_sw365_subscription_modifiedonbehalfby = "lk_sw365_subscription_modifiedonbehalfby";
+			public const string lk_sw365_address_createdby = "lk_sw365_address_createdby";
+			public const string lk_sw365_address_createdonbehalfby = "lk_sw365_address_createdonbehalfby";
+			public const string lk_sw365_address_modifiedby = "lk_sw365_address_modifiedby";
+			public const string lk_sw365_address_modifiedonbehalfby = "lk_sw365_address_modifiedonbehalfby";
 			public const string ModifiedBy = "modifiedby";
 			public const string ModifiedByName = "modifiedbyname";
 			public const string ModifiedByYomiName = "modifiedbyyominame";
@@ -94,23 +102,25 @@ namespace SW365.OSIRIS.TableModel
 			public const string statecodeName = "statecodename";
 			public const string StatusCode = "statuscode";
 			public const string statuscodeName = "statuscodename";
-			public const string sw365_dubscriptionenddate = "sw365_dubscriptionenddate";
-			public const string sw365_membership = "sw365_membership";
-			public const string sw365_membershipName = "sw365_membershipname";
-			public const string sw365_membershipYomiName = "sw365_membershipyominame";
+			public const string sw365_addressId = "sw365_addressid";
+			public const string Id = "sw365_addressid";
+			public const string sw365_addressline1 = "sw365_addressline1";
+			public const string sw365_addressline2 = "sw365_addressline2";
+			public const string sw365_AddressType = "sw365_addresstype";
+			public const string sw365_addresstypeName = "sw365_addresstypename";
+			public const string sw365_citysuburb = "sw365_citysuburb";
+			public const string sw365_country = "sw365_country";
+			public const string sw365_isprimary = "sw365_isprimary";
+			public const string sw365_isprimaryName = "sw365_isprimaryname";
 			public const string sw365_Name = "sw365_name";
-			public const string sw365_payment_sw365_subscription = "sw365_payment_sw365_subscription";
-			public const string sw365_subscription_membership = "sw365_subscription_membership";
-			public const string sw365_subscriptionenddate = "sw365_subscriptionenddate";
-			public const string sw365_subscriptionId = "sw365_subscriptionid";
-			public const string Id = "sw365_subscriptionid";
-			public const string sw365_subscriptionprice = "sw365_subscriptionprice";
-			public const string sw365_subscriptionprice_Base = "sw365_subscriptionprice_base";
-			public const string sw365_subscriptionstartdate = "sw365_subscriptionstartdate";
+			public const string sw365_postalcode = "sw365_postalcode";
+			public const string sw365_regardingid = "sw365_regardingid";
+			public const string sw365_regardingidName = "sw365_regardingidname";
+			public const string sw365_regardingidYomiName = "sw365_regardingidyominame";
+			public const string sw365_stateprovince = "sw365_stateprovince";
+			public const string sw365_sw365_address_sw365_eventvenue_sw365_regardingid = "sw365_sw365_address_sw365_eventvenue_sw365_regardingid";
 			public const string TimeZoneRuleVersionNumber = "timezoneruleversionnumber";
-			public const string TransactionCurrencyId = "transactioncurrencyid";
-			public const string TransactionCurrencyIdName = "transactioncurrencyidname";
-			public const string user_sw365_subscription = "user_sw365_subscription";
+			public const string user_sw365_address = "user_sw365_address";
 			public const string UTCConversionTimeZoneCode = "utcconversiontimezonecode";
 			public const string VersionNumber = "versionnumber";
 		}
@@ -119,22 +129,22 @@ namespace SW365.OSIRIS.TableModel
 		/// Default Constructor.
 		/// </summary>
 		[System.Diagnostics.DebuggerNonUserCode()]
-		public sw365_subscription() : 
+		public sw365_address() : 
 				base(EntityLogicalName)
 		{
 		}
 		
-		public const string PrimaryIdAttribute = "sw365_subscriptionid";
+		public const string PrimaryIdAttribute = "sw365_addressid";
 		
 		public const string PrimaryNameAttribute = "sw365_name";
 		
-		public const string EntitySchemaName = "sw365_subscription";
+		public const string EntitySchemaName = "sw365_address";
 		
-		public const string EntityLogicalName = "sw365_subscription";
+		public const string EntityLogicalName = "sw365_address";
 		
-		public const string EntityLogicalCollectionName = "sw365_subscriptions";
+		public const string EntityLogicalCollectionName = "sw365_addresses";
 		
-		public const string EntitySetName = "sw365_subscriptions";
+		public const string EntitySetName = "sw365_addresses";
 		
 		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		
@@ -269,19 +279,6 @@ namespace SW365.OSIRIS.TableModel
 				{
 					return default(string);
 				}
-			}
-		}
-		
-		/// <summary>
-		/// Exchange rate for the currency associated with the entity with respect to the base currency.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("exchangerate")]
-		public System.Nullable<decimal> ExchangeRate
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<System.Nullable<decimal>>("exchangerate");
 			}
 		}
 		
@@ -556,15 +553,15 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Status of the Subscription
+		/// Status of the Address
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
-		public virtual sw365_subscriptionState? StateCode
+		public virtual sw365_addressState? StateCode
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((sw365_subscriptionState?)(EntityOptionSetEnum.GetEnum(this, "statecode")));
+				return ((sw365_addressState?)(EntityOptionSetEnum.GetEnum(this, "statecode")));
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
@@ -593,15 +590,15 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// Reason for the status of the Subscription
+		/// Reason for the status of the Address
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
-		public virtual sw365_subscription_StatusCode? StatusCode
+		public virtual sw365_address_StatusCode? StatusCode
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((sw365_subscription_StatusCode?)(EntityOptionSetEnum.GetEnum(this, "statuscode")));
+				return ((sw365_address_StatusCode?)(EntityOptionSetEnum.GetEnum(this, "statuscode")));
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
@@ -629,49 +626,109 @@ namespace SW365.OSIRIS.TableModel
 			}
 		}
 		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_dubscriptionenddate")]
-		public System.Nullable<System.DateTime> sw365_dubscriptionenddate
+		/// <summary>
+		/// Unique identifier for entity instances
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_addressid")]
+		public System.Nullable<System.Guid> sw365_addressId
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetAttributeValue<System.Nullable<System.DateTime>>("sw365_dubscriptionenddate");
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("sw365_addressid");
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("sw365_dubscriptionenddate");
-				this.SetAttributeValue("sw365_dubscriptionenddate", value);
-				this.OnPropertyChanged("sw365_dubscriptionenddate");
-			}
-		}
-		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_membership")]
-		public Microsoft.Xrm.Sdk.EntityReference sw365_membership
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("sw365_membership");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("sw365_membership");
-				this.SetAttributeValue("sw365_membership", value);
-				this.OnPropertyChanged("sw365_membership");
-			}
-		}
-		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_membershipname")]
-		public string sw365_membershipName
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				if (this.FormattedValues.Contains("sw365_membership"))
+				this.OnPropertyChanging("sw365_addressId");
+				this.SetAttributeValue("sw365_addressid", value);
+				if (value.HasValue)
 				{
-					return this.FormattedValues["sw365_membership"];
+					base.Id = value.Value;
+				}
+				else
+				{
+					base.Id = System.Guid.Empty;
+				}
+				this.OnPropertyChanged("sw365_addressId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_addressid")]
+		public override System.Guid Id
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return base.Id;
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.sw365_addressId = value;
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_addressline1")]
+		public string sw365_addressline1
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("sw365_addressline1");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_addressline1");
+				this.SetAttributeValue("sw365_addressline1", value);
+				this.OnPropertyChanged("sw365_addressline1");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_addressline2")]
+		public string sw365_addressline2
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("sw365_addressline2");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_addressline2");
+				this.SetAttributeValue("sw365_addressline2", value);
+				this.OnPropertyChanged("sw365_addressline2");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_addresstype")]
+		public virtual sw365_address_sw365_AddressType? sw365_AddressType
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((sw365_address_sw365_AddressType?)(EntityOptionSetEnum.GetEnum(this, "sw365_addresstype")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_AddressType");
+				this.SetAttributeValue("sw365_addresstype", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("sw365_AddressType");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_addresstypename")]
+		public string sw365_addresstypeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("sw365_addresstype"))
+				{
+					return this.FormattedValues["sw365_addresstype"];
 				}
 				else
 				{
@@ -680,15 +737,66 @@ namespace SW365.OSIRIS.TableModel
 			}
 		}
 		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_membershipyominame")]
-		public string sw365_membershipYomiName
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_citysuburb")]
+		public string sw365_citysuburb
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				if (this.FormattedValues.Contains("sw365_membership"))
+				return this.GetAttributeValue<string>("sw365_citysuburb");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_citysuburb");
+				this.SetAttributeValue("sw365_citysuburb", value);
+				this.OnPropertyChanged("sw365_citysuburb");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_country")]
+		public string sw365_country
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("sw365_country");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_country");
+				this.SetAttributeValue("sw365_country", value);
+				this.OnPropertyChanged("sw365_country");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_isprimary")]
+		public System.Nullable<bool> sw365_isprimary
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("sw365_isprimary");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("sw365_isprimary");
+				this.SetAttributeValue("sw365_isprimary", value);
+				this.OnPropertyChanged("sw365_isprimary");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_isprimaryname")]
+		public string sw365_isprimaryName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("sw365_isprimary"))
 				{
-					return this.FormattedValues["sw365_membership"];
+					return this.FormattedValues["sw365_isprimary"];
 				}
 				else
 				{
@@ -714,110 +822,88 @@ namespace SW365.OSIRIS.TableModel
 			}
 		}
 		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionenddate")]
-		public System.Nullable<System.DateTime> sw365_subscriptionenddate
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_postalcode")]
+		public string sw365_postalcode
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetAttributeValue<System.Nullable<System.DateTime>>("sw365_subscriptionenddate");
+				return this.GetAttributeValue<string>("sw365_postalcode");
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("sw365_subscriptionenddate");
-				this.SetAttributeValue("sw365_subscriptionenddate", value);
-				this.OnPropertyChanged("sw365_subscriptionenddate");
+				this.OnPropertyChanging("sw365_postalcode");
+				this.SetAttributeValue("sw365_postalcode", value);
+				this.OnPropertyChanged("sw365_postalcode");
 			}
 		}
 		
-		/// <summary>
-		/// Unique identifier for entity instances
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionid")]
-		public System.Nullable<System.Guid> sw365_subscriptionId
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_regardingid")]
+		public Microsoft.Xrm.Sdk.EntityReference sw365_regardingid
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetAttributeValue<System.Nullable<System.Guid>>("sw365_subscriptionid");
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("sw365_regardingid");
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("sw365_subscriptionId");
-				this.SetAttributeValue("sw365_subscriptionid", value);
-				if (value.HasValue)
+				this.OnPropertyChanging("sw365_regardingid");
+				this.SetAttributeValue("sw365_regardingid", value);
+				this.OnPropertyChanged("sw365_regardingid");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_regardingidname")]
+		public string sw365_regardingidName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("sw365_regardingid"))
 				{
-					base.Id = value.Value;
+					return this.FormattedValues["sw365_regardingid"];
 				}
 				else
 				{
-					base.Id = System.Guid.Empty;
+					return default(string);
 				}
-				this.OnPropertyChanged("sw365_subscriptionId");
 			}
 		}
 		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionid")]
-		public override System.Guid Id
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_regardingidyominame")]
+		public string sw365_regardingidYomiName
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return base.Id;
+				if (this.FormattedValues.Contains("sw365_regardingid"))
+				{
+					return this.FormattedValues["sw365_regardingid"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_stateprovince")]
+		public string sw365_stateprovince
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("sw365_stateprovince");
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.sw365_subscriptionId = value;
-			}
-		}
-		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionprice")]
-		public Microsoft.Xrm.Sdk.Money sw365_subscriptionprice
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("sw365_subscriptionprice");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("sw365_subscriptionprice");
-				this.SetAttributeValue("sw365_subscriptionprice", value);
-				this.OnPropertyChanged("sw365_subscriptionprice");
-			}
-		}
-		
-		/// <summary>
-		/// Value of the Subscription Price in base currency.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionprice_base")]
-		public Microsoft.Xrm.Sdk.Money sw365_subscriptionprice_Base
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("sw365_subscriptionprice_base");
-			}
-		}
-		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_subscriptionstartdate")]
-		public System.Nullable<System.DateTime> sw365_subscriptionstartdate
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<System.Nullable<System.DateTime>>("sw365_subscriptionstartdate");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("sw365_subscriptionstartdate");
-				this.SetAttributeValue("sw365_subscriptionstartdate", value);
-				this.OnPropertyChanged("sw365_subscriptionstartdate");
+				this.OnPropertyChanging("sw365_stateprovince");
+				this.SetAttributeValue("sw365_stateprovince", value);
+				this.OnPropertyChanged("sw365_stateprovince");
 			}
 		}
 		
@@ -838,43 +924,6 @@ namespace SW365.OSIRIS.TableModel
 				this.OnPropertyChanging("TimeZoneRuleVersionNumber");
 				this.SetAttributeValue("timezoneruleversionnumber", value);
 				this.OnPropertyChanged("TimeZoneRuleVersionNumber");
-			}
-		}
-		
-		/// <summary>
-		/// Unique identifier of the currency associated with the entity.
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("transactioncurrencyid")]
-		public Microsoft.Xrm.Sdk.EntityReference TransactionCurrencyId
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("transactioncurrencyid");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("TransactionCurrencyId");
-				this.SetAttributeValue("transactioncurrencyid", value);
-				this.OnPropertyChanged("TransactionCurrencyId");
-			}
-		}
-		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("transactioncurrencyidname")]
-		public string TransactionCurrencyIdName
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				if (this.FormattedValues.Contains("transactioncurrencyid"))
-				{
-					return this.FormattedValues["transactioncurrencyid"];
-				}
-				else
-				{
-					return default(string);
-				}
 			}
 		}
 		
@@ -912,127 +961,107 @@ namespace SW365.OSIRIS.TableModel
 		}
 		
 		/// <summary>
-		/// 1:N sw365_payment_sw365_subscription
-		/// </summary>
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_payment_sw365_subscription")]
-		public System.Collections.Generic.IEnumerable<SW365.OSIRIS.TableModel.sw365_payment> sw365_payment_sw365_subscription
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetRelatedEntities<SW365.OSIRIS.TableModel.sw365_payment>("sw365_payment_sw365_subscription", null);
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("sw365_payment_sw365_subscription");
-				this.SetRelatedEntities<SW365.OSIRIS.TableModel.sw365_payment>("sw365_payment_sw365_subscription", null, value);
-				this.OnPropertyChanged("sw365_payment_sw365_subscription");
-			}
-		}
-		
-		/// <summary>
-		/// N:1 lk_sw365_subscription_createdby
+		/// N:1 lk_sw365_address_createdby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_subscription_createdby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_subscription_createdby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_address_createdby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_address_createdby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_subscription_createdby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_address_createdby", null);
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_sw365_subscription_createdonbehalfby
+		/// N:1 lk_sw365_address_createdonbehalfby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_subscription_createdonbehalfby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_subscription_createdonbehalfby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_address_createdonbehalfby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_address_createdonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_subscription_createdonbehalfby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_address_createdonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("lk_sw365_subscription_createdonbehalfby");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_subscription_createdonbehalfby", null, value);
-				this.OnPropertyChanged("lk_sw365_subscription_createdonbehalfby");
+				this.OnPropertyChanging("lk_sw365_address_createdonbehalfby");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_address_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_sw365_address_createdonbehalfby");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_sw365_subscription_modifiedby
+		/// N:1 lk_sw365_address_modifiedby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_subscription_modifiedby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_subscription_modifiedby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_address_modifiedby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_address_modifiedby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_subscription_modifiedby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_address_modifiedby", null);
 			}
 		}
 		
 		/// <summary>
-		/// N:1 lk_sw365_subscription_modifiedonbehalfby
+		/// N:1 lk_sw365_address_modifiedonbehalfby
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_subscription_modifiedonbehalfby")]
-		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_subscription_modifiedonbehalfby
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_sw365_address_modifiedonbehalfby")]
+		public SW365.OSIRIS.TableModel.SystemUser lk_sw365_address_modifiedonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_subscription_modifiedonbehalfby", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_address_modifiedonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("lk_sw365_subscription_modifiedonbehalfby");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_subscription_modifiedonbehalfby", null, value);
-				this.OnPropertyChanged("lk_sw365_subscription_modifiedonbehalfby");
+				this.OnPropertyChanging("lk_sw365_address_modifiedonbehalfby");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("lk_sw365_address_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_sw365_address_modifiedonbehalfby");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 sw365_subscription_membership
+		/// N:1 sw365_sw365_address_sw365_eventvenue_sw365_regardingid
 		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_membership")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_subscription_membership")]
-		public SW365.OSIRIS.TableModel.Account sw365_subscription_membership
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sw365_regardingid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sw365_sw365_address_sw365_eventvenue_sw365_regardingid")]
+		public SW365.OSIRIS.TableModel.sw365_eventvenue sw365_sw365_address_sw365_eventvenue_sw365_regardingid
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.Account>("sw365_subscription_membership", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.sw365_eventvenue>("sw365_sw365_address_sw365_eventvenue_sw365_regardingid", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("sw365_subscription_membership");
-				this.SetRelatedEntity<SW365.OSIRIS.TableModel.Account>("sw365_subscription_membership", null, value);
-				this.OnPropertyChanged("sw365_subscription_membership");
+				this.OnPropertyChanging("sw365_sw365_address_sw365_eventvenue_sw365_regardingid");
+				this.SetRelatedEntity<SW365.OSIRIS.TableModel.sw365_eventvenue>("sw365_sw365_address_sw365_eventvenue_sw365_regardingid", null, value);
+				this.OnPropertyChanged("sw365_sw365_address_sw365_eventvenue_sw365_regardingid");
 			}
 		}
 		
 		/// <summary>
-		/// N:1 user_sw365_subscription
+		/// N:1 user_sw365_address
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
-		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_sw365_subscription")]
-		public SW365.OSIRIS.TableModel.SystemUser user_sw365_subscription
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_sw365_address")]
+		public SW365.OSIRIS.TableModel.SystemUser user_sw365_address
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("user_sw365_subscription", null);
+				return this.GetRelatedEntity<SW365.OSIRIS.TableModel.SystemUser>("user_sw365_address", null);
 			}
 		}
 		
@@ -1041,7 +1070,7 @@ namespace SW365.OSIRIS.TableModel
 		/// <param name="anonymousType">LINQ anonymous type.</param>
 		/// </summary>
 		[System.Diagnostics.DebuggerNonUserCode()]
-		public sw365_subscription(object anonymousType) : 
+		public sw365_address(object anonymousType) : 
 				this()
 		{
             foreach (var p in anonymousType.GetType().GetProperties())
@@ -1059,9 +1088,9 @@ namespace SW365.OSIRIS.TableModel
                 {
                     case "id":
                         base.Id = (System.Guid)value;
-                        Attributes["sw365_subscriptionid"] = base.Id;
+                        Attributes["sw365_addressid"] = base.Id;
                         break;
-                    case "sw365_subscriptionid":
+                    case "sw365_addressid":
                         var id = (System.Nullable<System.Guid>) value;
                         if(id == null){ continue; }
                         base.Id = id.Value;
