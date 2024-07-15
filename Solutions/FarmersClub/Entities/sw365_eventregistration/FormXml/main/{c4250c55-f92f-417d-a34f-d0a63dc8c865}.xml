@@ -12,7 +12,7 @@
             <label description="General" languagecode="1033" />
           </labels>
           <columns>
-            <column width="50%">
+            <column width="65%">
               <sections>
                 <section showlabel="false" showbar="false" IsUserDefined="0" id="{f797497c-85da-4523-8770-5ea785ee6cfd}" columns="1">
                   <labels>
@@ -111,7 +111,7 @@
                 </section>
               </sections>
             </column>
-            <column width="50%">
+            <column width="35%">
               <sections>
                 <section name="section_event_details" id="1565108b-7277-4067-9d44-5b32bd5ea3d4" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
                   <labels>

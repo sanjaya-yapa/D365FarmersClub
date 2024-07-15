@@ -192,6 +192,113 @@
             </column>
           </columns>
         </tab>
+        <tab name="tab_eventregistration_payments" id="cde6461a-16d2-4dad-b881-67ccc5ff8199" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Event Registrations &amp; Payments" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="section_event_registration" id="d0b11021-3d67-4686-97bb-fe699ccd0c42" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Event Registration" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{6fdb118e-fae2-4ddd-9950-20169e97d8d4}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="Event Ticket Prices" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="subgrid_event_registrations" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sw365_eventregistration</TargetEntityType>
+                            <ViewId>{85D24E7E-4CF2-4B66-A428-1A178C78B5EB}</ViewId>
+                            <ViewIds>{85D24E7E-4CF2-4B66-A428-1A178C78B5EB}</ViewIds>
+                            <RelationshipName>sw365_communityevent_sw365_eventregistration</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="tab_registered_attendees" id="980dfe40-e11f-4aee-8ef4-624cf1a190d2" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Attendees" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{17c356eb-857e-468c-bb0e-f493bd2b9cef}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="Attendees" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="subgrid_event_attendees" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sw365_attendees</TargetEntityType>
+                            <ViewId>{F7436AF4-1F11-44F9-A1EA-72A2A9B92462}</ViewId>
+                            <ViewIds>{F7436AF4-1F11-44F9-A1EA-72A2A9B92462},{94729DD5-CA03-437C-9354-145DC776280D}</ViewIds>
+                            <RelationshipName>sw365_communityevent_sw365_attendees</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="tab_eventregistration_payments" id="c5e75ba3-f875-4b75-b457-49f1d949aff4" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Payments" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{0c09f8d2-d741-4bc2-8638-bc98126d0b6b}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="Payments" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="subgrid_event_registration_payment" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sw365_payment</TargetEntityType>
+                            <ViewId>{7675F75E-643D-EF11-A316-000D3AE18015}</ViewId>
+                            <ViewIds>{7675F75E-643D-EF11-A316-000D3AE18015},{2D66359C-5FE4-4A92-9589-1CF1E26374A2},{A1DD43DF-633D-EF11-A316-000D3AE18015}</ViewIds>
+                            <RelationshipName>sw365_communityevent_sw365_payment</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
       </tabs>
       <header id="{2196e7e9-92f0-486e-bf06-c3fc08eaf59d}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
         <rows>
@@ -260,7 +367,7 @@
         </controlDescription>
       </controlDescriptions>
       <Navigation>
-        <NavBar></NavBar>
+        <NavBar />
         <NavBarAreas>
           <NavBarArea Id="Info">
             <Titles>

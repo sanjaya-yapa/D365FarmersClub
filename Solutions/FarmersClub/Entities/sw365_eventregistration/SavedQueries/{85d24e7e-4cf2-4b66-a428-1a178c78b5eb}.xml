@@ -10,8 +10,10 @@
     <layoutxml>
       <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
         <row name="result" id="sw365_eventregistrationid">
-          <cell name="sw365_name" width="300" />
-          <cell name="createdon" width="125" />
+          <cell name="sw365_name" width="200" />
+          <cell name="sw365_communityevent" width="144" />
+          <cell name="sw365_eventregistrationdate" width="175" />
+          <cell name="sw365_eventregistrationstatus" width="183" />
         </row>
       </grid>
     </layoutxml>
@@ -21,11 +23,13 @@
         <entity name="sw365_eventregistration">
           <attribute name="sw365_eventregistrationid" />
           <attribute name="sw365_name" />
-          <attribute name="createdon" />
           <order attribute="sw365_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
+          <attribute name="sw365_communityevent" />
+          <attribute name="sw365_eventregistrationdate" />
+          <attribute name="sw365_eventregistrationstatus" />
         </entity>
       </fetch>
     </fetchxml>
