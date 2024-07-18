@@ -41,10 +41,7 @@ namespace SW365.OSIRI.Processors
             subscription.sw365_membership = new EntityReference(Account.EntityLogicalName, membership.Id);
             subscription.sw365_subscriptionstartdate = DateTime.Now;
             subscription.sw365_subscriptionenddate = DateTime.Now.AddYears(1);
-            if (membership.sw365_paymentoption == sw365_PaymentOptions.FullPayment) 
-            {
-                subscription.sw365_subscriptionprice = new Money(subscriptiontype.sw365_subscriptionfee.Value * 12.0m);
-            }
+            subscription.sw365_subscriptionprice = new Money(subscriptiontype.sw365_subscriptionfee.Value * 12.0m);
             subscription.StatusCode = sw365_subscription_StatusCode.PendingPayment;
 
 

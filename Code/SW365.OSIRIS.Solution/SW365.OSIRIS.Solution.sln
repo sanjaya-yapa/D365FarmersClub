@@ -13,6 +13,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SW365.OSIRIS.Processors", "
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SW365.OSIRIS.DataAccess", "SW365.OSIRIS.DataAccess\SW365.OSIRIS.DataAccess.shproj", "{F2D4240C-FB18-4BA2-AA3B-F1F9DCA3096B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SW365.OSIRIS.Plugins.Tests", "SW365.OSIRIS.Plugins.Tests\SW365.OSIRIS.Plugins.Tests.csproj", "{8F49170B-401B-4BB7-8055-7334100278EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{886B2B32-88C2-4E62-BA62-2BE675057076}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{886B2B32-88C2-4E62-BA62-2BE675057076}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{886B2B32-88C2-4E62-BA62-2BE675057076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F49170B-401B-4BB7-8055-7334100278EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F49170B-401B-4BB7-8055-7334100278EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F49170B-401B-4BB7-8055-7334100278EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F49170B-401B-4BB7-8055-7334100278EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +46,7 @@ Global
 		SW365.OSIRIS.DataAccess\SW365.OSIRIS.DataAccess.projitems*{51a065a0-2255-481c-9798-6df6b0ae268a}*SharedItemsImports = 4
 		SW365.OSIRIS.TableModel\SW365.OSIRIS.TableModel.projitems*{51a065a0-2255-481c-9798-6df6b0ae268a}*SharedItemsImports = 4
 		SW365.OSIRI.Processors\SW365.OSIRI.Processors.projitems*{5f1a7754-313d-4dac-a4d6-cfd0da6979be}*SharedItemsImports = 13
+		SW365.OSIRIS.TableModel\SW365.OSIRIS.TableModel.projitems*{8f49170b-401b-4bb7-8055-7334100278ee}*SharedItemsImports = 4
 		SW365.OSIRIS.DataAccess\SW365.OSIRIS.DataAccess.projitems*{f2d4240c-fb18-4ba2-aa3b-f1f9dca3096b}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

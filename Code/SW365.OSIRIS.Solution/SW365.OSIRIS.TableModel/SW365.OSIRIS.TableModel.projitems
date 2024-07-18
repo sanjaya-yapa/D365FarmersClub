@@ -37,7 +37,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Tables\ActivityPointer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\Appointment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\Contact.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Tables\CrmServiceContext.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\Incident.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\IncidentResolution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tables\sw365_address.cs" />
