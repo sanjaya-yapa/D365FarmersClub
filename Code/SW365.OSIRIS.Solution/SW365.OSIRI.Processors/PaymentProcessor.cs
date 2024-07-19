@@ -25,15 +25,14 @@ namespace SW365.OSIRI.Processors
         {
             _tracingService.Trace($"MembershipProcessor | CreatePayment | Create Monthly Payment");
             decimal installmentAmount = subscription.sw365_subscriptionprice.Value / installments;
-            DateTime nextPaymentDate = GetNextMonthFirstDay(DateTime.Now).AddDays(7);
+            DateTime nextPaymentDate = GetNextPaymentDueDate(DateTime.Now);
             for (int i = 0; i < installments; i++)
             {
                 var payment = createPaymentObject(subscription, new Money(installmentAmount), nextPaymentDate, installments);
                 paymentDataAccess.CreateEntity(payment);
-                nextPaymentDate = GetNextMonthFirstDay(nextPaymentDate.AddMonths(1));
+                nextPaymentDate = GetNextPaymentDueDate(nextPaymentDate.AddMonths(1));
             }
         }
-
 
         private sw365_payment createPaymentObject(sw365_subscription subscription, Money amount, DateTime dueDate, int installments) 
         {
@@ -45,6 +44,18 @@ namespace SW365.OSIRI.Processors
                 sw365_fee = amount, 
                 StatusCode = sw365_payment_StatusCode.Pending
             };
+        }
+
+        private DateTime GetNextPaymentDueDate(DateTime currentDate) 
+        {
+            if (currentDate.Day > 15)
+            {
+                return new DateTime(currentDate.Year, currentDate.Month, 15).AddMonths(1);
+            }
+            else 
+            {
+                return new DateTime(currentDate.Year, currentDate.Month, 15);
+            }
         }
 
         private DateTime GetNextMonthFirstDay(DateTime date)
