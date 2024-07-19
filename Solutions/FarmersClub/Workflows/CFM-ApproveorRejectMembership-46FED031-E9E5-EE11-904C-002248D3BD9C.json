@@ -4,7 +4,7 @@
       "shared_commondataserviceforapps": {
         "runtimeSource": "embedded",
         "connection": {
-          "connectionReferenceLogicalName": "sw365_sharedcommondataserviceforapps_11166"
+          "connectionReferenceLogicalName": "sw365_sharedcommondataserviceforapps_1d600"
         },
         "api": {
           "name": "shared_commondataserviceforapps"
