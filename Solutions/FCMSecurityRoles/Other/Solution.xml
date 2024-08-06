@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24071.180" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.24072.182" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>FCMSecurityRoles</UniqueName>
     <LocalizedNames>
@@ -79,6 +79,7 @@
     </Publisher>
     <RootComponents>
       <RootComponent type="20" id="{13d82e08-e046-ef11-a316-002248e286e8}" behavior="0" />
+      <RootComponent type="20" id="{14f3d424-2b54-ef11-bfe3-002248e286e8}" behavior="0" />
       <RootComponent type="20" id="{3545ce19-e146-ef11-a316-002248e286e8}" behavior="0" />
       <RootComponent type="20" id="{56ef1c8e-e046-ef11-a316-002248e286e8}" behavior="0" />
       <RootComponent type="20" id="{6762cb78-e046-ef11-a316-002248e286e8}" behavior="0" />

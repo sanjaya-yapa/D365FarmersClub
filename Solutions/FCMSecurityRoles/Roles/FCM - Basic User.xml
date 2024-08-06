@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Role id="{14f3d424-2b54-ef11-bfe3-002248e286e8}" name="FCM - Basic User" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsCustomizable>1</IsCustomizable>
+  <RolePrivileges>
+    <RolePrivilege name="prvAddressBook" level="Global" />
+    <RolePrivilege name="prvAppendToAsyncOperation" level="Basic" />
+    <RolePrivilege name="prvAppendToWorkflow" level="Global" />
+    <RolePrivilege name="prvAppendToWorkflowSession" level="Basic" />
+    <RolePrivilege name="prvAppendWorkflow" level="Basic" />
+    <RolePrivilege name="prvAppendWorkflowSession" level="Basic" />
+    <RolePrivilege name="prvAssignAsyncOperation" level="Basic" />
+    <RolePrivilege name="prvAssignWorkflow" level="Basic" />
+    <RolePrivilege name="prvAssignWorkflowSession" level="Basic" />
+    <RolePrivilege name="prvBulkEdit" level="Global" />
+    <RolePrivilege name="prvCreateSharePointData" level="Global" />
+    <RolePrivilege name="prvCreateUserApplicationMetadata" level="Basic" />
+    <RolePrivilege name="prvCreateWorkflow" level="Basic" />
+    <RolePrivilege name="prvCreateWorkflowSession" level="Basic" />
+    <RolePrivilege name="prvDeleteUserApplicationMetadata" level="Basic" />
+    <RolePrivilege name="prvDeleteWorkflow" level="Basic" />
+    <RolePrivilege name="prvDeleteWorkflowSession" level="Basic" />
+    <RolePrivilege name="prvExportToExcel" level="Global" />
+    <RolePrivilege name="prvIntelligenceUsage" level="Global" />
+    <RolePrivilege name="prvMerge" level="Global" />
+    <RolePrivilege name="prvPrint" level="Global" />
+    <RolePrivilege name="prvReadAccount" level="Basic" />
+    <RolePrivilege name="prvReadAppModule" level="Global" />
+    <RolePrivilege name="prvReadAsyncOperation" level="Basic" />
+    <RolePrivilege name="prvReadAttribute" level="Global" />
+    <RolePrivilege name="prvReadContact" level="Basic" />
+    <RolePrivilege name="prvReadCustomization" level="Global" />
+    <RolePrivilege name="prvReadEntity" level="Global" />
+    <RolePrivilege name="prvReadEntityKey" level="Global" />
+    <RolePrivilege name="prvReadEntityMap" level="Global" />
+    <RolePrivilege name="prvReadExpanderEvent" level="Global" />
+    <RolePrivilege name="prvReadHierarchyRule" level="Global" />
+    <RolePrivilege name="prvReadIncident" level="Basic" />
+    <RolePrivilege name="prvReadLicense" level="Global" />
+    <RolePrivilege name="prvReadOptionSet" level="Global" />
+    <RolePrivilege name="prvReadPluginAssembly" level="Global" />
+    <RolePrivilege name="prvReadPluginType" level="Global" />
+    <RolePrivilege name="prvReadQuery" level="Global" />
+    <RolePrivilege name="prvReadRelationship" level="Global" />
+    <RolePrivilege name="prvReadSavedQueryVisualizations" level="Global" />
+    <RolePrivilege name="prvReadSdkMessage" level="Global" />
+    <RolePrivilege name="prvReadSdkMessageProcessingStep" level="Global" />
+    <RolePrivilege name="prvReadSdkMessageProcessingStepImage" level="Global" />
+    <RolePrivilege name="prvReadSharePointData" level="Global" />
+    <RolePrivilege name="prvReadSharePointDocument" level="Global" />
+    <RolePrivilege name="prvReadsw365_communityevent" level="Basic" />
+    <RolePrivilege name="prvReadsw365_eventregistration" level="Basic" />
+    <RolePrivilege name="prvReadsw365_eventticketprice" level="Basic" />
+    <RolePrivilege name="prvReadsw365_eventtype" level="Basic" />
+    <RolePrivilege name="prvReadsw365_eventvenue" level="Basic" />
+    <RolePrivilege name="prvReadsw365_subscription" level="Basic" />
+    <RolePrivilege name="prvReadsw365_subscriptiontype" level="Basic" />
+    <RolePrivilege name="prvReadSystemApplicationMetadata" level="Global" />
+    <RolePrivilege name="prvReadSystemForm" level="Global" />
+    <RolePrivilege name="prvReadUserApplicationMetadata" level="Basic" />
+    <RolePrivilege name="prvReadWebResource" level="Global" />
+    <RolePrivilege name="prvReadWorkflow" level="Basic" />
+    <RolePrivilege name="prvReadWorkflowSession" level="Global" />
+    <RolePrivilege name="prvShareWorkflow" level="Basic" />
+    <RolePrivilege name="prvShareWorkflowSession" level="Basic" />
+    <RolePrivilege name="prvWriteAsyncOperation" level="Basic" />
+    <RolePrivilege name="prvWriteSharePointData" level="Global" />
+    <RolePrivilege name="prvWriteUserApplicationMetadata" level="Basic" />
+    <RolePrivilege name="prvWriteWorkflow" level="Basic" />
+    <RolePrivilege name="prvWriteWorkflowSession" level="Basic" />
+  </RolePrivileges>
+</Role>
