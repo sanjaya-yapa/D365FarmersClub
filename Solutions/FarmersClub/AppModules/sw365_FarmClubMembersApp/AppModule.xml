@@ -40,6 +40,17 @@
     <AppModuleComponent type="62" schemaName="sw365_FarmClubMembersApp" />
   </AppModuleComponents>
   <AppModuleRoleMaps>
+    <Role id="{14f3d424-2b54-ef11-bfe3-002248e286e8}" />
+    <Role id="{6762cb78-e046-ef11-a316-002248e286e8}" />
+    <Role id="{56ef1c8e-e046-ef11-a316-002248e286e8}" />
+    <Role id="{a2b90a09-e146-ef11-a316-002248e286e8}" />
+    <Role id="{e067d18e-e146-ef11-a316-002248e286e8}" />
+    <Role id="{94b26bae-e046-ef11-a316-002248e286e8}" />
+    <Role id="{82b727a2-e046-ef11-a316-002248e286e8}" />
+    <Role id="{13d82e08-e046-ef11-a316-002248e286e8}" />
+    <Role id="{f480da64-e046-ef11-a316-002248e286e8}" />
+    <Role id="{3545ce19-e146-ef11-a316-002248e286e8}" />
+    <Role id="{e49f157d-e146-ef11-a316-002248e286e8}" />
     <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
     <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
   </AppModuleRoleMaps>

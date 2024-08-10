@@ -98,7 +98,7 @@
                             <ChartGridMode>All</ChartGridMode>
                             <TargetEntityType>sw365_payment</TargetEntityType>
                             <ViewId>{7675F75E-643D-EF11-A316-000D3AE18015}</ViewId>
-                            <ViewIds>{7675F75E-643D-EF11-A316-000D3AE18015},{A1DD43DF-633D-EF11-A316-000D3AE18015},{2D66359C-5FE4-4A92-9589-1CF1E26374A2}</ViewIds>
+                            <ViewIds>{7675F75E-643D-EF11-A316-000D3AE18015},{A1DD43DF-633D-EF11-A316-000D3AE18015},{AA07F07E-9F45-EF11-BFE2-002248E33FD3}</ViewIds>
                             <RelationshipName>sw365_eventregistration_sw365_payment</RelationshipName>
                           </parameters>
                         </control>
