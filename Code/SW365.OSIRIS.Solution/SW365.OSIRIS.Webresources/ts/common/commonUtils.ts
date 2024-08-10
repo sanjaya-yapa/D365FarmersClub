@@ -1,4 +1,4 @@
-﻿module SW365.OSIRIS.Common {
+﻿namespace SW365.OSIRIS.Common {
     interface IAttribute {
         getValue(): any;
         setValue(value: any): void;

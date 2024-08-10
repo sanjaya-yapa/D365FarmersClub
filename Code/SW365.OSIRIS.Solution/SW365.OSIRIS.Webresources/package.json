@@ -9,7 +9,7 @@
   "author": "Sanjaya Yapa",
   "license": "ISC",
   "devDependencies": {
-    "@types/xrm": "^9.0.78",
+    "@types/xrm": "^9.0.80",
     "typescript": "^5.3.3"
   }
 }
