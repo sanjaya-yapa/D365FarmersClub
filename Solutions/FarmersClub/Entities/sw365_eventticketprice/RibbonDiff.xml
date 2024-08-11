@@ -1,14 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <CustomActions />
+  <CustomActions>
+    <HideCustomAction HideActionId="sw365.Mscrm.SubGrid.sw365_eventticketprice.AddExistingAssoc.Hide" Location="Mscrm.SubGrid.sw365_eventticketprice.AddExistingAssoc" />
+    <HideCustomAction HideActionId="sw365.Mscrm.SubGrid.sw365_eventticketprice.AddExistingStandard.Hide" Location="Mscrm.SubGrid.sw365_eventticketprice.AddExistingStandard" />
+    <HideCustomAction HideActionId="sw365.Mscrm.SubGrid.sw365_eventticketprice.AddNewStandard.Hide" Location="Mscrm.SubGrid.sw365_eventticketprice.AddNewStandard" />
+    <CustomAction Id="sw365.sw365_eventticketprice.AddNew.Button.CustomAction" Location="Mscrm.SubGrid.sw365_eventticketprice.MainTab.Management.Controls._children" Sequence="18">
+      <CommandUIDefinition>
+        <Button Command="sw365.sw365_eventticketprice.AddNew.Command" Id="sw365.sw365_eventticketprice.AddNew.Button" LabelText="$LocLabels:sw365.sw365_eventticketprice.AddNew.Button.LabelText" Sequence="18" TemplateAlias="o1" ToolTipTitle="$LocLabels:sw365.sw365_eventticketprice.AddNew.Button.ToolTipTitle" ModernImage="New" />
+      </CommandUIDefinition>
+    </CustomAction>
+  </CustomActions>
   <Templates>
     <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
   </Templates>
-  <CommandDefinitions />
+  <CommandDefinitions>
+    <CommandDefinition Id="sw365.sw365_eventticketprice.AddNew.Command">
+      <EnableRules />
+      <DisplayRules />
+      <Actions>
+        <JavaScriptFunction FunctionName="SW365.OSIRIS.Common.EventTicketCommand.addNewEventTicketPrice" Library="$webresource:sw365_/js/EventTicketPrice/EventTicketPriceCommands.js">
+          <CrmParameter Value="PrimaryControl" />
+          <CrmParameter Value="SelectedEntityTypeName" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+  </CommandDefinitions>
   <RuleDefinitions>
     <TabDisplayRules />
     <DisplayRules />
     <EnableRules />
   </RuleDefinitions>
-  <LocLabels />
+  <LocLabels>
+    <LocLabel Id="sw365.sw365_eventticketprice.AddNew.Button.LabelText">
+      <Titles>
+        <Title description="Add New" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="sw365.sw365_eventticketprice.AddNew.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Add new event ticket prices" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+  </LocLabels>
 </RibbonDiffXml>

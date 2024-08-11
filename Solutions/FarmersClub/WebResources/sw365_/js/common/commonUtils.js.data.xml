@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{653ed047-5a57-ef11-bfe3-002248e286e8}</WebResourceId>
+  <Name>sw365_/js/common/commonUtils.js</Name>
+  <DisplayName>FCM - sw365_/js/common/commonUtils.js</DisplayName>
+  <LanguageCode>0</LanguageCode>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/sw365_jscommoncommonUtilsjs653ED047-5A57-EF11-BFE3-002248E286E8</FileName>
+</WebResource>
