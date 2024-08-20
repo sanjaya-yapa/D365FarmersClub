@@ -1,5 +1,5 @@
 
-<entities xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" timestamp="2024-08-11T00:14:38.5061847Z">
+<entities xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" timestamp="2024-08-20T07:15:38.4722829Z">
   <entity name="sw365_subscriptiontype" displayname="Subscription Type">
     <records>
       <record id="408e4b2d-831e-ef11-840a-6045bd3d2806">
@@ -147,6 +147,83 @@
         <field name="statuscode" value="1" />
         <field name="sw365_name" value="Water Management:" />
         <field name="sw365_casetypeid" value="c66cc8a7-551e-ef11-840a-6045bd3d2806" />
+      </record>
+    </records>
+    <m2mrelationships />
+  </entity>
+  <entity name="sw365_eventtype" displayname="Event Type">
+    <records>
+      <record id="2013303a-655e-ef11-bfe4-002248e286e8">
+        <field name="sw365_eventtypeid" value="2013303a-655e-ef11-bfe4-002248e286e8" />
+        <field name="sw365_name" value="Educational Workshops" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="83101543-655e-ef11-bfe4-002248e286e8">
+        <field name="sw365_eventtypeid" value="83101543-655e-ef11-bfe4-002248e286e8" />
+        <field name="sw365_name" value="Seasonal Agricultural Shows" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="a8ade849-655e-ef11-bfe4-002248e286e8">
+        <field name="sw365_eventtypeid" value="a8ade849-655e-ef11-bfe4-002248e286e8" />
+        <field name="sw365_name" value="Field Days" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="2719e84f-655e-ef11-bfe4-002248e286e8">
+        <field name="sw365_eventtypeid" value="2719e84f-655e-ef11-bfe4-002248e286e8" />
+        <field name="sw365_name" value="Annual Conferences" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="2819e84f-655e-ef11-bfe4-002248e286e8">
+        <field name="sw365_eventtypeid" value="2819e84f-655e-ef11-bfe4-002248e286e8" />
+        <field name="sw365_name" value="Seasonal Planning Sessions" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="afc36e60-655e-ef11-bfe4-002248e286e8">
+        <field name="sw365_eventtypeid" value="afc36e60-655e-ef11-bfe4-002248e286e8" />
+        <field name="sw365_name" value="Market Days" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="69610868-655e-ef11-bfe4-002248e286e8">
+        <field name="sw365_eventtypeid" value="69610868-655e-ef11-bfe4-002248e286e8" />
+        <field name="sw365_name" value="Training on Government Regulations and Compliance" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="a4bfbd70-655e-ef11-bfe4-002248e286e8">
+        <field name="sw365_eventtypeid" value="a4bfbd70-655e-ef11-bfe4-002248e286e8" />
+        <field name="sw365_name" value="Social Events and Gatherings" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="81cd0378-655e-ef11-bfe4-002248e286e8">
+        <field name="sw365_eventtypeid" value="81cd0378-655e-ef11-bfe4-002248e286e8" />
+        <field name="sw365_name" value="Technology and Innovation Expos" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="231e4f7f-655e-ef11-bfe4-002248e286e8">
+        <field name="sw365_eventtypeid" value="231e4f7f-655e-ef11-bfe4-002248e286e8" />
+        <field name="sw365_name" value="Sustainability and Environmental Conservation Workshops" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="58a38b86-655e-ef11-bfe4-002248e286e8">
+        <field name="sw365_eventtypeid" value="58a38b86-655e-ef11-bfe4-002248e286e8" />
+        <field name="sw365_name" value="Youth Engagement Programs" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
+      </record>
+      <record id="59a38b86-655e-ef11-bfe4-002248e286e8">
+        <field name="sw365_eventtypeid" value="59a38b86-655e-ef11-bfe4-002248e286e8" />
+        <field name="sw365_name" value="Charity and Community Support Events" />
+        <field name="statecode" value="0" />
+        <field name="statuscode" value="1" />
       </record>
     </records>
     <m2mrelationships />

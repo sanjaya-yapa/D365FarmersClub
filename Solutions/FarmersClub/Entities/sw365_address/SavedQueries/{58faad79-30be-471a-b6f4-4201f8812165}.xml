@@ -5,13 +5,14 @@
     <CanBeDeleted>0</CanBeDeleted>
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
-    <isdefault>1</isdefault>
+    <isdefault>0</isdefault>
     <savedqueryid>{58faad79-30be-471a-b6f4-4201f8812165}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
         <row name="result" id="sw365_addressid">
-          <cell name="sw365_name" width="300" />
-          <cell name="createdon" width="125" />
+          <cell name="sw365_name" width="280" />
+          <cell name="sw365_addresstype" width="118" />
+          <cell name="sw365_isprimary" width="168" />
         </row>
       </grid>
     </layoutxml>
@@ -21,11 +22,12 @@
         <entity name="sw365_address">
           <attribute name="sw365_addressid" />
           <attribute name="sw365_name" />
-          <attribute name="createdon" />
           <order attribute="sw365_name" descending="false" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
+          <attribute name="sw365_isprimary" />
+          <attribute name="sw365_addresstype" />
         </entity>
       </fetch>
     </fetchxml>

@@ -24,7 +24,7 @@
                         <labels>
                           <label description="Event Code" languagecode="1033" />
                         </labels>
-                        <control id="sw365_eventcode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_eventcode" disabled="false" />
+                        <control id="sw365_eventcode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_eventcode" disabled="true" />
                       </cell>
                       <cell locklevel="0" id="{0032a099-876c-45c7-b049-f9f3bf1bf844}" showlabel="false">
                         <labels>
@@ -399,11 +399,22 @@
       <DisplayConditions Order="0" FallbackForm="true">
         <Everyone />
       </DisplayConditions>
+      <formLibraries>
+        <Library name="sw365_/js/common/commonUtils.js" libraryUniqueId="{602dea0c-042d-4733-a996-630ee9b89ae7}" />
+        <Library name="sw365_/js/CommunityEvents/communityEventForm.js" libraryUniqueId="{f72c7676-97b1-492b-8925-97be638c82b1}" />
+      </formLibraries>
+      <events>
+        <event name="onchange" application="false" active="false" attribute="sw365_eventstartdate">
+          <Handlers>
+            <Handler functionName="SW365.OSIRIS.Common.CommunityEventsForm.validateFormDates" libraryName="sw365_/js/CommunityEvents/communityEventForm.js" handlerUniqueId="{55b9f049-f114-4a2f-9913-908b2fd1eeb8}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
     <LocalizedNames>
-      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="FCM - Community Event main Form" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
       <Description description="A form for this entity." languagecode="1033" />

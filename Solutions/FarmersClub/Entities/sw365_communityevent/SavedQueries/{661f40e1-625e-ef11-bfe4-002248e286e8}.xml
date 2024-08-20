@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{661f40e1-625e-ef11-bfe4-002248e286e8}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
+        <row name="result" id="sw365_communityeventid">
+          <cell name="sw365_eventcode" width="125" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="sw365_name" width="200" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="sw365_eventtype" width="100" />
+          <cell name="sw365_isguestsallowed" width="125" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="sw365_numberofattendees" width="125" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="sw365_eventstartdate" width="125" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="sw365_eventenddate" width="100" />
+          <cell name="sw365_registrationstartdate" width="100" />
+          <cell name="sw365_registrationenddate" width="100" />
+          <cell name="sw365_eventstatus" width="100" />
+          <cell name="sw365_eventvenue" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical" distinct="true">
+        <entity name="sw365_communityevent">
+          <attribute name="sw365_name" />
+          <attribute name="sw365_registrationstartdate" />
+          <attribute name="sw365_registrationenddate" />
+          <attribute name="sw365_isguestsallowed" />
+          <attribute name="sw365_eventvenue" />
+          <attribute name="sw365_eventtype" />
+          <attribute name="sw365_eventstatus" />
+          <attribute name="sw365_eventstartdate" />
+          <attribute name="sw365_eventenddate" />
+          <attribute name="sw365_eventcode" />
+          <attribute name="sw365_numberofattendees" />
+          <attribute name="sw365_communityeventid" />
+          <order attribute="sw365_eventstartdate" descending="true" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+            <condition attribute="sw365_eventstartdate" operator="next-x-months" value="12" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Upcoming Events" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

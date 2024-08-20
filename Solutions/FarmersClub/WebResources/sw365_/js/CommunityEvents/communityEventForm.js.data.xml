@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{32eb0e49-485b-ef11-bfe3-002248e286e8}</WebResourceId>
+  <Name>sw365_/js/CommunityEvents/communityEventForm.js</Name>
+  <DisplayName>FCM - sw365_/js/CommunityEvents/communityEventForm.js</DisplayName>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/sw365_jsCommunityEventscommunityEventFormjs32EB0E49-485B-EF11-BFE3-002248E286E8</FileName>
+</WebResource>

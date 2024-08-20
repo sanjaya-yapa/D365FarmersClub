@@ -6,6 +6,52 @@ var SW365;
         (function (Common) {
             class CommonUtil {
                 constructor(_formContext) {
+                    this.attribute = {
+                        value: (fieldName, value) => {
+                            const attribute = this.formContext.getAttribute(fieldName);
+                            if (!attribute) {
+                                console.error(`Attribute ${fieldName} not found.`);
+                                return null;
+                            }
+                            if (typeof value !== 'undefined') {
+                                attribute.setValue(value);
+                                return;
+                            }
+                            return attribute.getValue();
+                        },
+                        clearValue: (fieldName) => {
+                            const attribute = this.formContext.getAttribute(fieldName);
+                            if (!attribute) {
+                                console.error(`Attribute ${fieldName} not found.`);
+                                return;
+                            }
+                            attribute.clearValue();
+                        },
+                        setRequiredLelvel: (fieldName, requiredLevel) => {
+                            const attribute = this.formContext.getAttribute(fieldName);
+                            if (!attribute) {
+                                console.error(`Attribute ${fieldName} not found.`);
+                                return;
+                            }
+                            attribute.setRequiredLevel(requiredLevel);
+                        },
+                        getLookupValue: (fieldName) => {
+                            const attribute = this.formContext.getAttribute(fieldName);
+                            if (!attribute) {
+                                console.error(`Attribute ${fieldName} not found.`);
+                                return;
+                            }
+                            if (attribute.getValue() && attribute.getValue().length > 0) {
+                                const lookupValue = attribute.getValue()[0];
+                                return {
+                                    id: lookupValue.id,
+                                    name: lookupValue.name,
+                                    entityType: lookupValue.entityType
+                                };
+                            }
+                            return null;
+                        }
+                    };
                     this.formContext = _formContext;
                 }
                 async callCustomApi(apiName, data) {

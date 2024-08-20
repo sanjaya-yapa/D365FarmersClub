@@ -77,7 +77,7 @@
                             <ChartGridMode>All</ChartGridMode>
                             <TargetEntityType>sw365_communityevent</TargetEntityType>
                             <ViewId>{9A5B4C46-A175-4244-8710-3B970528CFA7}</ViewId>
-                            <ViewIds>{9A5B4C46-A175-4244-8710-3B970528CFA7},{472F49CE-BB54-400C-A406-D01ADA9CF9D1}</ViewIds>
+                            <ViewIds>{9A5B4C46-A175-4244-8710-3B970528CFA7},{472F49CE-BB54-400C-A406-D01ADA9CF9D1},{661F40E1-625E-EF11-BFE4-002248E286E8}</ViewIds>
                             <RelationshipName>sw365_eventvenue_sw365_communityevent</RelationshipName>
                           </parameters>
                         </control>
@@ -104,12 +104,12 @@
                             <RecordsPerPage>4</RecordsPerPage>
                             <AutoExpand>Fixed</AutoExpand>
                             <EnableQuickFind>false</EnableQuickFind>
-                            <EnableViewPicker>true</EnableViewPicker>
+                            <EnableViewPicker>false</EnableViewPicker>
                             <EnableChartPicker>true</EnableChartPicker>
                             <ChartGridMode>All</ChartGridMode>
                             <TargetEntityType>sw365_address</TargetEntityType>
                             <ViewId>{58FAAD79-30BE-471A-B6F4-4201F8812165}</ViewId>
-                            <ViewIds>{58FAAD79-30BE-471A-B6F4-4201F8812165},{B8D75F25-5F18-43A4-971D-B668B0CB5952}</ViewIds>
+                            <ViewIds>{58FAAD79-30BE-471A-B6F4-4201F8812165}</ViewIds>
                             <RelationshipName>sw365_sw365_address_sw365_eventvenue_sw365_regardingid</RelationshipName>
                           </parameters>
                         </control>
@@ -174,7 +174,7 @@
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
     <LocalizedNames>
-      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="CF Venue Main Form" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
       <Description description="A form for this entity." languagecode="1033" />

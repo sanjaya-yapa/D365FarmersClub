@@ -36,6 +36,14 @@
                       </cell>
                     </row>
                     <row>
+                      <cell id="{538cd2d2-ad29-4207-b9df-6b90b53489eb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Event Registration Status" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventregistrationstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="sw365_eventregistrationstatus" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{6c778de2-c3cf-41c4-8d02-b1bcb254811b}" visible="false">
                         <labels>
                           <label description="Owner" languagecode="1033" />

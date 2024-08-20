@@ -1,0 +1,127 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "sw365_sharedcommondataserviceforapps_2df4b"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Event_Registration_Added": {
+          "metadata": {
+            "operationMetadataId": "8b096bac-1f90-4904-955c-952e76bfbd1d"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "sw365_eventregistration",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "sw365_eventregistrationid,sw365_eventregistrationstatus",
+              "subscriptionRequest/runas": 3
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Check_if_the_registration_is_confirmed": {
+          "actions": {
+            "Get_Community_Event_for_Registration": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "f2f2eee1-54cb-4a59-8ec3-7602c6b8ba1e"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "sw365_communityevents",
+                  "recordId": "@triggerOutputs()?['body/_sw365_communityevent_value']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Update_Event_Registration_Count": {
+              "runAfter": {
+                "Increment_Event_Registration_Count": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "1afcd9f5-3245-4b40-92fd-3462ba95c29e"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "sw365_communityevents",
+                  "recordId": "@outputs('Get_Community_Event_for_Registration')?['body/sw365_communityeventid']",
+                  "item/sw365_registrationcount": "@outputs('Increment_Event_Registration_Count')"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Increment_Event_Registration_Count": {
+              "runAfter": {
+                "Get_Community_Event_for_Registration": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "36429807-a3b0-4364-9520-5f7d7e9fcdcc"
+              },
+              "type": "Compose",
+              "inputs": "@add(int(outputs('Get_Community_Event_for_Registration')?['sw365_registrationcount']),1)"
+            }
+          },
+          "runAfter": {},
+          "expression": {
+            "equals": [
+              "@triggerOutputs()?['body/sw365_eventregistrationstatus']",
+              147980001
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "226bfaa3-fde2-4507-b3da-e7a951272c70"
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

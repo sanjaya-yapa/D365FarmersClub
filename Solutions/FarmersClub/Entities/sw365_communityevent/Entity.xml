@@ -768,7 +768,7 @@
           <Type>datetime</Type>
           <Name>sw365_eventenddate</Name>
           <LogicalName>sw365_eventenddate</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
+          <RequiredLevel>required</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
           <ValidForUpdateApi>1</ValidForUpdateApi>
@@ -808,7 +808,7 @@
           <Type>datetime</Type>
           <Name>sw365_eventstartdate</Name>
           <LogicalName>sw365_eventstartdate</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
+          <RequiredLevel>required</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
           <ValidForUpdateApi>1</ValidForUpdateApi>
@@ -940,7 +940,7 @@
           <Type>lookup</Type>
           <Name>sw365_eventtype</Name>
           <LogicalName>sw365_eventtype</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
+          <RequiredLevel>required</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
           <ValidForUpdateApi>1</ValidForUpdateApi>
@@ -979,7 +979,7 @@
           <Type>lookup</Type>
           <Name>sw365_eventvenue</Name>
           <LogicalName>sw365_eventvenue</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
+          <RequiredLevel>required</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
           <ValidForUpdateApi>1</ValidForUpdateApi>
@@ -1240,7 +1240,7 @@
           <Type>datetime</Type>
           <Name>sw365_registrationstartdate</Name>
           <LogicalName>sw365_registrationstartdate</LogicalName>
-          <RequiredLevel>none</RequiredLevel>
+          <RequiredLevel>required</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
           <ValidForUpdateApi>1</ValidForUpdateApi>

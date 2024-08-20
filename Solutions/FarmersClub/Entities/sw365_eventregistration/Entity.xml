@@ -777,7 +777,7 @@
               </option>
               <option value="147980001" ExternalValue="">
                 <labels>
-                  <label description="Completed" languagecode="1033" />
+                  <label description="Confirmed" languagecode="1033" />
                 </labels>
                 <Descriptions>
                   <Description description="" languagecode="1033" />
@@ -786,6 +786,14 @@
               <option value="147980002" ExternalValue="">
                 <labels>
                   <label description="Cancelled" languagecode="1033" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="1033" />
+                </Descriptions>
+              </option>
+              <option value="147980003">
+                <labels>
+                  <label description="Attended" languagecode="1033" />
                 </labels>
                 <Descriptions>
                   <Description description="" languagecode="1033" />

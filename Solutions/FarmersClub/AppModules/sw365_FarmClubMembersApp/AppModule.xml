@@ -19,6 +19,7 @@
     <AppModuleComponent type="1" schemaName="sw365_casetype" />
     <AppModuleComponent type="1" schemaName="sw365_communityevent" />
     <AppModuleComponent type="1" schemaName="sw365_eventregistration" />
+    <AppModuleComponent type="1" schemaName="sw365_eventtype" />
     <AppModuleComponent type="1" schemaName="sw365_eventvenue" />
     <AppModuleComponent type="1" schemaName="sw365_payment" />
     <AppModuleComponent type="1" schemaName="sw365_subscription" />
@@ -28,9 +29,11 @@
     <AppModuleComponent type="26" id="{a1dd43df-633d-ef11-a316-000d3ae18015}" />
     <AppModuleComponent type="26" id="{7675f75e-643d-ef11-a316-000d3ae18015}" />
     <AppModuleComponent type="26" id="{0b6763c2-653d-ef11-a316-000d3ae18015}" />
+    <AppModuleComponent type="26" id="{a89cb58e-c212-455f-9ede-0bb1718234db}" />
     <AppModuleComponent type="26" id="{2d66359c-5fe4-4a92-9589-1cf1e26374a2}" />
     <AppModuleComponent type="26" id="{ca91c70a-672c-4e0b-8f51-1ef6e6206d12}" />
     <AppModuleComponent type="26" id="{4ca543eb-ca53-4523-a072-295ce5e261b7}" />
+    <AppModuleComponent type="26" id="{97a76061-42c3-4aa9-a155-5cbb328427ba}" />
     <AppModuleComponent type="26" id="{15e93a60-0304-4403-86e3-7c724f558780}" />
     <AppModuleComponent type="26" id="{ab4d0be0-de2d-420d-abe6-816bfe55be71}" />
     <AppModuleComponent type="26" id="{5aa2e8a1-9c06-4eaa-8074-91e45a028ccf}" />

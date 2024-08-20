@@ -20,6 +20,14 @@
                   </labels>
                   <rows>
                     <row>
+                      <cell id="{ba014fc0-4772-455e-a203-ef5828978c56}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Full Address" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{820e613c-5685-4460-9957-1bd8c7e5b646}" locklevel="0" colspan="1" rowspan="1" labelid="{19ca49c3-8b47-47ab-a5f4-d28a0a693d0a}">
                         <labels>
                           <label description="Address Type" languagecode="1033" />
