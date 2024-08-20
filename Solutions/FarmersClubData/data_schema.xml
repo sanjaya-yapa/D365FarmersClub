@@ -20,4 +20,13 @@
       <field displayname="Case Type" name="sw365_casetypeid" type="guid" primaryKey="true" />
     </fields>
   </entity>
+  <entity name="sw365_eventtype" displayname="Event Type" etc="11082" primaryidfield="sw365_eventtypeid" primarynamefield="sw365_name" disableplugins="false">
+    <fields>
+      <field displayname="Event Type" name="sw365_eventtypeid" type="guid" primaryKey="true" />
+      <field displayname="Event Type Title" name="sw365_name" type="string" customfield="true" />
+      <field displayname="Status" name="statecode" type="state" />
+      <field displayname="Status Reason" name="statuscode" type="status" />
+    </fields>
+    <relationships />
+  </entity>
 </entities>
