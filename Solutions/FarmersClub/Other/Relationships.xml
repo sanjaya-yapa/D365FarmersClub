@@ -55,6 +55,7 @@
   <EntityRelationship Name="sw365_communityevent_sw365_eventregistration" />
   <EntityRelationship Name="sw365_communityevent_sw365_eventticketprice" />
   <EntityRelationship Name="sw365_communityevent_sw365_payment" />
+  <EntityRelationship Name="sw365_eventregistration_membership" />
   <EntityRelationship Name="sw365_eventregistration_sw365_attendees" />
   <EntityRelationship Name="sw365_eventregistration_sw365_payment" />
   <EntityRelationship Name="sw365_eventtype_sw365_communityevent" />

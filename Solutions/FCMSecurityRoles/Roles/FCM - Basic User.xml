@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Role id="{14f3d424-2b54-ef11-bfe3-002248e286e8}" name="FCM - Basic User" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <IsCustomizable>1</IsCustomizable>
+  <IsAutoAssigned>0</IsAutoAssigned>
   <RolePrivileges>
     <RolePrivilege name="prvAddressBook" level="Global" />
     <RolePrivilege name="prvAppendToAsyncOperation" level="Basic" />

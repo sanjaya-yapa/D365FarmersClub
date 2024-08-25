@@ -95,7 +95,7 @@
             },
             "Increment_Event_Registration_Count": {
               "runAfter": {
-                "Get_Community_Event_for_Registration": [
+                "Compose": [
                   "Succeeded"
                 ]
               },
@@ -104,6 +104,18 @@
               },
               "type": "Compose",
               "inputs": "@add(int(outputs('Get_Community_Event_for_Registration')?['sw365_registrationcount']),1)"
+            },
+            "Compose": {
+              "runAfter": {
+                "Get_Community_Event_for_Registration": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "c6942d07-b559-497f-a9d7-3e15e4575051"
+              },
+              "type": "Compose",
+              "inputs": "@outputs('Get_Community_Event_for_Registration')?['body/sw365_registrationcount']"
             }
           },
           "runAfter": {},
@@ -121,7 +133,7 @@
       },
       "outputs": {}
     },
-    "templateName": null
+    "templateName": ""
   },
   "schemaVersion": "1.0.0.0"
 }
