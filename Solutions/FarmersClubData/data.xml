@@ -1,5 +1,5 @@
 
-<entities xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" timestamp="2024-08-25T21:06:26.1565339Z">
+<entities xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" timestamp="2024-10-15T00:42:48.7074399Z">
   <entity name="sw365_subscriptiontype" displayname="Subscription Type">
     <records>
       <record id="408e4b2d-831e-ef11-840a-6045bd3d2806">

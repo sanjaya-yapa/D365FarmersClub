@@ -57,6 +57,14 @@
                       </cell>
                     </row>
                     <row>
+                      <cell id="{e1a1f29d-dedc-497f-9536-a474b72021f2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Primary Contact" languagecode="1033" />
+                        </labels>
+                        <control id="primarycontactid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="primarycontactid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{d1bc0fa4-0bce-4eb0-a7f8-3b70cabfa5d4}" locklevel="0" colspan="1" rowspan="1" labelid="{a2a76fb6-051e-463a-ab3d-c93072fff663}">
                         <labels>
                           <label description="Membership Status" languagecode="1033" />

@@ -10,8 +10,8 @@
     <layoutxml>
       <grid name="sw365_subscriptiontypes" jump="sw365_name" select="1" icon="1" preview="0">
         <row name="sw365_subscriptiontype" id="sw365_subscriptiontypeid">
-          <cell name="sw365_name" width="300" />
-          <cell name="createdon" width="125" />
+          <cell name="sw365_name" width="230" />
+          <cell name="sw365_subscriptionfee" width="135" />
         </row>
       </grid>
     </layoutxml>
@@ -21,10 +21,10 @@
         <entity name="sw365_subscriptiontype">
           <attribute name="sw365_subscriptiontypeid" />
           <attribute name="sw365_name" />
-          <attribute name="createdon" />
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
+          <attribute name="sw365_subscriptionfee" />
         </entity>
       </fetch>
     </fetchxml>

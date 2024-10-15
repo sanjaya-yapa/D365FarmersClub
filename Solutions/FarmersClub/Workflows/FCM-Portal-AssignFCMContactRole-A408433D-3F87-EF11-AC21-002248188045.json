@@ -1,0 +1,158 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "sw365_sharedcommondataserviceforapps_2d341"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_Contact_is_Registered": {
+          "metadata": {
+            "operationMetadataId": "b4336ba4-e769-4eb7-8cfe-7e56766063c1"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "contact",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/runas": 2
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Get_Roles": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "06dacf75-a082-4c6f-9cab-4f185488648d"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "mspp_webroles",
+              "$select": "mspp_webroleid,mspp_name"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@outputs('Get_Roles')?['body/value']",
+          "actions": {
+            "Unrelate_rows": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "8738ac66-72d7-4bcf-a5db-d1ef62df809d"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "DisassociateEntities",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "contacts",
+                  "recordId": "@triggerOutputs()?['body/contactid']",
+                  "associationEntityRelationship": "powerpagecomponent_mspp_webrole_contact",
+                  "$id": "@items('Apply_to_each')?['mspp_webroleid']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Roles": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "662646f1-3341-4e76-aff4-663189f90af9"
+          },
+          "type": "Foreach"
+        },
+        "Get_FCM_Contact_Role": {
+          "runAfter": {
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "cf24b359-1648-4cf0-8654-9f608e999fde"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "mspp_webroles",
+              "recordId": "7571b817-d386-ef11-ac21-002248188045"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Relate_rows": {
+          "runAfter": {
+            "Get_FCM_Contact_Role": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "787fcbf4-8761-4224-9485-b888334c7ae6"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "AssociateEntities",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "contacts",
+              "recordId": "@triggerOutputs()?['body/contactid']",
+              "associationEntityRelationship": "powerpagecomponent_mspp_webrole_contact",
+              "item/@odata.id": "@outputs('Get_FCM_Contact_Role')?['body/@odata.id']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

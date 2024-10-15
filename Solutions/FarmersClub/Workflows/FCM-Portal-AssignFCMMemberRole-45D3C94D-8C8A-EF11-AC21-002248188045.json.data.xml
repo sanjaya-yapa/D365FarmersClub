@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Workflow WorkflowId="{42d98185-1958-ef11-bfe3-002248e286e8}" Name="FCM - Evnt Registration - Increment Registration Count" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <JsonFileName>/Workflows/FCM-EvntRegistration-IncrementRegistrationCount-42D98185-1958-EF11-BFE3-002248E286E8.json</JsonFileName>
+<Workflow WorkflowId="{45d3c94d-8c8a-ef11-ac21-002248188045}" Name="FCM - Portal - Assign FCM Member Role" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <JsonFileName>/Workflows/FCM-Portal-AssignFCMMemberRole-45D3C94D-8C8A-EF11-AC21-002248188045.json</JsonFileName>
   <Type>1</Type>
   <Subprocess>0</Subprocess>
   <Category>5</Category>
@@ -17,9 +17,10 @@
   <IsTransacted>1</IsTransacted>
   <IntroducedVersion>1.0.0.0</IntroducedVersion>
   <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
   <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
   <PrimaryEntity>none</PrimaryEntity>
   <LocalizedNames>
-    <LocalizedName languagecode="1033" description="FCM - Evnt Registration - Increment Registration Count" />
+    <LocalizedName languagecode="1033" description="FCM - Portal - Assign FCM Member Role" />
   </LocalizedNames>
 </Workflow>

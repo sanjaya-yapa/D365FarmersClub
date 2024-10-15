@@ -10,13 +10,6 @@
     <RolePrivilege name="prvAppendIncident" level="Local" />
     <RolePrivilege name="prvAppendmsdyn_flow_approvalrequest" level="Global" />
     <RolePrivilege name="prvAppendNewProcess" level="Global" />
-    <RolePrivilege name="prvAppendsw365_communityevent" level="Global" />
-    <RolePrivilege name="prvAppendsw365_eventregistration" level="Global" />
-    <RolePrivilege name="prvAppendsw365_eventticketprice" level="Global" />
-    <RolePrivilege name="prvAppendsw365_eventtype" level="Global" />
-    <RolePrivilege name="prvAppendsw365_eventvenue" level="Global" />
-    <RolePrivilege name="prvAppendsw365_payment" level="Global" />
-    <RolePrivilege name="prvAppendsw365_subscription" level="Global" />
     <RolePrivilege name="prvAppendToAccount" level="Local" />
     <RolePrivilege name="prvAppendToActivity" level="Local" />
     <RolePrivilege name="prvAppendToAsyncOperation" level="Basic" />
@@ -24,13 +17,6 @@
     <RolePrivilege name="prvAppendToIncident" level="Local" />
     <RolePrivilege name="prvAppendTomsdyn_flow_approvalrequest" level="Global" />
     <RolePrivilege name="prvAppendToNewProcess" level="Global" />
-    <RolePrivilege name="prvAppendTosw365_communityevent" level="Global" />
-    <RolePrivilege name="prvAppendTosw365_eventregistration" level="Global" />
-    <RolePrivilege name="prvAppendTosw365_eventticketprice" level="Global" />
-    <RolePrivilege name="prvAppendTosw365_eventtype" level="Global" />
-    <RolePrivilege name="prvAppendTosw365_eventvenue" level="Global" />
-    <RolePrivilege name="prvAppendTosw365_payment" level="Global" />
-    <RolePrivilege name="prvAppendTosw365_subscription" level="Global" />
     <RolePrivilege name="prvAppendToTranslationProcess" level="Global" />
     <RolePrivilege name="prvAppendToWorkflow" level="Global" />
     <RolePrivilege name="prvAppendToWorkflowSession" level="Basic" />
@@ -43,13 +29,6 @@
     <RolePrivilege name="prvAssignContact" level="Local" />
     <RolePrivilege name="prvAssignIncident" level="Local" />
     <RolePrivilege name="prvAssignmsdyn_flow_approvalrequest" level="Global" />
-    <RolePrivilege name="prvAssignsw365_communityevent" level="Global" />
-    <RolePrivilege name="prvAssignsw365_eventregistration" level="Global" />
-    <RolePrivilege name="prvAssignsw365_eventticketprice" level="Global" />
-    <RolePrivilege name="prvAssignsw365_eventtype" level="Global" />
-    <RolePrivilege name="prvAssignsw365_eventvenue" level="Global" />
-    <RolePrivilege name="prvAssignsw365_payment" level="Global" />
-    <RolePrivilege name="prvAssignsw365_subscription" level="Global" />
     <RolePrivilege name="prvAssignWorkflow" level="Basic" />
     <RolePrivilege name="prvAssignWorkflowSession" level="Basic" />
     <RolePrivilege name="prvCreateAccount" level="Basic" />
@@ -103,14 +82,6 @@
     <RolePrivilege name="prvReadSdkMessageProcessingStepImage" level="Global" />
     <RolePrivilege name="prvReadSharePointData" level="Global" />
     <RolePrivilege name="prvReadSharePointDocument" level="Global" />
-    <RolePrivilege name="prvReadsw365_communityevent" level="Global" />
-    <RolePrivilege name="prvReadsw365_eventregistration" level="Global" />
-    <RolePrivilege name="prvReadsw365_eventticketprice" level="Global" />
-    <RolePrivilege name="prvReadsw365_eventtype" level="Global" />
-    <RolePrivilege name="prvReadsw365_eventvenue" level="Global" />
-    <RolePrivilege name="prvReadsw365_payment" level="Global" />
-    <RolePrivilege name="prvReadsw365_subscription" level="Global" />
-    <RolePrivilege name="prvReadsw365_subscriptiontype" level="Global" />
     <RolePrivilege name="prvReadSystemApplicationMetadata" level="Global" />
     <RolePrivilege name="prvReadSystemForm" level="Global" />
     <RolePrivilege name="prvReadTeam" level="Global" />
@@ -130,13 +101,6 @@
     <RolePrivilege name="prvShareContact" level="Local" />
     <RolePrivilege name="prvShareIncident" level="Local" />
     <RolePrivilege name="prvSharemsdyn_flow_approvalrequest" level="Global" />
-    <RolePrivilege name="prvSharesw365_communityevent" level="Global" />
-    <RolePrivilege name="prvSharesw365_eventregistration" level="Global" />
-    <RolePrivilege name="prvSharesw365_eventticketprice" level="Global" />
-    <RolePrivilege name="prvSharesw365_eventtype" level="Global" />
-    <RolePrivilege name="prvSharesw365_eventvenue" level="Global" />
-    <RolePrivilege name="prvSharesw365_payment" level="Global" />
-    <RolePrivilege name="prvSharesw365_subscription" level="Global" />
     <RolePrivilege name="prvShareUserEntityUISettings" level="Basic" />
     <RolePrivilege name="prvShareWorkflow" level="Basic" />
     <RolePrivilege name="prvShareWorkflowSession" level="Basic" />
