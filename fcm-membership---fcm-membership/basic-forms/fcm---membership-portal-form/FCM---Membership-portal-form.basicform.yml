@@ -1,0 +1,23 @@
+adx_attachfilelabel: ''
+adx_attachfilemaxsize: 
+adx_attachfilestoragelocation: 756150000
+adx_captcharequired: false
+adx_containername: ''
+adx_copy: undefined
+adx_entityformid: f5cecc59-7a79-4e8e-9523-154c6f2316a8
+adx_entityname: account
+adx_entitypermissionsenabled: true
+adx_entitysourcetype: 
+adx_formname: FCM - Membership portal form
+adx_hideformonsuccess: true
+adx_lcid: 1033
+adx_maximumnooffiles: 5
+adx_mode: 100000000
+adx_name: FCM - Membership portal form
+adx_onsuccess: 756150000
+adx_recordidquerystringparametername: 
+adx_redirecturl: 
+adx_redirectwebpage: 
+adx_showcaptchaforauthenticatedusers: false
+adx_storageaccountname: ''
+adx_successmessage: ''

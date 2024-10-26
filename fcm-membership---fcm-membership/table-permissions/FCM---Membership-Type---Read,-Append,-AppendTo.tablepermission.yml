@@ -1,0 +1,12 @@
+adx_append: true
+adx_appendto: true
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: sw365_subscriptiontype
+adx_entityname: FCM - Membership Type - Read, Append, AppendTo
+adx_entitypermission_webrole:
+- 7571b817-d386-ef11-ac21-002248188045
+adx_entitypermissionid: 1da95fec-d786-ef11-ac21-002248188045
+adx_read: true
+adx_scope: 756150000
+adx_write: false
