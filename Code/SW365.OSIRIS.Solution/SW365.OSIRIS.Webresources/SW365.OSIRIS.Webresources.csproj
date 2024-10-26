@@ -69,6 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="js\common\commonUtils.js" />
+    <Content Include="js\CommunityEvents\communityEventsForm.js" />
+    <Content Include="js\EventTicketPrice\eventTicketPriceCommands.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,14 +89,13 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="ts\common\commonUtils.ts" />
+    <TypeScriptCompile Include="ts\CommunityEvents\communityEventsForm.ts" />
     <TypeScriptCompile Include="ts\EventTicketPrice\eventTicketPriceCommands.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="js\EventTicketPrice\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
