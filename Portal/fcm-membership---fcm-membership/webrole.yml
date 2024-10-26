@@ -1,0 +1,20 @@
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: true
+  adx_name: FCM - Member
+  adx_webroleid: 5d9be8b4-cd88-ef11-8a6a-002248188045
+- adx_anonymoususersrole: true
+  adx_authenticatedusersrole: false
+  adx_name: Anonymous Users
+  adx_webroleid: 61373829-393a-4587-84cf-37a51f8493be
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_name: Administrators
+  adx_webroleid: 75532e9a-dc9e-497d-b61c-49715636bd23
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: true
+  adx_name: FCM - Contact
+  adx_webroleid: 7571b817-d386-ef11-ac21-002248188045
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: true
+  adx_name: Authenticated Users
+  adx_webroleid: e74e7926-3f02-4be5-bfc3-b5d13fe0e822
