@@ -1,0 +1,45 @@
+- adx_name: Grant Change to Content
+  adx_right: 1
+  adx_scope: 1
+  adx_webpageaccesscontrolruleid: 147294d7-15f1-4054-964c-315517b35318
+- adx_name: Grant Change to Administrators
+  adx_right: 1
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 75532e9a-dc9e-497d-b61c-49715636bd23
+  adx_webpageaccesscontrolruleid: 4138a014-6c64-459d-b539-65ce2f7b66e9
+  adx_webpageid: 3e0d219c-0e2d-43e4-befb-80acbde514ae
+- adx_copy: undefined
+  adx_filecontent: 
+  adx_name: Restrict Read on Membership
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 5d9be8b4-cd88-ef11-8a6a-002248188045
+  - 7571b817-d386-ef11-ac21-002248188045
+  adx_webpageaccesscontrolruleid: 86000b1e-75fd-383c-b33f-8959991d779d
+  adx_webpageid: 039ea968-b685-a93a-f45b-9bd81ec08338
+- adx_copy: undefined
+  adx_name: Restrict Read on Events
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 5d9be8b4-cd88-ef11-8a6a-002248188045
+  adx_webpageaccesscontrolruleid: adf9d5c2-9b4f-c332-adf1-a01ca4ff7e14
+  adx_webpageid: a525abd9-568a-6208-c59a-42b50e60f5e9
+- adx_copy: undefined
+  adx_name: Restrict Read on Subscription And Payment
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 5d9be8b4-cd88-ef11-8a6a-002248188045
+  adx_webpageaccesscontrolruleid: bc00ada1-def7-565e-3a47-cdac3cf36483
+  adx_webpageid: 1eaf0064-2095-9061-9cc6-343c59433a14
+- adx_copy: undefined
+  adx_name: Restrict Read on Cases
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 5d9be8b4-cd88-ef11-8a6a-002248188045
+  adx_webpageaccesscontrolruleid: c8a23658-7ff3-e02b-e790-bf8c500adc13
+  adx_webpageid: 83f31e72-a8b3-f17a-9ba9-8c38be18006e
