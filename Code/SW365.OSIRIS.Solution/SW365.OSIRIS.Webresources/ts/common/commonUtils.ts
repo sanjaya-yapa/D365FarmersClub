@@ -1,5 +1,5 @@
 ﻿namespace SW365.OSIRIS.Common {
-    interface IAttribute {
+    interface IExtendedAttribute extends Xrm.Attributes.Attribute<any> {
         getValue(): any;
         setValue(value: any): void;
         clearValue(): void;
@@ -12,7 +12,7 @@
 
     interface IControl {
         setVisible(visible: boolean): void;
-        getAttribute(): IAttribute;
+        getAttribute(): IExtendedAttribute;
         // Add more control methods and properties as needed
     }
 
@@ -27,7 +27,7 @@
     }
 
     interface IFormContext {
-        getAttribute(attributeName: string): IAttribute | undefined;
+        getAttribute(attributeName: string): IExtendedAttribute | undefined;
         getControl(controlName: string): IControl | undefined;
         ui: {
             setFormNotification(message: string, level: "ERROR" | "INFO" | "WARNING", uniqueId: string): boolean;
@@ -50,76 +50,15 @@
         // Add more form context  methods and properties as needed
     }
 
-    export class AttributeWrapper implements IAttribute {
-        private attribute: Xrm.Attributes.Attribute<any>;
-
-        constructor(_attribute: Xrm.Attributes.Attribute<any>) {
-            this.attribute = _attribute;
-        }
-
-        getValue(): any { return this.attribute.getValue(); }
-
-        setValue(value: any): any { return this.attribute.setValue(value); }
-
-        clearValue(): void { this.attribute.setValue(null); }
-
-        setRequiredLevel(requiredLevel: string): void {
-            this.attribute.setRequiredLevel(requiredLevel as Xrm.Attributes.RequirementLevel);
-        }
-
-        addOnChange(handler: Xrm.Events.ContextSensitiveHandler): void {
-            this.attribute.addOnChange(handler);
-        }
-
-        removeOnChange(handler: Xrm.Events.ContextSensitiveHandler): void {
-            this.attribute.removeOnChange(handler);
-        }
-
-        getLookupValue(): { id: string, name: string, entityType: string } | null {
-            const lookupValue = (this.attribute as Xrm.Attributes.LookupAttribute).getValue();
-            if (lookupValue && lookupValue.length > 0) {
-                const { id, name, entityType } = lookupValue[0];
-                return { id, name, entityType };  
-            }
-            return null;
-        }
-    }
-
-    export class FormContext implements IFormContext {
-        private formContext: Xrm.FormContext;
-
-        constructor(_formContext: Xrm.FormContext) {
-            this.formContext = _formContext;
-        }
-
-        public getAttribute(attributeName: string): IAttribute {
-            return this.formContext.getAttribute(attributeName) as IAttribute;
-        }
-        getControl(controlName: string): IControl | undefined {
-            throw new Error("Method not implemented.");
-        }
-        ui: {
-            setFormNotification(message: string, level: "ERROR" | "INFO" | "WARNING", uniqueId: string): boolean; clearFormNotification(uniqueId: string): boolean; tabs: {
-                get(tabName: string): ITab | undefined;
-            };
-        };
-        data: {
-            entity: {
-                getId(): string;
-                getEntityName(): string;
-            }; save(options?: Xrm.SaveOptions): Promise<void>;
-        };
-
-    }
     export class CommonUtil {
-        protected formContext: IFormContext;
-        constructor(_formContext: IFormContext) {
+        protected formContext: Xrm.FormContext;
+        constructor(_formContext: Xrm.FormContext) {
             this.formContext = _formContext;
         }
 
         public attribute = {
             value: (fieldName: string, value?: any): any => {
-                const attribute = this.formContext.getAttribute(fieldName) as IAttribute;
+                const attribute = this.formContext.getAttribute(fieldName) as unknown as IExtendedAttribute;
 
                 if (!attribute) {
                     console.error(`Attribute ${fieldName} not found.`);
@@ -135,7 +74,7 @@
             },
 
             clearValue: (fieldName: string): void => {
-                const attribute = this.formContext.getAttribute(fieldName) as IAttribute;
+                const attribute = this.formContext.getAttribute(fieldName) as unknown as IExtendedAttribute;
 
                 if (!attribute) {
                     console.error(`Attribute ${fieldName} not found.`);
@@ -146,7 +85,7 @@
             },
 
             setRequiredLelvel: (fieldName: string, requiredLevel: 'none' | 'required' | 'recommended'): void => {
-                const attribute = this.formContext.getAttribute(fieldName) as IAttribute;
+                const attribute = this.formContext.getAttribute(fieldName) as unknown as IExtendedAttribute;
 
                 if (!attribute) {
                     console.error(`Attribute ${fieldName} not found.`);
@@ -157,7 +96,7 @@
             },
 
             getLookupValue: (fieldName: string): { id: string, name: string, entityType: string } | null => {
-                const attribute = this.formContext.getAttribute(fieldName) as IAttribute;
+                const attribute = this.formContext.getAttribute(fieldName) as unknown as IExtendedAttribute;
                 if (!attribute) {
                     console.error(`Attribute ${fieldName} not found.`);
                     return;

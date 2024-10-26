@@ -12,8 +12,8 @@
 			registrationSartDate: 'sw365_registrationstartdate',
 			registrationEndDate: 'sw365_registrationenddate'
 		}
-		constructor(executionContext: Xrm.Events.EventContext) {
-			super(executionContext);
+		constructor(formContext: Xrm.FormContext) {
+			super(formContext);
 		}
 		public validateFormDates(): void {
 			const eventStartDate = this.attribute.value(CommunityEventsForm.Fields.startDate);
@@ -29,5 +29,7 @@
 			}
 		}
 	}
-	export const CommunityEvent = new CommunityEventsForm();
+	export const CommunityEvent = (formContext: Xrm.FormContext): CommunityEventsForm => {
+		return new CommunityEventsForm(formContext);
+	}
 }
