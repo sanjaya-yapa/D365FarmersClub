@@ -137,7 +137,7 @@
                         <labels>
                           <label description="Attendee Count" languagecode="1033" />
                         </labels>
-                        <control id="sw365_attendeecount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="sw365_attendeecount" disabled="false" />
+                        <control id="sw365_attendeecount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="sw365_attendeecount" disabled="true" />
                       </cell>
                     </row>
                     <row>
@@ -151,7 +151,7 @@
                         <labels>
                           <label description="Registration Count" languagecode="1033" />
                         </labels>
-                        <control id="sw365_registrationcount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="sw365_registrationcount" disabled="false" />
+                        <control id="sw365_registrationcount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="sw365_registrationcount" disabled="true" />
                       </cell>
                     </row>
                   </rows>
@@ -404,9 +404,29 @@
         <Library name="sw365_/js/CommunityEvents/communityEventForm.js" libraryUniqueId="{f72c7676-97b1-492b-8925-97be638c82b1}" />
       </formLibraries>
       <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="SW365.OSIRIS.Common.CommunityEvent.onFormLoad" libraryName="sw365_/js/CommunityEvents/communityEventForm.js" handlerUniqueId="{66c69c77-5ce4-4157-9a15-f30dc6abe019}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
         <event name="onchange" application="false" active="false" attribute="sw365_eventstartdate">
           <Handlers>
-            <Handler functionName="SW365.OSIRIS.Common.CommunityEventsForm.validateFormDates" libraryName="sw365_/js/CommunityEvents/communityEventForm.js" handlerUniqueId="{55b9f049-f114-4a2f-9913-908b2fd1eeb8}" enabled="true" parameters="" passExecutionContext="true" />
+            <Handler functionName="SW365.OSIRIS.Common.CommunityEvent.eventStartDateOnChange" libraryName="sw365_/js/CommunityEvents/communityEventForm.js" handlerUniqueId="{55b9f049-f114-4a2f-9913-908b2fd1eeb8}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="sw365_eventenddate">
+          <Handlers>
+            <Handler functionName="SW365.OSIRIS.Common.CommunityEvent.eventEndDateOnChange" libraryName="sw365_/js/CommunityEvents/communityEventForm.js" handlerUniqueId="{38da81a3-3f9b-4c5a-8037-d5ab194ba5fe}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="sw365_registrationstartdate">
+          <Handlers>
+            <Handler functionName="SW365.OSIRIS.Common.CommunityEvent.registrationStartDateOnChange" libraryName="sw365_/js/common/commonUtils.js" handlerUniqueId="{2b1e0cf1-d5ce-4c03-ad2f-366782c8a55f}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="sw365_registrationenddate">
+          <Handlers>
+            <Handler functionName="SW365.OSIRIS.Common.CommunityEvent.registrationEndDateOnChange" libraryName="sw365_/js/common/commonUtils.js" handlerUniqueId="{1402675b-d4f7-4843-b6df-582791c9c3c4}" enabled="true" parameters="" passExecutionContext="false" />
           </Handlers>
         </event>
       </events>

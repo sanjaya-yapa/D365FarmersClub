@@ -3,6 +3,7 @@
   <WebResourceId>{32eb0e49-485b-ef11-bfe3-002248e286e8}</WebResourceId>
   <Name>sw365_/js/CommunityEvents/communityEventForm.js</Name>
   <DisplayName>FCM - sw365_/js/CommunityEvents/communityEventForm.js</DisplayName>
+  <LanguageCode>0</LanguageCode>
   <WebResourceType>3</WebResourceType>
   <IntroducedVersion>1.0.0.0</IntroducedVersion>
   <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
