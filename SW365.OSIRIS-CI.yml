@@ -4,6 +4,16 @@
 # Variable 'SolutionName' was defined in the Variables tab
 # Variable 'SolutionNameSecurity' was defined in the Variables tab
 
+trigger:
+  branches:
+    include:
+      - main
+
+pr:
+  branches:
+    include:
+      - main
+
 jobs:
 - job: Job_1
   displayName: Agent job 1
