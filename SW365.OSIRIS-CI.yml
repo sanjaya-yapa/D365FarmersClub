@@ -112,12 +112,12 @@ jobs:
 
       echo "https://$(AZURE_DEVOPS_PAT):@dev.azure.com" > ~/.git-credentials
 
-      git clone --mirror https://powerCreate@dev.azure.com/powerCreate/SW365.OSIRIS/_git/SW365.OSIRIS
+      git clone --mirror https://$(AZURE_DEVOPS_PAT)@dev.azure.com/powerCreate/SW365.OSIRIS/_git/SW365.OSIRIS
       cd SW365.OSIRIS.git
 
       git remote add github https://$(GITHUB_TOKEN):x-oauth-basic@github.com/sanjaya-yapa/D365FarmersClub.git
       git push --mirror github
-    displayName: 'Mirror Azure DevOps Repo to GitHub'
+    displayName: 'Mirror Azure DevOps Repo to GitHub - CI'
     env:
       GITHUB_TOKEN: $(GITHUB_TOKEN)
       AZURE_DEVOPS_PAT: $(AZURE_DEVOPS_PAT)
