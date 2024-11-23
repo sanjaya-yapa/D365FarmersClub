@@ -4,6 +4,7 @@
   <EntityRelationship Name="business_unit_sw365_attendees" />
   <EntityRelationship Name="business_unit_sw365_casetype" />
   <EntityRelationship Name="business_unit_sw365_communityevent" />
+  <EntityRelationship Name="business_unit_sw365_eventactivity" />
   <EntityRelationship Name="business_unit_sw365_eventregistration" />
   <EntityRelationship Name="business_unit_sw365_eventticketprice" />
   <EntityRelationship Name="business_unit_sw365_eventtype" />
@@ -20,6 +21,8 @@
   <EntityRelationship Name="lk_sw365_casetype_modifiedby" />
   <EntityRelationship Name="lk_sw365_communityevent_createdby" />
   <EntityRelationship Name="lk_sw365_communityevent_modifiedby" />
+  <EntityRelationship Name="lk_sw365_eventactivity_createdby" />
+  <EntityRelationship Name="lk_sw365_eventactivity_modifiedby" />
   <EntityRelationship Name="lk_sw365_eventregistration_createdby" />
   <EntityRelationship Name="lk_sw365_eventregistration_modifiedby" />
   <EntityRelationship Name="lk_sw365_eventticketprice_createdby" />
@@ -40,6 +43,7 @@
   <EntityRelationship Name="owner_sw365_attendees" />
   <EntityRelationship Name="owner_sw365_casetype" />
   <EntityRelationship Name="owner_sw365_communityevent" />
+  <EntityRelationship Name="owner_sw365_eventactivity" />
   <EntityRelationship Name="owner_sw365_eventregistration" />
   <EntityRelationship Name="owner_sw365_eventticketprice" />
   <EntityRelationship Name="owner_sw365_eventtype" />
@@ -55,6 +59,7 @@
   <EntityRelationship Name="sw365_communityevent_sw365_eventregistration" />
   <EntityRelationship Name="sw365_communityevent_sw365_eventticketprice" />
   <EntityRelationship Name="sw365_communityevent_sw365_payment" />
+  <EntityRelationship Name="sw365_eventactivity_sw365_communityevent" />
   <EntityRelationship Name="sw365_eventregistration_membership" />
   <EntityRelationship Name="sw365_eventregistration_sw365_attendees" />
   <EntityRelationship Name="sw365_eventregistration_sw365_payment" />
@@ -77,6 +82,7 @@
   <EntityRelationship Name="team_sw365_attendees" />
   <EntityRelationship Name="team_sw365_casetype" />
   <EntityRelationship Name="team_sw365_communityevent" />
+  <EntityRelationship Name="team_sw365_eventactivity" />
   <EntityRelationship Name="team_sw365_eventregistration" />
   <EntityRelationship Name="team_sw365_eventticketprice" />
   <EntityRelationship Name="team_sw365_eventtype" />
@@ -93,6 +99,7 @@
   <EntityRelationship Name="user_sw365_attendees" />
   <EntityRelationship Name="user_sw365_casetype" />
   <EntityRelationship Name="user_sw365_communityevent" />
+  <EntityRelationship Name="user_sw365_eventactivity" />
   <EntityRelationship Name="user_sw365_eventregistration" />
   <EntityRelationship Name="user_sw365_eventticketprice" />
   <EntityRelationship Name="user_sw365_eventtype" />
