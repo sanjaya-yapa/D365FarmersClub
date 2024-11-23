@@ -83,7 +83,7 @@ jobs:
 
         echo "checkout main branch"
 
-        git checkout main
+        git checkout -b main || git checkout main
 
         echo "pull origin"
 
