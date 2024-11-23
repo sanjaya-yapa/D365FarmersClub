@@ -1,0 +1,117 @@
+# 'Allow scripts to access the OAuth token' was selected in pipeline.  Add the following YAML to any steps requiring access:
+#       env:
+#           MY_ACCESS_TOKEN: $(System.AccessToken)
+# Variable 'SolutionName' was defined in the Variables tab
+# Variable 'SolutionNameSecurity' was defined in the Variables tab
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    vmImage: windows-2019
+  steps:
+  - checkout: self
+    fetchDepth: 1
+    persistCredentials: True
+  - task: microsoft-IsvExpTools.PowerPlatform-BuildTools.tool-installer.PowerPlatformToolInstaller@2
+    displayName: 'Power Platform Tool Installer '
+  - task: microsoft-IsvExpTools.PowerPlatform-BuildTools.publish-customizations.PowerPlatformPublishCustomizations@2
+    displayName: 'Power Platform Publish Customizations '
+    inputs:
+      authenticationType: PowerPlatformSPN
+      PowerPlatformSPN: f5bb14a8-848a-4153-91fd-fa9ff2344adc
+  - task: microsoft-IsvExpTools.PowerPlatform-BuildTools.export-solution.PowerPlatformExportSolution@2
+    displayName: Power Platform Export Solution - App
+    inputs:
+      authenticationType: PowerPlatformSPN
+      PowerPlatformSPN: f5bb14a8-848a-4153-91fd-fa9ff2344adc
+      SolutionName: $(SolutionName)
+      SolutionOutputFile: $(Build.ArtifactStagingDirectory)\Solutions\$(SolutionName).zip
+  - task: microsoft-IsvExpTools.PowerPlatform-BuildTools.unpack-solution.PowerPlatformUnpackSolution@2
+    displayName: Power Platform Unpack Solution - App
+    inputs:
+      SolutionInputFile: $(Build.ArtifactStagingDirectory)\Solutions\$(SolutionName).zip
+      SolutionTargetFolder: $(Build.SourcesDirectory)\Solutions\$(SolutionName)
+  - task: microsoft-IsvExpTools.PowerPlatform-BuildTools.export-data.PowerPlatformExportData@2
+    displayName: 'Power Platform Export Data '
+    inputs:
+      authenticationType: PowerPlatformSPN
+      PowerPlatformSPN: f5bb14a8-848a-4153-91fd-fa9ff2344adc
+      SchemaFile: $(Build.SourcesDirectory)\Solutions\FarmersClubData\data_schema.xml
+      DataFile: $(Build.SourcesDirectory)\Solutions\FarmersClubData\data.zip
+      Overwrite: true
+  - task: WaelHamze.xrm-ci-framework-build-tasks.MSCRMToolInstaller.MSCRMToolInstaller@12
+    displayName: Power DevOps Tool Installer
+  - task: WaelHamze.xrm-ci-framework-build-tasks.MSCRMExtractCMData.MSCRMExtractCMData@12
+    displayName: Extract Configuration Migration Data
+    inputs:
+      dataFile: $(Build.SourcesDirectory)\Solutions\FarmersClubData\data.zip
+      extractFolder: $(Build.SourcesDirectory)\Solutions\FarmersClubData\
+      sortExtractedData: true
+      splitExtractedData: false
+  - task: microsoft-IsvExpTools.PowerPlatform-BuildTools.export-solution.PowerPlatformExportSolution@2
+    displayName: Power Platform Export Solution - Security
+    inputs:
+      authenticationType: PowerPlatformSPN
+      PowerPlatformSPN: f5bb14a8-848a-4153-91fd-fa9ff2344adc
+      SolutionName: $(SolutionNameSecurity)
+      SolutionOutputFile: $(Build.ArtifactStagingDirectory)\Solutions\$(SolutionNameSecurity).zip
+  - task: microsoft-IsvExpTools.PowerPlatform-BuildTools.unpack-solution.PowerPlatformUnpackSolution@2
+    displayName: Power Platform Unpack Solution - Security
+    inputs:
+      SolutionInputFile: $(Build.ArtifactStagingDirectory)\Solutions\$(SolutionNameSecurity).zip
+      SolutionTargetFolder: $(Build.SourcesDirectory)\Solutions\$(SolutionNameSecurity)
+  - task: CmdLine@2
+    displayName: Command Line Script
+    inputs:
+      script: >-
+        echo commit all changes
+
+        git config user.email "sanjaya@subwindw365.com"
+
+        git config user.name "Automatic Build"
+
+        echo "checkout main branch"
+
+        git checkout -b main
+
+        echo "pull origin"
+
+        git pull origin
+
+        echo "add all"
+
+        git add --all
+
+        git commit -m "solution init"
+
+        echo "push code to new repo"
+
+        git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push origin main
+...
+- job: MirrorToGitHub
+  displayName: Mirror Azure DevOps Repo to GitHub
+  dependsOn: Job_1
+  pool:
+    vmImage: windows-2019
+  steps:
+  - script: |
+      git config --global user.email "sanjaya@subwind365.com"
+      git config --global user.name "Sanjaya Yapa"
+      git config --global credential.helper store
+
+      # Store Azure DevOps PAT in credetials
+      exho "https://$(AZURE_DEVOPS_PAT):@dev.azure.com" > ~/.git-credentials"
+
+      # Clone Azure DevOps Repo
+      git clone --mirror https://dev.azure.com/powerCreate/SW365.OSIRIS/_git/SW365.OSIRIS
+      cd SW365.OSIRIS.git
+
+      # Add GitHub credentials to push to GitHub
+      git remote add github https://$(GITHUB_TOKEN):x-oauth-basic@github.com/sanjaya-yapa/D365FarmersClub.git
+      git push --mirror github
+    displayName: 'Mirror Azure DevOps Repo to GitHub'
+    env:
+      GITHUB_TOKEN: $(GITHUB_TOKEN)
+      AZURE_DEVOPS_PAT: $(AZURE_DEVOPS_PAT)
+      
+  
