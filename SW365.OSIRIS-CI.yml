@@ -67,17 +67,17 @@ jobs:
       script: >-
         echo commit all changes
 
-        git config user.email "sanjaya@subwindw365.com"
+        git config user.email "sanjaya@subwind365.com"
 
         git config user.name "Automatic Build"
 
         echo "checkout main branch"
 
-        git checkout -b main
+        git checkout main
 
         echo "pull origin"
 
-        git pull origin
+        git pull origin main
 
         echo "add all"
 
