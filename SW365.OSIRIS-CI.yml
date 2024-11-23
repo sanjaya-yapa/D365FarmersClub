@@ -3,6 +3,7 @@
 #           MY_ACCESS_TOKEN: $(System.AccessToken)
 # Variable 'SolutionName' was defined in the Variables tab
 # Variable 'SolutionNameSecurity' was defined in the Variables tab
+
 jobs:
 - job: Job_1
   displayName: Agent job 1
@@ -87,7 +88,7 @@ jobs:
         echo "push code to new repo"
 
         git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push origin main
-...
+        
 - job: MirrorToGitHub
   displayName: Mirror Azure DevOps Repo to GitHub
   dependsOn: Job_1
