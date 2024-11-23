@@ -93,26 +93,21 @@ jobs:
   displayName: Mirror Azure DevOps Repo to GitHub
   dependsOn: Job_1
   pool:
-    vmImage: windows-2019
+    vmImage: 'windows-2019'
   steps:
   - script: |
       git config --global user.email "sanjaya@subwind365.com"
       git config --global user.name "Sanjaya Yapa"
       git config --global credential.helper store
 
-      # Store Azure DevOps PAT in credetials
-      exho "https://$(AZURE_DEVOPS_PAT):@dev.azure.com" > ~/.git-credentials"
+      echo "https://$(AZURE_DEVOPS_PAT):@dev.azure.com" > ~/.git-credentials
 
-      # Clone Azure DevOps Repo
-      git clone --mirror https://dev.azure.com/powerCreate/SW365.OSIRIS/_git/SW365.OSIRIS
+      git clone --mirror https://powerCreate@dev.azure.com/powerCreate/SW365.OSIRIS/_git/SW365.OSIRIS
       cd SW365.OSIRIS.git
 
-      # Add GitHub credentials to push to GitHub
       git remote add github https://$(GITHUB_TOKEN):x-oauth-basic@github.com/sanjaya-yapa/D365FarmersClub.git
       git push --mirror github
     displayName: 'Mirror Azure DevOps Repo to GitHub'
     env:
       GITHUB_TOKEN: $(GITHUB_TOKEN)
       AZURE_DEVOPS_PAT: $(AZURE_DEVOPS_PAT)
-      
-  
