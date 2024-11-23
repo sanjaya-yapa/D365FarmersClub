@@ -305,13 +305,13 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="LinkedInExtensions/Account/LinkedInExtensions_Account.js" displayName="LinkedInExtensions/Account/LinkedInExtensions_Account.js" solution="msdyn_LinkedInExtensions (9.0.24105.10016)">
-          <package>msdyn_SalesIntegrationsAddOns (9.0.24104.10001)</package>
+          <package>msdyn_SalesIntegrationsAddOns (9.0.24111.10002)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership portal form - Readonly" parentDisplayName="Account" id="{692e7a05-3af1-ee11-904b-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="LinkedInExtensions/Account/LinkedInExtensions_Account.js" displayName="LinkedInExtensions/Account/LinkedInExtensions_Account.js" solution="msdyn_LinkedInExtensions (9.0.24105.10016)">
-          <package>msdyn_SalesIntegrationsAddOns (9.0.24104.10001)</package>
+          <package>msdyn_SalesIntegrationsAddOns (9.0.24111.10002)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership portal form" parentDisplayName="Account" id="{8194fe3b-d1e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
