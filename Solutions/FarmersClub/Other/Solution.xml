@@ -403,6 +403,12 @@
         <Required type="61" schemaName="Sales/ClientCommon/Sales_ClientCommon.js" displayName="Sales/ClientCommon/Sales_ClientCommon.js" solution="msdynce_Sales (9.0.4.0076)">
           <package>msdynce_SalesAnchor (9.0.24104.10008)</package>
         </Required>
+        <Dependent type="60" displayName="FCM - Membership main form" parentDisplayName="Account" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/ClientCommon/Sales_ClientCommon.js" displayName="Sales/ClientCommon/Sales_ClientCommon.js" solution="msdynce_Sales (9.0.4.0076)">
+          <package>msdynce_SalesAnchor (9.0.24104.10008)</package>
+        </Required>
         <Dependent type="60" displayName="FCM - Membership portal form - Readonly" parentDisplayName="Account" id="{692e7a05-3af1-ee11-904b-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
@@ -410,12 +416,6 @@
           <package>msdynce_SalesAnchor (9.0.24104.10008)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership portal form" parentDisplayName="Account" id="{8194fe3b-d1e9-ee11-a203-002248d3bd9c}" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="61" schemaName="Sales/ClientCommon/Sales_ClientCommon.js" displayName="Sales/ClientCommon/Sales_ClientCommon.js" solution="msdynce_Sales (9.0.4.0076)">
-          <package>msdynce_SalesAnchor (9.0.24104.10008)</package>
-        </Required>
-        <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="Sales/Contact/Contact_main_system_library.js" displayName="Sales/Contact/Contact_main_system_library.js" solution="msdynce_SalesPatch201904 (9.0.1912.1007)">
