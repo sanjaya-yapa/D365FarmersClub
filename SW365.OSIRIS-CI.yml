@@ -106,17 +106,24 @@ jobs:
     vmImage: 'windows-2019'
   steps:
   - script: |
+      set -e
+
+      echo "Configuring Git..."
       git config --global user.email "sanjaya@subwind365.com"
       git config --global user.name "Sanjaya Yapa"
       git config --global credential.helper store
 
+      echo "Storing Azure DevOps PAT in credentials"
       echo "https://$(AZURE_DEVOPS_PAT):@dev.azure.com" > ~/.git-credentials
 
-      git clone --mirror https://$(AZURE_DEVOPS_PAT)@dev.azure.com/powerCreate/SW365.OSIRIS/_git/SW365.OSIRIS
+      git clone --mirror https://$(AZURE_DEVOPS_PAT)@dev.azure.com/powerCreate/SW365.OSIRIS/_git/SW365.OSIRIS || { echo 'Clone failed'; exit 1; }
       cd SW365.OSIRIS.git
 
-      git remote add github https://$(GITHUB_TOKEN):x-oauth-basic@github.com/sanjaya-yapa/D365FarmersClub.git
-      git push --mirror github
+      echo "Adding GitHub Remote..."
+      git remote add github https://$(GITHUB_TOKEN):x-oauth-basic@github.com/sanjaya-yapa/D365FarmersClub.git || { echo 'Adding GitHub remote failed'; exit 1; }
+
+      echo "Pushing to GitHub..."
+      git push --mirror github || { echo 'Push failed'; exit 1; }
     displayName: 'Mirror Azure DevOps Repo to GitHub - CI'
     env:
       GITHUB_TOKEN: $(GITHUB_TOKEN)
