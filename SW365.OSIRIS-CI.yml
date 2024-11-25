@@ -114,26 +114,27 @@ jobs:
       git config --global credential.helper store
 
       echo "Storing Azure DevOps PAT in credentials"
-      echo "https://$(AZURE_DEVOPS_PAT):@dev.azure.com" > ~/.git-credentials
+      echo "https://$(AZURE_DEVOPS_PAT):@dev.azure.com" > %USERPROFILE%\.git-credentials
 
       git clone --mirror https://$powerCreate@dev.azure.com/powerCreate/SW365.OSIRIS/_git/SW365.OSIRIS 
       if errorlevel 1 ( 
-        echo 'Clone failed'
+        echo 'Clone mirror failed'
         exit /b 1
       )
+        
       cd SW365.OSIRIS.git
 
       echo "Adding GitHub Remote..."
       git remote add github https://$(GITHUB_TOKEN):x-oauth-basic@github.com/sanjaya-yapa/D365FarmersClub.git 
       if errorlevel 1 ( 
-        echo 'Clone failed'
+        echo 'Remote add failed'
         exit /b 1
       )
 
       echo "Pushing to GitHub..."
       git push --mirror github
       if errorlevel 1 ( 
-        echo 'Clone failed'
+        echo 'Clone mirror push failed'
         exit /b 1
       )
     displayName: 'Mirror Azure DevOps Repo to GitHub - CI'
