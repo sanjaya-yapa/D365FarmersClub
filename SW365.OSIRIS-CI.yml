@@ -116,7 +116,7 @@ jobs:
       echo "Storing Azure DevOps PAT in credentials"
       echo "https://$(AZURE_DEVOPS_PAT):@dev.azure.com" > %USERPROFILE%\.git-credentials
 
-      git clone --mirror https://$powerCreate@dev.azure.com/powerCreate/SW365.OSIRIS/_git/SW365.OSIRIS 
+      git clone --mirror https://$(AZURE_DEVOPS_PAT)/powerCreate/SW365.OSIRIS/_git/SW365.OSIRIS 
       if errorlevel 1 ( 
         echo 'Clone mirror failed'
         exit /b 1
