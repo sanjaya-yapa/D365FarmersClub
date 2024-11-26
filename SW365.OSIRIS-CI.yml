@@ -106,8 +106,6 @@ jobs:
     vmImage: 'windows-2019'
   steps:
   - script: |
-      set -e
-
       echo "Configuring Git..."
       git config --global user.email "sanjaya@subwind365.com"
       git config --global user.name "Sanjaya Yapa"
@@ -116,7 +114,7 @@ jobs:
       echo "Storing Azure DevOps PAT in credentials"
       echo "https://$(AZURE_DEVOPS_PAT):@dev.azure.com" > %USERPROFILE%\.git-credentials
 
-      git clone --mirror https://$(AZURE_DEVOPS_PAT)/powerCreate/SW365.OSIRIS/_git/SW365.OSIRIS 
+      git clone --mirror https://$(AZURE_DEVOPS_PAT)@dev.azure.com/powerCreate/SW365.OSIRIS/_git/SW365.OSIRIS 
       if errorlevel 1 ( 
         echo 'Clone mirror failed'
         exit /b 1
