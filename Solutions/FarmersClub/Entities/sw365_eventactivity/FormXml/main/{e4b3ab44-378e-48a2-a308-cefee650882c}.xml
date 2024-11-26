@@ -5,7 +5,7 @@
     <IntroducedVersion>1.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form>
+    <form headerdensity="HighWithControls">
       <tabs>
         <tab verticallayout="true" id="{31d8e63f-aad5-4c7b-91fe-a6d29260c4f9}" IsUserDefined="1">
           <labels>
@@ -14,7 +14,7 @@
           <columns>
             <column width="100%">
               <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{8dd33bce-6776-434b-9217-cf79f35aa7f8}">
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{8dd33bce-6776-434b-9217-cf79f35aa7f8}" columns="11">
                   <labels>
                     <label description="General" languagecode="1033" />
                   </labels>
@@ -24,15 +24,66 @@
                         <labels>
                           <label description="Event Activity Code" languagecode="1033" />
                         </labels>
-                        <control id="sw365_eventactivitycode" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sw365_eventactivitycode" />
+                        <control id="sw365_eventactivitycode" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="sw365_eventactivitycode" disabled="true" />
+                      </cell>
+                      <cell id="{e6c75efb-3f8a-40b8-93b4-3321a0449bd1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Activity Title" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_activitytitle" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_activitytitle" disabled="false" />
                       </cell>
                     </row>
                     <row>
-                      <cell id="{22596b50-bd61-442a-b422-c1156c1e0d63}">
+                      <cell id="{69a4a00f-6369-4419-ab18-2d6a06c0f4c1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Community Event" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_communityevent" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_communityevent" disabled="false" />
+                      </cell>
+                      <cell id="{55b43f6e-8987-4c9d-9763-a64fe34dab1a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Activity Host" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_contact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_contact" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8acba8ce-4bbf-4021-9ce8-96803c2e7a03}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Activity Start" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_activitystart" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_activitystart" disabled="false" />
+                      </cell>
+                      <cell id="{4427f207-6bf9-438e-bdc8-342f6cc2564a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Activity End" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_activityend" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_activityend" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{04525449-c2be-4959-8f3f-ef6f635ed87e}" locklevel="0" colspan="2" rowspan="5">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_description" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="sw365_description" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row>
+                      <cell id="{22596b50-bd61-442a-b422-c1156c1e0d63}" visible="false">
                         <labels>
                           <label description="Owner" languagecode="1033" />
                         </labels>
                         <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell locklevel="0" id="{f676dd28-50e4-4fbd-b407-8fe71e933be0}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
                       </cell>
                     </row>
                   </rows>
@@ -42,6 +93,51 @@
           </columns>
         </tab>
       </tabs>
+      <header id="{703bb77b-12e1-44cc-abd2-ddb9b891d59c}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{1eca91f3-33ae-44ec-a58f-0a38c855810b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{6a88e40c-2ed4-4be7-ba5f-d0a008d55cae}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{5d594808-4a5a-4d51-b4b0-4651acf3259c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{eeacd518-1145-4709-bbf3-1f946485a008}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{42993979-545d-46a5-9eaa-0cbfc6fd4ecf}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{780893bf-901e-49c3-883c-c5d22798dae8}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1b66768e-7719-4605-99c3-9a1d0dd36cd4}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
