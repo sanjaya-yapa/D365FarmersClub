@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{66304a8e-74b2-ef11-b8e8-6045bd40b0c6}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="sw365_name" select="1" icon="1" preview="1">
+        <row name="result" id="sw365_eventticketpriceid">
+          <cell name="sw365_subscriptiontype" width="143" />
+          <cell name="sw365_ticketprice" width="108" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="sw365_eventticketprice">
+          <attribute name="sw365_eventticketpriceid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="sw365_subscriptiontype" />
+          <attribute name="sw365_ticketprice" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Event Ticket Price List" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
