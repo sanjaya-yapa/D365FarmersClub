@@ -7,10 +7,16 @@
     <RolePrivilege name="prvAppendAccount" level="Global" />
     <RolePrivilege name="prvAppendContact" level="Global" />
     <RolePrivilege name="prvAppendNewProcess" level="Global" />
+    <RolePrivilege name="prvAppendsw365_communityevent" level="Global" />
+    <RolePrivilege name="prvAppendsw365_eventactivity" level="Global" />
+    <RolePrivilege name="prvAppendsw365_eventregistration" level="Global" />
     <RolePrivilege name="prvAppendToAccount" level="Global" />
     <RolePrivilege name="prvAppendToAsyncOperation" level="Basic" />
     <RolePrivilege name="prvAppendToContact" level="Global" />
     <RolePrivilege name="prvAppendToNewProcess" level="Global" />
+    <RolePrivilege name="prvAppendTosw365_communityevent" level="Global" />
+    <RolePrivilege name="prvAppendTosw365_eventactivity" level="Global" />
+    <RolePrivilege name="prvAppendTosw365_eventregistration" level="Global" />
     <RolePrivilege name="prvAppendToTranslationProcess" level="Global" />
     <RolePrivilege name="prvAppendToWorkflow" level="Global" />
     <RolePrivilege name="prvAppendToWorkflowSession" level="Basic" />
@@ -20,12 +26,16 @@
     <RolePrivilege name="prvAssignAccount" level="Global" />
     <RolePrivilege name="prvAssignAsyncOperation" level="Basic" />
     <RolePrivilege name="prvAssignContact" level="Global" />
+    <RolePrivilege name="prvAssignsw365_eventactivity" level="Global" />
+    <RolePrivilege name="prvAssignsw365_eventregistration" level="Global" />
     <RolePrivilege name="prvAssignWorkflow" level="Basic" />
     <RolePrivilege name="prvAssignWorkflowSession" level="Basic" />
     <RolePrivilege name="prvCreateAccount" level="Basic" />
     <RolePrivilege name="prvCreateContact" level="Global" />
     <RolePrivilege name="prvCreateNewProcess" level="Global" />
     <RolePrivilege name="prvCreateSharePointData" level="Global" />
+    <RolePrivilege name="prvCreatesw365_eventactivity" level="Basic" />
+    <RolePrivilege name="prvCreatesw365_eventregistration" level="Basic" />
     <RolePrivilege name="prvCreateTranslationProcess" level="Global" />
     <RolePrivilege name="prvCreateUserApplicationMetadata" level="Basic" />
     <RolePrivilege name="prvCreateUserEntityUISettings" level="Basic" />
@@ -68,6 +78,12 @@
     <RolePrivilege name="prvReadSdkMessageProcessingStepImage" level="Global" />
     <RolePrivilege name="prvReadSharePointData" level="Global" />
     <RolePrivilege name="prvReadSharePointDocument" level="Global" />
+    <RolePrivilege name="prvReadsw365_communityevent" level="Global" />
+    <RolePrivilege name="prvReadsw365_eventactivity" level="Global" />
+    <RolePrivilege name="prvReadsw365_eventregistration" level="Global" />
+    <RolePrivilege name="prvReadsw365_eventticketprice" level="Global" />
+    <RolePrivilege name="prvReadsw365_eventtype" level="Global" />
+    <RolePrivilege name="prvReadsw365_eventvenue" level="Global" />
     <RolePrivilege name="prvReadSystemApplicationMetadata" level="Global" />
     <RolePrivilege name="prvReadSystemForm" level="Global" />
     <RolePrivilege name="prvReadTeam" level="Global" />
@@ -84,6 +100,8 @@
     <RolePrivilege name="prvReadWorkflowSession" level="Global" />
     <RolePrivilege name="prvShareAccount" level="Global" />
     <RolePrivilege name="prvShareContact" level="Global" />
+    <RolePrivilege name="prvSharesw365_eventactivity" level="Global" />
+    <RolePrivilege name="prvSharesw365_eventregistration" level="Global" />
     <RolePrivilege name="prvShareUserEntityUISettings" level="Basic" />
     <RolePrivilege name="prvShareWorkflow" level="Basic" />
     <RolePrivilege name="prvShareWorkflowSession" level="Basic" />
@@ -93,6 +111,8 @@
     <RolePrivilege name="prvWriteContact" level="Global" />
     <RolePrivilege name="prvWriteNewProcess" level="Global" />
     <RolePrivilege name="prvWriteSharePointData" level="Global" />
+    <RolePrivilege name="prvWritesw365_eventactivity" level="Basic" />
+    <RolePrivilege name="prvWritesw365_eventregistration" level="Basic" />
     <RolePrivilege name="prvWriteTranslationProcess" level="Global" />
     <RolePrivilege name="prvWriteUserApplicationMetadata" level="Basic" />
     <RolePrivilege name="prvWriteUserEntityUISettings" level="Basic" />

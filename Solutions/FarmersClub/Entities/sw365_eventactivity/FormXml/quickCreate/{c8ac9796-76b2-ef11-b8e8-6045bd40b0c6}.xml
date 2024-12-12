@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{c8ac9796-76b2-ef11-b8e8-6045bd40b0c6}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{b4fcf2ac-2fcc-4c35-92cd-2f4acee423b4}" showlabel="false" name="New Tab" labelid="{bad5f7ae-269c-48a7-94e3-fd75bd7ee50e}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section showlabel="true" columns="1" showbar="false" IsUserDefined="false" labelwidth="130" id="{aee9a36f-3990-4f63-9661-b2b28bcbe3ba}" name="tab_1_column_1_section_1" labelid="{d08617c1-5b49-43d1-91f2-39652b9e15d9}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{07ce015b-0517-4edd-9b06-76e20d56a9b2}" locklevel="0" colspan="1" rowspan="1" labelid="{2f08553a-2c02-4361-bb31-66f65cbca3b6}">
+                        <labels>
+                          <label description="Event Activity Code" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_eventactivitycode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_eventactivitycode" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6d86ea73-900a-421a-aef4-701ca6d936bd}" labelid="{afe7787c-bfde-4235-80e8-10cb2066f9db}">
+                        <labels>
+                          <label description="Activity Title" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_activitytitle" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_activitytitle" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bc79b725-0811-4ded-8bfb-4e0a0107e163}" labelid="{68274763-d02e-4339-9bb5-a84e717a98fc}">
+                        <labels>
+                          <label description="Activity Start" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_activitystart" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_activitystart" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{20ce248c-fef9-4171-bd8b-1f44af18cb82}" labelid="{e3e7f3bb-90a2-4445-93ac-c71f1fff2f41}">
+                        <labels>
+                          <label description="Activity End" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_activityend" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_activityend" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{655e3fc4-37a6-4a5a-b7f7-58c45676e1a8}" locklevel="0" colspan="1" rowspan="1" labelid="{e1008078-b444-461f-bc5f-39efecba094a}">
+                        <labels>
+                          <label description="Activity Host" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_contact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_contact" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{571df78b-50b8-43a8-8bf7-da1d7604dc7b}" locklevel="0" colspan="1" rowspan="1" labelid="{3d2ff008-4a01-4833-bbce-81d4c0d72222}">
+                        <labels>
+                          <label description="Community Event" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_communityevent" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_communityevent" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ec0e08e3-ace6-44ab-8c1a-2e988a225963}" labelid="{7db439b9-3146-4302-a9a7-0651da7e3165}">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_description" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="sw365_description" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="{7fe4e53a-3e10-44c1-8263-8fbbb988c9d9}" name="tab_1_column_2_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{688feb43-9b34-454a-b6f0-887d6294d3ad}" visible="false">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{76d5bb67-102d-433c-a89b-d08b85da0368}" labelid="{c4ce6335-6730-46ca-8f68-ff678b3d3472}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="{98c23a8f-3f0b-448f-a4fd-8d8114409ca2}" name="tab_1_column_3_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{8fbf06d2-1652-475c-9e72-dd5dc9dbc54b}" visible="false">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{25f9fb00-5302-4053-9bd1-4a7091f97b14}" labelid="{18eba1e4-2cdf-4997-9221-bd5fb7a39230}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="FCM - Event Activity Quick Create" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

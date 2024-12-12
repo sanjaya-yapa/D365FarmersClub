@@ -12,11 +12,11 @@
             <label description="General" languagecode="1033" />
           </labels>
           <columns>
-            <column width="100%">
+            <column width="65%">
               <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{b530cf18-5fe8-497c-b237-0c7a07a77d2b}" columns="11">
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{b530cf18-5fe8-497c-b237-0c7a07a77d2b}" columns="11">
                   <labels>
-                    <label description="General" languagecode="1033" />
+                    <label description="Summary" languagecode="1033" />
                   </labels>
                   <rows>
                     <row>
@@ -107,7 +107,43 @@
                     </row>
                   </rows>
                 </section>
-                <section name="null_section_3" id="298fc0c1-6514-42d1-a127-0702dee572f8" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                <section name="section_event_activities" id="291140ec-a8a6-4a5d-82b7-a613a5f0011a" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Event Activities" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{1fc0e003-5706-4676-a736-09eb2959c48e}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="Event Activities" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="subgrid_event_activities" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sw365_eventactivity</TargetEntityType>
+                            <ViewId>{600FCCA2-49BF-4D45-90E9-A84DB3FEA404}</ViewId>
+                            <ViewIds>{600FCCA2-49BF-4D45-90E9-A84DB3FEA404}</ViewIds>
+                            <RelationshipName>sw365_eventactivity_sw365_communityevent</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="35%">
+              <sections>
+                <section name="null_section_3" id="298fc0c1-6514-42d1-a127-0702dee572f8" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
                   <labels>
                     <label description="Registration and Attendenace" languagecode="1033" />
                   </labels>
@@ -119,12 +155,6 @@
                         </labels>
                         <control id="sw365_registrationstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_registrationstartdate" disabled="false" />
                       </cell>
-                      <cell id="{17af1234-6f32-4886-bb11-a7740e3ae8da}" locklevel="0" colspan="1" rowspan="1">
-                        <labels>
-                          <label description="Registration End Date" languagecode="1033" />
-                        </labels>
-                        <control id="sw365_registrationenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_registrationenddate" disabled="false" />
-                      </cell>
                     </row>
                     <row>
                       <cell id="{e4bfaf77-6814-4350-83e1-f55dd27e2757}" locklevel="0" colspan="1" rowspan="1">
@@ -132,12 +162,6 @@
                           <label description="Number of Attendees" languagecode="1033" />
                         </labels>
                         <control id="sw365_numberofattendees" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="sw365_numberofattendees" disabled="false" />
-                      </cell>
-                      <cell id="{c150a02b-29d0-415d-a776-64732a35850b}" locklevel="0" colspan="1" rowspan="1">
-                        <labels>
-                          <label description="Attendee Count" languagecode="1033" />
-                        </labels>
-                        <control id="sw365_attendeecount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="sw365_attendeecount" disabled="true" />
                       </cell>
                     </row>
                     <row>
@@ -147,6 +171,24 @@
                         </labels>
                         <control id="sw365_isguestsallowed" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="sw365_isguestsallowed" disabled="false" uniqueid="{56ba58d6-f1b5-44e1-a914-66c96f63f5d9}" />
                       </cell>
+                    </row>
+                    <row>
+                      <cell id="{17af1234-6f32-4886-bb11-a7740e3ae8da}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Registration End Date" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_registrationenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="sw365_registrationenddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c150a02b-29d0-415d-a776-64732a35850b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Attendee Count" languagecode="1033" />
+                        </labels>
+                        <control id="sw365_attendeecount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="sw365_attendeecount" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{ca6b93f2-23ce-4131-ae0d-636d52b96a40}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
                           <label description="Registration Count" languagecode="1033" />
@@ -165,20 +207,20 @@
                     <row>
                       <cell locklevel="0" id="{d43e601a-7050-4b70-8fd2-7ef136ee1263}" rowspan="4" colspan="1" auto="false" showlabel="false">
                         <labels>
-                          <label description="New SG control 1719143275527" languagecode="1033" />
+                          <label description="Event Ticket Pricing" languagecode="1033" />
                         </labels>
-                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                        <control indicationOfSubgrid="true" id="subgrid_event_ticketprice" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
                           <parameters>
-                            <RecordsPerPage>4</RecordsPerPage>
+                            <RecordsPerPage>5</RecordsPerPage>
                             <AutoExpand>Fixed</AutoExpand>
                             <EnableQuickFind>false</EnableQuickFind>
-                            <EnableViewPicker>true</EnableViewPicker>
+                            <EnableViewPicker>false</EnableViewPicker>
                             <EnableChartPicker>true</EnableChartPicker>
                             <ChartGridMode>All</ChartGridMode>
                             <TargetEntityType>sw365_eventticketprice</TargetEntityType>
-                            <ViewId>{2F7139CD-7DC9-4023-A187-FE775152C9ED}</ViewId>
-                            <ViewIds>{2F7139CD-7DC9-4023-A187-FE775152C9ED}</ViewIds>
+                            <ViewId>{66304A8E-74B2-EF11-B8E8-6045BD40B0C6}</ViewId>
                             <RelationshipName>sw365_communityevent_sw365_eventticketprice</RelationshipName>
+                            <ViewIds>{2F7139CD-7DC9-4023-A187-FE775152C9ED},{66304A8E-74B2-EF11-B8E8-6045BD40B0C6}</ViewIds>
                           </parameters>
                         </control>
                       </cell>

@@ -48,6 +48,19 @@
     <RolePrivilege name="prvReadSdkMessageProcessingStepImage" level="Global" />
     <RolePrivilege name="prvReadSharePointData" level="Global" />
     <RolePrivilege name="prvReadSharePointDocument" level="Global" />
+    <RolePrivilege name="prvReadsw365_address" level="Global" />
+    <RolePrivilege name="prvReadsw365_attendees" level="Global" />
+    <RolePrivilege name="prvReadsw365_casetype" level="Global" />
+    <RolePrivilege name="prvReadsw365_communityevent" level="Global" />
+    <RolePrivilege name="prvReadsw365_eventactivity" level="Global" />
+    <RolePrivilege name="prvReadsw365_eventregistration" level="Global" />
+    <RolePrivilege name="prvReadsw365_eventticketprice" level="Global" />
+    <RolePrivilege name="prvReadsw365_eventtype" level="Global" />
+    <RolePrivilege name="prvReadsw365_eventvenue" level="Global" />
+    <RolePrivilege name="prvReadsw365_membershipapproval" level="Global" />
+    <RolePrivilege name="prvReadsw365_payment" level="Global" />
+    <RolePrivilege name="prvReadsw365_subscription" level="Global" />
+    <RolePrivilege name="prvReadsw365_subscriptiontype" level="Global" />
     <RolePrivilege name="prvReadSystemApplicationMetadata" level="Global" />
     <RolePrivilege name="prvReadSystemForm" level="Global" />
     <RolePrivilege name="prvReadUserApplicationMetadata" level="Basic" />
