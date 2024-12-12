@@ -9,6 +9,7 @@
     <Import_RootNamespace>SW365.OSIRIS.DataAccess</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ContactDataAccess.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataAccessBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MembershipDataAccess.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PaymentDataAccess.cs" />
