@@ -32,11 +32,23 @@ namespace SW365.OSIRIS.Plugins
                 Account membership = (pluginExecutionContext.PostEntityImages != null && pluginExecutionContext.PostEntityImages.Contains("PostImage"))
                                         ? pluginExecutionContext.PostEntityImages["PostImage"].ToEntity<Account>() : null;
 
-                if (membership != null && membership.sw365_membershipstatus.Value == sw365_MembershipStatus.ApplicationApproved)
+                MembershipProcessor membershipProcessor = new MembershipProcessor(localcontext.OrganizationService, tracingService);
+
+                if(pluginExecutionContext.MessageName == "Update") 
                 {
-                    tracingService.Trace($"MembershipOnSave | ExecuteCrmPlugin | Calling Generate Subscription");
-                    MembershipProcessor membershipProcessor = new MembershipProcessor(localcontext.OrganizationService, tracingService);
-                    membershipProcessor.GenerateSubscriptionAndPayments(membership);
+                    if (membership != null && membership.sw365_membershipstatus.Value == sw365_MembershipStatus.ApplicationApproved)
+                    {
+                        tracingService.Trace($"MembershipOnSave | ExecuteCrmPlugin | Calling Generate Subscription");
+                        membershipProcessor.GenerateSubscriptionAndPayments(membership);
+                    }
+                } 
+                else if (pluginExecutionContext.MessageName == "Create")
+                {
+                    if (membership != null && membership.sw365_membershipstatus.Value == sw365_MembershipStatus.Applied)
+                    {
+                        tracingService.Trace($"MembershipOnSave | ExceuteCrmPlugin | Calling Set Primary Contact using contact email.");
+                        membershipProcessor.SetPrimaryContactByEmail(membership);
+                    }
                 }
             }
         }
