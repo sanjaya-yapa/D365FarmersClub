@@ -1067,7 +1067,7 @@
               <Description description="" languagecode="1033" />
             </Descriptions>
             <options>
-              <option value="147980000" ExternalValue="">
+              <option value="147980000" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="Credit/Debit Card" languagecode="1033" />
                 </labels>
@@ -1075,7 +1075,7 @@
                   <Description description="" languagecode="1033" />
                 </Descriptions>
               </option>
-              <option value="147980001" ExternalValue="">
+              <option value="147980001" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="Cash" languagecode="1033" />
                 </labels>
@@ -1083,7 +1083,7 @@
                   <Description description="" languagecode="1033" />
                 </Descriptions>
               </option>
-              <option value="147980002" ExternalValue="">
+              <option value="147980002" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="Bank Transfer" languagecode="1033" />
                 </labels>
@@ -1091,7 +1091,7 @@
                   <Description description="" languagecode="1033" />
                 </Descriptions>
               </option>
-              <option value="147980003" ExternalValue="">
+              <option value="147980003" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="Cheque" languagecode="1033" />
                 </labels>
