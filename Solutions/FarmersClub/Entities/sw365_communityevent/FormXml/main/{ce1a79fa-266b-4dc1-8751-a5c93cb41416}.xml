@@ -73,7 +73,12 @@
                         <labels>
                           <label description="Event Venue" languagecode="1033" />
                         </labels>
-                        <control id="sw365_eventvenue" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_eventvenue" disabled="false" />
+                        <control id="sw365_eventvenue" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="sw365_eventvenue" disabled="false">
+                          <parameters>
+                            <DefaultViewId>{1057861A-8967-4086-B483-9F1E27654BC5}</DefaultViewId>
+                            <AvailableViewIds>{7DEA8634-206A-4F8E-92ED-5F119B18CBA8},{1057861A-8967-4086-B483-9F1E27654BC5},{197D994A-13F9-4719-957D-97644C8FF0EF}</AvailableViewIds>
+                          </parameters>
+                        </control>
                       </cell>
                       <cell locklevel="0" id="{45e271a3-6247-4ad9-9efc-bcc1def882c7}">
                         <labels>

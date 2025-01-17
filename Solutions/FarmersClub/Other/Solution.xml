@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24122.170" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24122.170" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.24123.00212">
+<ImportExportXml version="9.2.24123.212" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24123.212" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.24123.00212">
   <SolutionManifest>
     <UniqueName>FarmersClub</UniqueName>
     <LocalizedNames>
@@ -108,7 +108,9 @@
       <RootComponent type="61" schemaName="sw365_/js/common/commonUtils.js" behavior="0" />
       <RootComponent type="61" schemaName="sw365_/js/CommunityEvents/communityEventForm.js" behavior="0" />
       <RootComponent type="61" schemaName="sw365_/js/EventTicketPrice/EventTicketPriceCommands.js" behavior="0" />
+      <RootComponent type="62" schemaName="sw365_EventManagementApp" behavior="0" />
       <RootComponent type="62" schemaName="sw365_FarmClubMembersApp" behavior="0" />
+      <RootComponent type="80" schemaName="sw365_EventManagementApp" behavior="0" />
       <RootComponent type="80" schemaName="sw365_FarmClubMembersApp" behavior="0" />
       <RootComponent type="9" schemaName="sw365_approvalstatus" behavior="0" />
       <RootComponent type="9" schemaName="sw365_contacttype" behavior="0" />
@@ -350,6 +352,12 @@
         <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)">
           <package appName="AppModule Web Resources Package" version="2.5">AppModuleWebResources (2.5)</package>
         </Required>
+        <Dependent type="80" schemaName="sw365_EventManagementApp" displayName="Event Management App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)">
+          <package appName="AppModule Web Resources Package" version="2.5">AppModuleWebResources (2.5)</package>
+        </Required>
         <Dependent type="80" schemaName="sw365_FarmClubMembersApp" displayName="Farm Club Members App" />
       </MissingDependency>
       <MissingDependency>
@@ -437,62 +445,62 @@
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Intelligence.BusinessCardReaderControl.BusinessCardReader" displayName="Intelligence.BusinessCardReaderControl.BusinessCardReader" solution="BaseCustomControlsCore (9.0.2412.2002)">
-          <package appName="Base Custom Controls" version="9.0.2412.2002">BaseCustomControlsCore (9.0.2412.2002)</package>
+        <Required type="66" schemaName="Intelligence.BusinessCardReaderControl.BusinessCardReader" displayName="Intelligence.BusinessCardReaderControl.BusinessCardReader" solution="BaseCustomControlsCore (9.0.2412.3008)">
+          <package appName="Base Custom Controls" version="9.0.2412.3008">BaseCustomControlsCore (9.0.2412.3008)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Intelligence.BusinessCardReaderControl.BusinessCardReader" displayName="Intelligence.BusinessCardReaderControl.BusinessCardReader" solution="BaseCustomControlsCore (9.0.2412.2002)">
-          <package appName="Base Custom Controls" version="9.0.2412.2002">BaseCustomControlsCore (9.0.2412.2002)</package>
+        <Required type="66" schemaName="Intelligence.BusinessCardReaderControl.BusinessCardReader" displayName="Intelligence.BusinessCardReaderControl.BusinessCardReader" solution="BaseCustomControlsCore (9.0.2412.3008)">
+          <package appName="Base Custom Controls" version="9.0.2412.3008">BaseCustomControlsCore (9.0.2412.3008)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2412.2002)">
-          <package appName="Base Custom Controls" version="9.0.2412.2002">BaseCustomControlsCore (9.0.2412.2002)</package>
+        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2412.3008)">
+          <package appName="Base Custom Controls" version="9.0.2412.3008">BaseCustomControlsCore (9.0.2412.3008)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2412.2002)">
-          <package appName="Base Custom Controls" version="9.0.2412.2002">BaseCustomControlsCore (9.0.2412.2002)</package>
+        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2412.3008)">
+          <package appName="Base Custom Controls" version="9.0.2412.3008">BaseCustomControlsCore (9.0.2412.3008)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership main form" parentDisplayName="Account" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2412.2002)">
-          <package appName="Base Custom Controls" version="9.0.2412.2002">BaseCustomControlsCore (9.0.2412.2002)</package>
+        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2412.3008)">
+          <package appName="Base Custom Controls" version="9.0.2412.3008">BaseCustomControlsCore (9.0.2412.3008)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership portal form - Readonly" parentDisplayName="Account" id="{692e7a05-3af1-ee11-904b-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2412.2002)">
-          <package appName="Base Custom Controls" version="9.0.2412.2002">BaseCustomControlsCore (9.0.2412.2002)</package>
+        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2412.3008)">
+          <package appName="Base Custom Controls" version="9.0.2412.3008">BaseCustomControlsCore (9.0.2412.3008)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership portal form" parentDisplayName="Account" id="{8194fe3b-d1e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2412.2002)">
-          <package appName="Base Custom Controls" version="9.0.2412.2002">BaseCustomControlsCore (9.0.2412.2002)</package>
+        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2412.3008)">
+          <package appName="Base Custom Controls" version="9.0.2412.3008">BaseCustomControlsCore (9.0.2412.3008)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile portal form" parentDisplayName="Contact" id="{fe2f2d4d-d3e9-ee11-a203-002248d3bd9c}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2412.2002)">
-          <package appName="Base Custom Controls" version="9.0.2412.2002">BaseCustomControlsCore (9.0.2412.2002)</package>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2412.3008)">
+          <package appName="Base Custom Controls" version="9.0.2412.3008">BaseCustomControlsCore (9.0.2412.3008)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2412.2002)">
-          <package appName="Base Custom Controls" version="9.0.2412.2002">BaseCustomControlsCore (9.0.2412.2002)</package>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2412.3008)">
+          <package appName="Base Custom Controls" version="9.0.2412.3008">BaseCustomControlsCore (9.0.2412.3008)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Membership main form" parentDisplayName="Account" id="{687c9ea0-84d0-ee11-9078-6045bdc4789f}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2412.2002)">
-          <package appName="Base Custom Controls" version="9.0.2412.2002">BaseCustomControlsCore (9.0.2412.2002)</package>
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2412.3008)">
+          <package appName="Base Custom Controls" version="9.0.2412.3008">BaseCustomControlsCore (9.0.2412.3008)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Community Event main Form" parentDisplayName="Community Event" id="{ce1a79fa-266b-4dc1-8751-a5c93cb41416}" />
       </MissingDependency>
@@ -567,6 +575,12 @@
           <package appName="msdynce_SalesInsights" version="9.0.24114.10008">msdynce_SalesInsightsAnchor (9.0.24114.10008)</package>
         </Required>
         <Dependent type="60" displayName="FCM - Farmers Profile" parentDisplayName="Contact" id="{398abe3d-8dc2-ee11-9079-6045bdc245e2}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.12)" id.uniquename="AppChannel">
+          <package appName="PowerAppsAppFramework Package" version="1.0.0.16">PowerAppsAppFramework_Anchor (1.0.0.16)</package>
+        </Required>
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=sw365_EventManagementApp,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="sw365_EventManagementApp" id.settingdefinitionid.uniquename="AppChannel" />
       </MissingDependency>
       <MissingDependency>
         <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.12)" id.uniquename="AppChannel">
