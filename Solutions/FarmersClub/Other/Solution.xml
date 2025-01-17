@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24123.212" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24123.212" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.24123.00212">
+<ImportExportXml version="9.2.24123.212" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24123.212" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.24123.00214">
   <SolutionManifest>
     <UniqueName>FarmersClub</UniqueName>
     <LocalizedNames>
@@ -105,12 +105,16 @@
       <RootComponent type="29" id="{7d66db8c-45d4-ef11-a731-000d3ad08cdb}" behavior="0" />
       <RootComponent type="29" id="{a408433d-3f87-ef11-ac21-002248188045}" behavior="0" />
       <RootComponent type="29" id="{b80b416a-54e4-ee11-904c-002248d3bd9c}" behavior="0" />
+      <RootComponent type="300" schemaName="sw365_eventhome_7b57e" behavior="0" />
+      <RootComponent type="300" schemaName="sw365_eventregistrations_9194b" behavior="0" />
+      <RootComponent type="300" schemaName="sw365_home_dfff4" behavior="0" />
       <RootComponent type="61" schemaName="sw365_/js/common/commonUtils.js" behavior="0" />
       <RootComponent type="61" schemaName="sw365_/js/CommunityEvents/communityEventForm.js" behavior="0" />
       <RootComponent type="61" schemaName="sw365_/js/EventTicketPrice/EventTicketPriceCommands.js" behavior="0" />
+      <RootComponent type="62" schemaName="sw365_CommunityEventsManagementApp" behavior="0" />
       <RootComponent type="62" schemaName="sw365_EventManagementApp" behavior="0" />
       <RootComponent type="62" schemaName="sw365_FarmClubMembersApp" behavior="0" />
-      <RootComponent type="80" schemaName="sw365_EventManagementApp" behavior="0" />
+      <RootComponent type="80" schemaName="sw365_CommunityEventsManagementApp" behavior="0" />
       <RootComponent type="80" schemaName="sw365_FarmClubMembersApp" behavior="0" />
       <RootComponent type="9" schemaName="sw365_approvalstatus" behavior="0" />
       <RootComponent type="9" schemaName="sw365_contacttype" behavior="0" />
@@ -141,6 +145,12 @@
           <package appName="msdynce_Service" version="9.0.24122.1003">msdynce_ServiceAnchor (9.0.24122.1003)</package>
         </Required>
         <Dependent type="62" schemaName="sw365_FarmClubMembersApp" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="incidentresolution" displayName="Case Resolution" solution="msdynce_Service (9.0.5.56)">
+          <package appName="msdynce_Service" version="9.0.24122.1003">msdynce_ServiceAnchor (9.0.24122.1003)</package>
+        </Required>
+        <Dependent type="80" schemaName="sw365_CommunityEventsManagementApp" displayName="Community Events Management App" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="incidentresolution" displayName="Case Resolution" solution="msdynce_Service (9.0.5.56)">
@@ -352,7 +362,7 @@
         <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)">
           <package appName="AppModule Web Resources Package" version="2.5">AppModuleWebResources (2.5)</package>
         </Required>
-        <Dependent type="80" schemaName="sw365_EventManagementApp" displayName="Event Management App" />
+        <Dependent type="80" schemaName="sw365_CommunityEventsManagementApp" displayName="Community Events Management App" />
       </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)">
@@ -580,7 +590,7 @@
         <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.12)" id.uniquename="AppChannel">
           <package appName="PowerAppsAppFramework Package" version="1.0.0.16">PowerAppsAppFramework_Anchor (1.0.0.16)</package>
         </Required>
-        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=sw365_EventManagementApp,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="sw365_EventManagementApp" id.settingdefinitionid.uniquename="AppChannel" />
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=sw365_CommunityEventsManagementApp,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="sw365_CommunityEventsManagementApp" id.settingdefinitionid.uniquename="AppChannel" />
       </MissingDependency>
       <MissingDependency>
         <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.12)" id.uniquename="AppChannel">
