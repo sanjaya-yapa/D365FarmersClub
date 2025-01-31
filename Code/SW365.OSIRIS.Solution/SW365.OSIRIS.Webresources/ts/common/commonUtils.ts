@@ -51,70 +51,8 @@
     }
 
     export class CommonUtil {
-        protected formContext: Xrm.FormContext;
-        constructor(_formContext: Xrm.FormContext) {
-            this.formContext = _formContext;
-        }
-
-        public attribute = {
-            value: (fieldName: string, value?: any): any => {
-                const attribute = this.formContext.getAttribute(fieldName) as unknown as IExtendedAttribute;
-
-                if (!attribute) {
-                    console.error(`Attribute ${fieldName} not found.`);
-                    return null;
-                }
-
-                if (typeof value !== 'undefined') {
-                    attribute.setValue(value);
-                    return;
-                }
-
-                return attribute.getValue();
-            },
-
-            clearValue: (fieldName: string): void => {
-                const attribute = this.formContext.getAttribute(fieldName) as unknown as IExtendedAttribute;
-
-                if (!attribute) {
-                    console.error(`Attribute ${fieldName} not found.`);
-                    return;
-                }
-
-                attribute.clearValue();
-            },
-
-            setRequiredLelvel: (fieldName: string, requiredLevel: 'none' | 'required' | 'recommended'): void => {
-                const attribute = this.formContext.getAttribute(fieldName) as unknown as IExtendedAttribute;
-
-                if (!attribute) {
-                    console.error(`Attribute ${fieldName} not found.`);
-                    return;
-                }
-
-                attribute.setRequiredLevel(requiredLevel);
-            },
-
-            getLookupValue: (fieldName: string): { id: string, name: string, entityType: string } | null => {
-                const attribute = this.formContext.getAttribute(fieldName) as unknown as IExtendedAttribute;
-                if (!attribute) {
-                    console.error(`Attribute ${fieldName} not found.`);
-                    return;
-                }
-
-                if (attribute.getValue() && attribute.getValue().length > 0) {
-                    const lookupValue = attribute.getValue()[0];
-                    return {
-                        id: lookupValue.id,
-                        name: lookupValue.name,
-                        entityType: lookupValue.entityType
-                    };
-                }
-                return null;
-            }
-        };
-
-        async callCustomApi(apiName: string, data: any): Promise<any> {
+       
+        async callCustomApiPOST(apiName: string, data: any): Promise<any> {
             const requestUrl = `${Xrm.Utility.getGlobalContext().getClientUrl()}/api/data/v9.1/${apiName}`;
             try {
                 const response = await fetch(requestUrl, {
@@ -136,6 +74,31 @@
             }
             catch (error) {
                 console.log('Error Calling the custom Api: ', error);
+                throw error;
+            }
+        }
+
+        async callCustomApiGET(apiName: string, queryParams: string): Promise<any> {
+            const queryString = new URLSearchParams(queryParams).toString();
+            const requestUrl = `${Xrm.Utility.getGlobalContext().getClientUrl()}/api/data/v9.1/${apiName}?${queryString}`;
+            try {
+                const response = await fetch(requestUrl, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'ODATA-MaxVersion': '4.0',
+                        'ODATA-Version': '4.0'
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.statusText}`);
+                }
+                const responseData: any = await response.json();
+                console.log('Custom API Response: ', responseData);
+                return responseData;
+            } catch (error) {
+                console.error('Error Calling the custom Api: ', error);
                 throw error;
             }
         }

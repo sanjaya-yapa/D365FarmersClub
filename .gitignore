@@ -29,12 +29,11 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+[Ll]ib/
 
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
-.vs/VSWorkspaceState.json
-.vs/SRC.OSIRIS\v17
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -263,6 +262,13 @@ ClientBin/
 *.jfm
 *.pfx
 *.publishsettings
+*.txt
+*.png
+*.signature.p7s
+*.dll
+*.targets
+*._
+*.xml
 orleans.codegen.cs
 
 

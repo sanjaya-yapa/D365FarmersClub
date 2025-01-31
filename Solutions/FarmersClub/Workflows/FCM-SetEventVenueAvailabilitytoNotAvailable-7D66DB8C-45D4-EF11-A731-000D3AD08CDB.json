@@ -25,9 +25,9 @@
         }
       },
       "triggers": {
-        "FM_-_When_a_Membership_is_Awaiting_Approval": {
+        "When_an_Event_is_Created": {
           "metadata": {
-            "operationMetadataId": "2c3e4e82-c4fa-4c20-a6a2-4f0696f31d86"
+            "operationMetadataId": "90a63c57-89fb-4b4b-929f-6133f7590696"
           },
           "type": "OpenApiConnectionWebhook",
           "inputs": {
@@ -37,59 +37,35 @@
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
             },
             "parameters": {
-              "subscriptionRequest/message": 1,
-              "subscriptionRequest/entityname": "account",
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "sw365_communityevent",
               "subscriptionRequest/scope": 4,
               "subscriptionRequest/runas": 2
             },
             "authentication": "@parameters('$authentication')"
-          }
+          },
+          "conditions": []
         }
       },
       "actions": {
-        "Check_if_the_Membership_Status_is_Awaiting_Approval": {
+        "Check_for_event_venue": {
           "actions": {
-            "Create_Approval": {
+            "Set_Event_Availability_to_Unavailable": {
               "runAfter": {},
               "metadata": {
-                "operationMetadataId": "fd66208f-5e43-41cd-8b6a-c234c0d06a70"
+                "operationMetadataId": "45f28860-9876-4ab7-aa2f-45316cf1f2a6"
               },
               "type": "OpenApiConnection",
               "inputs": {
                 "host": {
                   "connectionName": "shared_commondataserviceforapps",
-                  "operationId": "CreateRecord",
+                  "operationId": "UpdateOnlyRecord",
                   "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
                 },
                 "parameters": {
-                  "entityName": "sw365_membershipapprovals",
-                  "item/sw365_approvalstatus": 147980000,
-                  "item/sw365_membership@odata.bind": "accounts(@{triggerOutputs()?['body/accountid']})",
-                  "item/sw365_subject": "@{triggerOutputs()?['body/sw365_membershipnumber']} - Application Approval"
-                },
-                "authentication": "@parameters('$authentication')"
-              }
-            },
-            "Set_Membership_status_to_Awaiting_Approval": {
-              "runAfter": {
-                "Create_Approval": [
-                  "Succeeded"
-                ]
-              },
-              "metadata": {
-                "operationMetadataId": "fbaa3b9b-3343-45e6-abb6-b86f3d852e25"
-              },
-              "type": "OpenApiConnection",
-              "inputs": {
-                "host": {
-                  "connectionName": "shared_commondataserviceforapps",
-                  "operationId": "UpdateRecord",
-                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
-                },
-                "parameters": {
-                  "entityName": "accounts",
-                  "recordId": "@triggerOutputs()?['body/accountid']",
-                  "item/sw365_membershipstatus": 147980001
+                  "entityName": "sw365_eventvenues",
+                  "recordId": "@triggerOutputs()?['body/_sw365_eventvenue_value']",
+                  "item/sw365_venueavailability": 147980001
                 },
                 "authentication": "@parameters('$authentication')"
               }
@@ -97,13 +73,15 @@
           },
           "runAfter": {},
           "expression": {
-            "equals": [
-              "@triggerOutputs()?['body/sw365_membershipstatus']",
-              147980000
-            ]
+            "not": {
+              "equals": [
+                "@triggerOutputs()?['body/_sw365_eventvenue_value']",
+                "@null"
+              ]
+            }
           },
           "metadata": {
-            "operationMetadataId": "c0d41b7e-ad6c-49b5-ac19-168f35a304f2"
+            "operationMetadataId": "3eca5553-91b5-410a-a5bc-673e47729a1e"
           },
           "type": "If"
         }

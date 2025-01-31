@@ -767,7 +767,7 @@
               <Description description="" languagecode="1033" />
             </Descriptions>
             <options>
-              <option value="147980000" ExternalValue="">
+              <option value="147980000" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="New" languagecode="1033" />
                 </labels>
@@ -775,7 +775,7 @@
                   <Description description="" languagecode="1033" />
                 </Descriptions>
               </option>
-              <option value="147980001" ExternalValue="">
+              <option value="147980001" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="Confirmed" languagecode="1033" />
                 </labels>
@@ -783,7 +783,7 @@
                   <Description description="" languagecode="1033" />
                 </Descriptions>
               </option>
-              <option value="147980002" ExternalValue="">
+              <option value="147980002" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="Cancelled" languagecode="1033" />
                 </labels>
@@ -791,7 +791,7 @@
                   <Description description="" languagecode="1033" />
                 </Descriptions>
               </option>
-              <option value="147980003">
+              <option value="147980003" IsHidden="0">
                 <labels>
                   <label description="Attended" languagecode="1033" />
                 </labels>

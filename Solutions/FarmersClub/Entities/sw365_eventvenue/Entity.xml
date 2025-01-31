@@ -768,7 +768,7 @@
               <Description description="" languagecode="1033" />
             </Descriptions>
             <options>
-              <option value="147980000" ExternalValue="">
+              <option value="147980000" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="Available" languagecode="1033" />
                 </labels>
@@ -776,7 +776,7 @@
                   <Description description="" languagecode="1033" />
                 </Descriptions>
               </option>
-              <option value="147980001" ExternalValue="">
+              <option value="147980001" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="Unavailable" languagecode="1033" />
                 </labels>

@@ -768,7 +768,7 @@
               <Description description="" languagecode="1033" />
             </Descriptions>
             <options>
-              <option value="147980000" ExternalValue="">
+              <option value="147980000" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="Home" languagecode="1033" />
                 </labels>
@@ -776,7 +776,7 @@
                   <Description description="" languagecode="1033" />
                 </Descriptions>
               </option>
-              <option value="147980001" ExternalValue="">
+              <option value="147980001" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="Business" languagecode="1033" />
                 </labels>
@@ -784,7 +784,7 @@
                   <Description description="" languagecode="1033" />
                 </Descriptions>
               </option>
-              <option value="147980002" ExternalValue="">
+              <option value="147980002" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="Postal" languagecode="1033" />
                 </labels>
@@ -963,12 +963,12 @@
               <Description description="" languagecode="1033" />
             </Descriptions>
             <options>
-              <option value="1" ExternalValue="">
+              <option value="1" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="Yes" languagecode="1033" />
                 </labels>
               </option>
-              <option value="0" ExternalValue="">
+              <option value="0" ExternalValue="" IsHidden="0">
                 <labels>
                   <label description="No" languagecode="1033" />
                 </labels>

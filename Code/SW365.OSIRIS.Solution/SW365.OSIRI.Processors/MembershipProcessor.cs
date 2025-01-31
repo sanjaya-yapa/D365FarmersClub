@@ -11,10 +11,14 @@ namespace SW365.OSIRIS.Processors
     {
         SubscriptionDataAccess subscriptionDataAccess;
         SubscriptionProcessor subscriptionProcessor;
+        MembershipDataAccess membershipDataAccess;
+        ContactDataAccess contactDataAccess;
         PaymentProcessor paymentProcessor;
         public MembershipProcessor(IOrganizationService organizationService, ITracingService tracingService) : base(organizationService, tracingService) 
         {
             subscriptionDataAccess = new SubscriptionDataAccess(organizationService);
+            contactDataAccess = new ContactDataAccess(organizationService); 
+            membershipDataAccess = new MembershipDataAccess(organizationService);
             subscriptionProcessor = new SubscriptionProcessor(organizationService, tracingService);
             paymentProcessor = new PaymentProcessor(organizationService, tracingService);
         }
@@ -63,6 +67,22 @@ namespace SW365.OSIRIS.Processors
                     break;
             }
         }
-       
+
+        public void SetPrimaryContactByEmail(Account membership)
+        {
+            _tracingService.Trace($"MembershipProcessor | SetPrimaryContactByEmail");
+            if (membership.sw365_membershipstatus == sw365_MembershipStatus.Applied) 
+            {
+                _tracingService.Trace($"MembershipProcessor | SetPrimaryContactByEmail | Membership Status is Applied");
+                var primaryContact = contactDataAccess.GetContactByEmail(membership.EMailAddress1);
+                Account membershipUpdate = new Account()
+                {
+                    AccountId = membership.Id,
+                    PrimaryContactId = new EntityReference(Contact.EntityLogicalName, primaryContact.FullName, primaryContact.Id),
+                };
+                _tracingService.Trace($"MembershipProcessor | SetPrimaryContactByEmail | Update Account { membership.Id }");
+                membershipDataAccess.UpdateEntity(membershipUpdate);
+            } 
+        }
     }
 }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24112.206" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.24112.00206">
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24123.214" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.24123.00214">
   <Entities />
   <Roles />
   <Workflows />
@@ -14,6 +14,7 @@
   <AppModuleSiteMaps />
   <AppModules />
   <EntityDataProviders />
+  <CanvasApps />
   <connectionreferences>
     <connectionreference connectionreferencelogicalname="sw365_sharedapprovals_37d1b">
       <connectionreferencedisplayname>Approvals FarmersClub-37d1b</connectionreferencedisplayname>
@@ -57,6 +58,14 @@
     </connectionreference>
     <connectionreference connectionreferencelogicalname="sw365_sharedcommondataserviceforapps_2df4b">
       <connectionreferencedisplayname>Microsoft Dataverse FarmersClub-2df4b</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="sw365_sharedcommondataserviceforapps_94ba5">
+      <connectionreferencedisplayname>Microsoft Dataverse FarmersClub-94ba5</connectionreferencedisplayname>
       <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
       <iscustomizable>1</iscustomizable>
       <promptingbehavior>0</promptingbehavior>
