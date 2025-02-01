@@ -2,6 +2,7 @@
   adx_displayimageonly: false
   adx_displayorder: 2
   adx_displaypagechildlinks: false
+  adx_filecontent: 
   adx_name: Pages
   adx_openinnewwindow: false
   adx_pageid: de4d95e9-ee48-481d-937e-7bdf7160f70e
@@ -9,6 +10,8 @@
   adx_robotsfollowlink: true
   adx_weblinkid: 3e59dce8-e295-4ad3-be7d-63c3d4c6839c
   adx_weblinksetid: f413a5ca-31fc-40ac-bcca-17e9f12b7c7d
+  statecode: 1
+  statuscode: 2
 - adx_disablepagevalidation: false
   adx_displayimageonly: false
   adx_displayorder: 1
@@ -24,6 +27,7 @@
   adx_displayimageonly: false
   adx_displayorder: 1
   adx_displaypagechildlinks: false
+  adx_filecontent: 
   adx_name: Subpage one
   adx_openinnewwindow: false
   adx_pageid: 59e89996-2465-419e-9fe1-3a0662df3e65
@@ -32,10 +36,58 @@
   adx_robotsfollowlink: true
   adx_weblinkid: 4b5ed9c7-b6b9-4ddc-9419-52f62c879272
   adx_weblinksetid: f413a5ca-31fc-40ac-bcca-17e9f12b7c7d
+  statecode: 1
+  statuscode: 2
+- adx_displayimageonly: false
+  adx_displayorder: 7
+  adx_displaypagechildlinks: false
+  adx_displaypagevalidation: false
+  adx_name: Cases
+  adx_openinnewwindow: false
+  adx_pageid: 20670d75-f9dd-ef11-a730-000d3a6aab35
+  adx_publishingstateid: 21fc0124-54c9-47d4-a847-2d9f48f2b1ff
+  adx_robotsfollowlink: true
+  adx_weblinkid: 55e76795-fc8d-4188-047f-de87188d6be5
+  adx_weblinksetid: f413a5ca-31fc-40ac-bcca-17e9f12b7c7d
+- adx_displayimageonly: false
+  adx_displayorder: 1
+  adx_displaypagechildlinks: false
+  adx_displaypagevalidation: false
+  adx_name: Member Subscriptions
+  adx_openinnewwindow: false
+  adx_pageid: fdc4ed5a-f9dd-ef11-a730-000d3a6aab35
+  adx_parentweblinkid: 7fa08eb7-0281-0c92-8a33-d29a6e7fcaba
+  adx_publishingstateid: 21fc0124-54c9-47d4-a847-2d9f48f2b1ff
+  adx_robotsfollowlink: true
+  adx_weblinkid: 5619c777-f716-644a-c3ee-7bab8636ba44
+  adx_weblinksetid: f413a5ca-31fc-40ac-bcca-17e9f12b7c7d
+- adx_displayimageonly: false
+  adx_displayorder: 6
+  adx_displaypagechildlinks: false
+  adx_displaypagevalidation: false
+  adx_name: Membership
+  adx_openinnewwindow: false
+  adx_pageid: ce333bcb-f8dd-ef11-a730-000d3a6aab35
+  adx_publishingstateid: 21fc0124-54c9-47d4-a847-2d9f48f2b1ff
+  adx_robotsfollowlink: true
+  adx_weblinkid: 7fa08eb7-0281-0c92-8a33-d29a6e7fcaba
+  adx_weblinksetid: f413a5ca-31fc-40ac-bcca-17e9f12b7c7d
+- adx_displayimageonly: false
+  adx_displayorder: 5
+  adx_displaypagechildlinks: false
+  adx_displaypagevalidation: false
+  adx_name: Events
+  adx_openinnewwindow: false
+  adx_pageid: fe1a48cd-f9dd-ef11-a730-000d3a6aab35
+  adx_publishingstateid: 21fc0124-54c9-47d4-a847-2d9f48f2b1ff
+  adx_robotsfollowlink: true
+  adx_weblinkid: 931ad9bf-50ac-7810-72f5-c8c5f2899965
+  adx_weblinksetid: f413a5ca-31fc-40ac-bcca-17e9f12b7c7d
 - adx_disablepagevalidation: false
   adx_displayimageonly: false
   adx_displayorder: 2
   adx_displaypagechildlinks: false
+  adx_filecontent: 
   adx_name: Subpage two
   adx_openinnewwindow: false
   adx_pageid: 5996f3f2-b779-40b8-9176-b3845710648c
@@ -43,4 +95,18 @@
   adx_publishingstateid: 21fc0124-54c9-47d4-a847-2d9f48f2b1ff
   adx_robotsfollowlink: true
   adx_weblinkid: bafcf536-4a6c-4e45-9109-48d80e7c85b3
+  adx_weblinksetid: f413a5ca-31fc-40ac-bcca-17e9f12b7c7d
+  statecode: 1
+  statuscode: 2
+- adx_displayimageonly: false
+  adx_displayorder: 1
+  adx_displaypagechildlinks: false
+  adx_displaypagevalidation: false
+  adx_name: Event Registrations
+  adx_openinnewwindow: false
+  adx_pageid: 736f54d8-31e0-ef11-a730-000d3a6aab35
+  adx_parentweblinkid: 931ad9bf-50ac-7810-72f5-c8c5f2899965
+  adx_publishingstateid: 21fc0124-54c9-47d4-a847-2d9f48f2b1ff
+  adx_robotsfollowlink: true
+  adx_weblinkid: daf69a87-da0d-93b8-a887-08ee23ff8822
   adx_weblinksetid: f413a5ca-31fc-40ac-bcca-17e9f12b7c7d
