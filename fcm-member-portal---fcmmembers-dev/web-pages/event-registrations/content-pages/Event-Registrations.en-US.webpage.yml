@@ -1,16 +1,15 @@
 adx_enablerating: false
 adx_excludefromsearch: false
 adx_feedbackpolicy: 756150000
-adx_filecontent: 
 adx_hiddenfromsitemap: false
 adx_isofflinecached: false
 adx_isroot: false
-adx_name: Case History
+adx_name: Event Registrations
 adx_pagetemplateid: bd37502f-27b4-4d11-863d-de8cd6de3b56
-adx_parentpageid: 20670d75-f9dd-ef11-a730-000d3a6aab35
-adx_partialurl: case-history
+adx_parentpageid: fe1a48cd-f9dd-ef11-a730-000d3a6aab35
+adx_partialurl: event-registrations
 adx_publishingstateid: 21fc0124-54c9-47d4-a847-2d9f48f2b1ff
-adx_rootwebpageid: b5a54399-f9dd-ef11-a730-000d3a6aab35
+adx_rootwebpageid: 736f54d8-31e0-ef11-a730-000d3a6aab35
 adx_sharedpageconfiguration: true
-adx_webpageid: b7a54399-f9dd-ef11-a730-000d3a6aab35
+adx_webpageid: b96f54d8-31e0-ef11-a730-000d3a6aab35
 adx_webpagelanguageid: 443924ef-00cc-45e4-9476-9ed7c2eec00e
