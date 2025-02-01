@@ -6,7 +6,7 @@ adx_botconsumer:
 adx_contentsnippet:
 - RecordId: 009d082c-c94a-4b3b-8a8f-31fb1db65949
   DisplayName: Site name
-  CheckSum: f65fd0899e9406cc5224720eb815a32c77788267a145668c225d903cf61c4135
+  CheckSum: 4ff07fbb9cc431b1105b5d576d914ef7bd427a108c47cab9fdea6ab18fc0f5c3
   IsDeleted: false
 - RecordId: 01d1af0b-f8f4-4c07-8ddc-b9219e052213
   DisplayName: Search/NoResults
@@ -369,7 +369,7 @@ adx_webfile:
 adx_weblink:
 - RecordId: 3e59dce8-e295-4ad3-be7d-63c3d4c6839c
   DisplayName: Pages
-  CheckSum: 134f7dd583ea6b7698dbedefcf34c56233ff906991ea0f65854272fec57efcfe
+  CheckSum: 4cc80b0a2830a075d4f31d0741f66b8a091ecb9f7496114581620cc9b63e4fca
   IsDeleted: false
 - RecordId: 49e1012a-8ab9-4282-9e14-b3f7a399b5c9
   DisplayName: Home
@@ -377,15 +377,35 @@ adx_weblink:
   IsDeleted: false
 - RecordId: 4b5ed9c7-b6b9-4ddc-9419-52f62c879272
   DisplayName: Subpage one
-  CheckSum: 4022d72839eca83bfef04222299dd3d00777c9154dac7dd3dcbb5c91c72a7f83
+  CheckSum: a322f9aa14db5ead9a6f950b933e34cabf4cd5b5971c233b89f2446769a3fa6f
+  IsDeleted: false
+- RecordId: 55e76795-fc8d-4188-047f-de87188d6be5
+  DisplayName: Cases
+  CheckSum: c9b4a6498a8bc4746ef0b04bff9b51ac632df774c3a4e44d135fbf4d65ff507f
+  IsDeleted: false
+- RecordId: 5619c777-f716-644a-c3ee-7bab8636ba44
+  DisplayName: Member Subscriptions
+  CheckSum: 84607c5636e3c463dfe0b07c7f38e01168b660c43bb8b8d519a5e0e8c3b5d81e
   IsDeleted: false
 - RecordId: 7c078bbf-453b-4744-a6f6-ebedda557442
   DisplayName: Profile
   CheckSum: 8c0ae59f740bf51913c297a046249b82c6b1cd8ccef29f519af18ede3a7ece38
   IsDeleted: false
+- RecordId: 7fa08eb7-0281-0c92-8a33-d29a6e7fcaba
+  DisplayName: Membership
+  CheckSum: e6b98271278f2dc8a034706318d482b58d7032834ff716d2a09dd5231f179792
+  IsDeleted: false
+- RecordId: 931ad9bf-50ac-7810-72f5-c8c5f2899965
+  DisplayName: Events
+  CheckSum: e4ef6a169be8d2d654af46e83fded0c0b99e078c044bb20d5b67f97a1099eb07
+  IsDeleted: false
 - RecordId: bafcf536-4a6c-4e45-9109-48d80e7c85b3
   DisplayName: Subpage two
-  CheckSum: bdce0c19a2cc86c0710e57aa9a331cb373322f15c09707e0d692180bc701336b
+  CheckSum: 8645fdd799dde0af17b169d584d95922dee8125b859f492c944a828b6c0ed7b4
+  IsDeleted: false
+- RecordId: daf69a87-da0d-93b8-a887-08ee23ff8822
+  DisplayName: Event Registrations
+  CheckSum: b8d2daa235b5b288d3ba91842c6a88ebc0305af76ef272068e8c4c94dd735056
   IsDeleted: false
 adx_weblinkset:
 - RecordId: 63b88c0f-59a9-46bf-baf8-7631157b6c13
@@ -407,7 +427,7 @@ adx_webpage:
   IsDeleted: false
 - RecordId: 20670d75-f9dd-ef11-a730-000d3a6aab35
   DisplayName: Cases
-  CheckSum: c4a478d89a6dd73bb966c76a921324de97a046f7ee458fcda4444f90baeefee3
+  CheckSum: eb5524f0eda57e18ccfc2a57fed1ec6481d79f1f8c50fc486541a84fbb77c300
   IsDeleted: false
 - RecordId: 401b48cd-f9dd-ef11-a730-000d3a6aab35
   DisplayName: Events
@@ -436,6 +456,10 @@ adx_webpage:
 - RecordId: 6a0cf336-fadd-ef11-a730-000d3a6aab35
   DisplayName: Payment History
   CheckSum: 4c2a0dee77002cfba92206e57aa21527a239a2d64fb36ee2ad78ad2b8d94d53a
+  IsDeleted: false
+- RecordId: 736f54d8-31e0-ef11-a730-000d3a6aab35
+  DisplayName: Event Registrations
+  CheckSum: 01551da23a1a90f64713bb11276d9a3e297b3b51290ff099b6cf591b70f0f5f1
   IsDeleted: false
 - RecordId: 7c951a1e-661b-4b9e-84f1-28f30d0b6254
   DisplayName: Access Denied
@@ -471,11 +495,15 @@ adx_webpage:
   IsDeleted: false
 - RecordId: b5a54399-f9dd-ef11-a730-000d3a6aab35
   DisplayName: Case History
-  CheckSum: 93b2942a0f0bc99eb5e3331c643221547cdf0e8480af663deae17f4d3f588ec4
+  CheckSum: 3c8d224bf0d189c665d5452f6936fe9989bb97669395391dc53c51bb08926daf
   IsDeleted: false
 - RecordId: b7a54399-f9dd-ef11-a730-000d3a6aab35
   DisplayName: Case History
-  CheckSum: 63750a2df45fecd2c38d58520d05ddd7bb44d7df10a2429eed756d617a818347
+  CheckSum: e79226f1e3536c7194c0aba24ffcb71aa8db9482743557d98706bbe82805e919
+  IsDeleted: false
+- RecordId: b96f54d8-31e0-ef11-a730-000d3a6aab35
+  DisplayName: Event Registrations
+  CheckSum: 88cd9d5955a8cf5aa47f9da3eaa0222ef4e2c7b6c40f8b3f71de344215017c6b
   IsDeleted: false
 - RecordId: bf9b5876-02ef-4f93-bb61-cbedda0ca9e5
   DisplayName: Profile
@@ -483,11 +511,11 @@ adx_webpage:
   IsDeleted: false
 - RecordId: ce333bcb-f8dd-ef11-a730-000d3a6aab35
   DisplayName: Membership
-  CheckSum: a7b44ed08de334d12658830d1281d660c2cff2ff787c6bf89654262424d4782a
+  CheckSum: cb0e70b946799d9a9ed27d550c3c68a2e15f8cf4647cad20d2bb3c5b8c61297a
   IsDeleted: false
 - RecordId: cf333bcb-f8dd-ef11-a730-000d3a6aab35
   DisplayName: Membership
-  CheckSum: 69ef29268ca27e2319848027dd22796b1b979e90670f1bafd517b9b5d221b262
+  CheckSum: cd5d72c27dd0120f24a49e7d0a14e70b70b816bbaea0406da2a72a6fa8c30eb8
   IsDeleted: false
 - RecordId: de4d95e9-ee48-481d-937e-7bdf7160f70e
   DisplayName: Pages
@@ -507,15 +535,15 @@ adx_webpage:
   IsDeleted: false
 - RecordId: fdc4ed5a-f9dd-ef11-a730-000d3a6aab35
   DisplayName: Member Subscriptions
-  CheckSum: a2bb383564475f4e4b044f99db8aed097a6b2295c05656239f3b81adbc5e9e1e
+  CheckSum: 79a57864fc50324671fdf4307de85cbe07099e21c7969df222e40e9e5445081f
   IsDeleted: false
 - RecordId: fe1a48cd-f9dd-ef11-a730-000d3a6aab35
   DisplayName: Events
-  CheckSum: 0c7fcf58ff729aca64fd8957980b3ed03ef0e78c0ec33ee9dd78cbde21ffd015
+  CheckSum: 4113c38fed0f08f7be57edd033f93b46fd3e9fb251ee97ff4f363a0a8e2fe8dc
   IsDeleted: false
 - RecordId: ffc4ed5a-f9dd-ef11-a730-000d3a6aab35
   DisplayName: Member Subscriptions
-  CheckSum: fe782d302fac08f99dfff2ae0843eb2c25920fffb9eab42a67c761bdc0e7b6f2
+  CheckSum: 4d4e0c34062d42b4b426816dd6ba79b59075884f1ad7b8b75476ed6974a17fd4
   IsDeleted: false
 adx_webpageaccesscontrolrule:
 - RecordId: 3a9d2479-669c-438d-95c9-c4dffbc38e9a
