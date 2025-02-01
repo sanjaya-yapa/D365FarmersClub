@@ -48,6 +48,19 @@ adx_contentsnippet:
   DisplayName: Header/Toggle Navigation
   CheckSum: c756bc84f336780b928d041e98c4957043b044997d4a42bbe915ea169a32f52b
   IsDeleted: false
+adx_entitypermission:
+- RecordId: 151e6e0e-56e0-ef11-a730-000d3a6aab35
+  DisplayName: FCM - Event Registration Table Permission
+  CheckSum: 43d917f8751ce632d884c7ffd3de9d18a9cf13f5b633da3953bbf1d8bf6dc846
+  IsDeleted: false
+- RecordId: 86a6c1b4-55e0-ef11-a730-000d3a6aab35
+  DisplayName: FCM - Membership Table Permission
+  CheckSum: 10429dc7d08f21294698b0a484891c31769b9bf396b9e02c9c34dd23c4eff5d6
+  IsDeleted: false
+- RecordId: bf4552e5-55e0-ef11-a730-000d3a6aab35
+  DisplayName: FCM - Events Permission
+  CheckSum: a67bf9af71456a309aa0de7091bc41207f9933d2dcdb2f9c8ddbc1ae394b64db
+  IsDeleted: false
 adx_pagetemplate:
 - RecordId: bd37502f-27b4-4d11-863d-de8cd6de3b56
   DisplayName: Default studio template
@@ -560,6 +573,14 @@ adx_webpageaccesscontrolrule_webrole:
   CheckSum: bc3791ecf3a99ffbb66710b7410de21133298e8c6bf850f7cc6e23d54ef507b8
   IsDeleted: false
 adx_webrole:
+- RecordId: 3d961047-55e0-ef11-a730-000d3a6aab35
+  DisplayName: Member Events Access
+  CheckSum: 7e9b79fd4c0dad6228adc518ad1ef15021ac8d0cf079d06396536cbae59da7a5
+  IsDeleted: false
+- RecordId: 7b8d4c3b-55e0-ef11-a730-000d3a6aab35
+  DisplayName: Membership Access
+  CheckSum: 580b248d14eab61eb7f8a0844b96f649bff62198a199f24f5dcaa7aaca15814a
+  IsDeleted: false
 - RecordId: a3e82ab2-96b3-406c-aec0-37ac2e29ad68
   DisplayName: Authenticated Users
   CheckSum: 6d5e4d9e8be6d5d69e4b46509ab27367bccbe42a5dc74fb143e5aba3c9009a95
@@ -567,6 +588,10 @@ adx_webrole:
 - RecordId: d2750f75-60a8-460e-8393-01a4a5719f3c
   DisplayName: Administrators
   CheckSum: 25708d85d1ad905e576f0d70351caf863ea07e49ab004de346ace7a26d2aef73
+  IsDeleted: false
+- RecordId: d2e2e652-55e0-ef11-a730-000d3a6aab35
+  DisplayName: Member Case Access
+  CheckSum: 42d4187d2cf3457a96130411cfed354e00e95db18396078e679322ce962511cd
   IsDeleted: false
 - RecordId: e1b861b0-1867-4086-a43c-6fca4bea8449
   DisplayName: Anonymous Users

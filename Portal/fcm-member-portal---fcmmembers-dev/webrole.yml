@@ -1,11 +1,23 @@
 - adx_anonymoususersrole: false
   adx_authenticatedusersrole: true
+  adx_name: Member Events Access
+  adx_webroleid: 3d961047-55e0-ef11-a730-000d3a6aab35
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: true
+  adx_name: Membership Access
+  adx_webroleid: 7b8d4c3b-55e0-ef11-a730-000d3a6aab35
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: true
   adx_name: Authenticated Users
   adx_webroleid: a3e82ab2-96b3-406c-aec0-37ac2e29ad68
 - adx_anonymoususersrole: false
   adx_authenticatedusersrole: false
   adx_name: Administrators
   adx_webroleid: d2750f75-60a8-460e-8393-01a4a5719f3c
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: true
+  adx_name: Member Case Access
+  adx_webroleid: d2e2e652-55e0-ef11-a730-000d3a6aab35
 - adx_anonymoususersrole: true
   adx_authenticatedusersrole: false
   adx_name: Anonymous Users
