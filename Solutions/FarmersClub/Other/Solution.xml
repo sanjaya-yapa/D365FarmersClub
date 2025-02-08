@@ -107,7 +107,6 @@
       <RootComponent type="61" schemaName="sw365_/js/common/commonUtils.js" behavior="0" />
       <RootComponent type="61" schemaName="sw365_/js/CommunityEvents/communityEventForm.js" behavior="0" />
       <RootComponent type="61" schemaName="sw365_/js/EventTicketPrice/EventTicketPriceCommands.js" behavior="0" />
-      <RootComponent type="62" schemaName="sw365_EventManagementApp" behavior="0" />
       <RootComponent type="62" schemaName="sw365_FarmClubMembersApp" behavior="0" />
       <RootComponent type="80" schemaName="sw365_FarmClubMembersApp" behavior="0" />
       <RootComponent type="9" schemaName="sw365_approvalstatus" behavior="0" />
