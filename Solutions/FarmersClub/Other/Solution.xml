@@ -104,8 +104,6 @@
       <RootComponent type="29" id="{46fed031-e9e5-ee11-904c-002248d3bd9c}" behavior="0" />
       <RootComponent type="29" id="{a408433d-3f87-ef11-ac21-002248188045}" behavior="0" />
       <RootComponent type="29" id="{b80b416a-54e4-ee11-904c-002248d3bd9c}" behavior="0" />
-      <RootComponent type="300" schemaName="sw365_eventregistrations_9194b" behavior="0" />
-      <RootComponent type="300" schemaName="sw365_eventsmanagementmobileapp_dbb6b" behavior="0" />
       <RootComponent type="300" schemaName="sw365_home_dfff4" behavior="0" />
       <RootComponent type="61" schemaName="sw365_/js/common/commonUtils.js" behavior="0" />
       <RootComponent type="61" schemaName="sw365_/js/CommunityEvents/communityEventForm.js" behavior="0" />
