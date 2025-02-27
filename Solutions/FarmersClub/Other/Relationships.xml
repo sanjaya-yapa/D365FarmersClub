@@ -68,7 +68,10 @@
   <EntityRelationship Name="sw365_eventvenue_sw365_address" />
   <EntityRelationship Name="sw365_eventvenue_sw365_communityevent" />
   <EntityRelationship Name="sw365_farmer_incident" />
+  <EntityRelationship Name="sw365_incident_account_sw365_regardingid" />
   <EntityRelationship Name="sw365_Incident_Appointment" />
+  <EntityRelationship Name="sw365_incident_sw365_communityevent_sw365_RegardingId" />
+  <EntityRelationship Name="sw365_incident_sw365_eventregistration_sw365_RegardingId" />
   <EntityRelationship Name="sw365_Incident_Task" />
   <EntityRelationship Name="sw365_membership_contact" />
   <EntityRelationship Name="sw365_membership_Incident" />

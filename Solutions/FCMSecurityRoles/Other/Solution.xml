@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24124.162" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24124.162" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.25012.00166">
+<ImportExportXml version="9.2.25021.188" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25021.188" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.25021.00188">
   <SolutionManifest>
     <UniqueName>FCMSecurityRoles</UniqueName>
     <LocalizedNames>
